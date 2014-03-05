@@ -81,14 +81,14 @@ public class SwipeFragment extends Fragment {
 	@Override
 	public void onStart() {
 		super.onStart();
-		Button btnNext = (Button) getActivity().findViewById(R.id.buttonSwipe);
-		
-		btnNext.setOnClickListener(new View.OnClickListener() {
-		    @Override
-		    public void onClick(View v) {
-		        doNext(v);
-		    }
-		});
+//		Button btnNext = (Button) getActivity().findViewById(R.id.buttonSwipe);
+//		
+//		btnNext.setOnClickListener(new View.OnClickListener() {
+//		    @Override
+//		    public void onClick(View v) {
+//		        doNext(v);
+//		    }
+//		});
 		
 		updateCardDetailView();
 	}
@@ -113,8 +113,6 @@ public class SwipeFragment extends Fragment {
     	    	
     	    	container.addView(textCard);
     	    	
-    	    	Button btnNext = (Button) getActivity().findViewById(R.id.buttonSwipe);
-    	    	btnNext.setEnabled(false);
     	    	return;
     		} else {
     			resetTextView();
@@ -129,9 +127,24 @@ public class SwipeFragment extends Fragment {
 	    	
 	    	container.addView(textCard);
 	    	
-	    	Button btnNext = (Button) getActivity().findViewById(R.id.buttonSwipe);
-	    	btnNext.setEnabled(false);
     	}
+        
+    }
+	
+	
+	public void backToQuestion() {
+    	
+
+    	if (!isSetEmpty()) {
+    		if (mode.equals(CARD_MODE_QUESTION)) {
+//    			mode = CARD_MODE_ANSWER;
+    			count--;
+    			updateCardDetailView();
+    		}
+    		
+    		
+	    	
+    	} 
         
     }
 	

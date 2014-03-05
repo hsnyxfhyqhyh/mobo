@@ -1,9 +1,29 @@
-<menu xmlns:android="http://schemas.android.com/apk/res/android" >
 
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
     <item
-        android:id="@+id/action_settings"
+        android:id="@+id/menu_previous_card"
+        android:orderInCategory="100"
+        android:showAsAction="always"
+        android:title="@string/menu_text_previous_card"
+        android:icon="@drawable/ic_action_previous_item"
+        />
+       
+    <item
+        android:id="@+id/menu_next_card"
+        android:orderInCategory="100"
+        android:showAsAction="always"
+        android:title="@string/menu_text_next_card"
+        android:icon="@drawable/ic_action_next_item"
+        />
+    
+    <item
+        android:id="@+id/menu_settings"
         android:orderInCategory="100"
         android:showAsAction="never"
-        android:title="@string/action_settings"/>
-
+        android:title="@string/menu_settings"/>
+    <item
+        android:id="@+id/menu_share"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="@string/menu_text_share"/>
 </menu>

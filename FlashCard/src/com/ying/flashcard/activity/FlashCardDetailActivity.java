@@ -33,6 +33,7 @@ public class FlashCardDetailActivity extends FragmentActivity implements
 	public ArrayList<QuestionDTO> questions = new ArrayList<QuestionDTO>() ; 
 
 	String setName = "";
+	SwipeFragment firstFragment =null;
 
 	// Called when the activity is first created
 	@Override
@@ -57,7 +58,7 @@ public class FlashCardDetailActivity extends FragmentActivity implements
 			// Create an instance of the Fragment that holds the titles
 
 //			FlashcardFragment firstFragment = new FlashcardFragment();
-			SwipeFragment firstFragment = new SwipeFragment();
+			firstFragment = new SwipeFragment();
 
 			// In case this activity was started with special instructions from
 			// an Intent,
@@ -74,7 +75,7 @@ public class FlashCardDetailActivity extends FragmentActivity implements
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
-		getMenuInflater().inflate(R.menu.main, menu);
+		getMenuInflater().inflate(R.menu.flash_card_detail, menu);
 		
 		return true;
 	}
@@ -135,12 +136,12 @@ public class FlashCardDetailActivity extends FragmentActivity implements
 		
 		switch (item.getItemId()){
 		
-		case R.id.menu_chapter_chooser:
+		case R.id.menu_previous_card:
+			firstFragment.backToQuestion();
 //			this.startActivity(intent);
-//			this.finish();
-//			break;
-		case R.id.menu_previous_chapter:
-			
+			break;
+		case R.id.menu_next_card:
+			firstFragment.updateCardDetailView();
 			break;
 		}
 		

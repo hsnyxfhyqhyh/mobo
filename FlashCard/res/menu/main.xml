@@ -1,72 +1,9 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android" >
-    <item
-        android:id="@+id/menu_previous_chapter"
-        android:orderInCategory="100"
-        android:showAsAction="always"
-        android:title="@string/menu_text_previous_chapter"
-        android:icon="@drawable/ic_action_previous_item"
-        />
-       
-    <item
-        android:id="@+id/menu_next_chapter"
-        android:orderInCategory="100"
-        android:showAsAction="always"
-        android:title="@string/menu_text_next_chapter"
-        android:icon="@drawable/ic_action_next_item"
-        />
-
-        
-    
-        
-          <item
-        android:id="@+id/menu_version_hhb"
-        android:orderInCategory="100"
-        android:showAsAction="always"
-        android:title="@string/menu_text_bible_version_hhb"
-        />
-        
-        
-        <item
-        android:id="@+id/menu_version_mix"
-        android:orderInCategory="100"
-        android:showAsAction="always"
-        android:title="@string/menu_text_bible_version_mix"
-        />
-        
-        <item
-        android:id="@+id/menu_chapter_chooser"
-        android:orderInCategory="100"
-        android:showAsAction="never"
-        android:title="@string/menu_text_choose_bible"
-        />
-        
-        <item
-        android:id="@+id/menu_version_niv"
-        android:orderInCategory="100"
-        android:showAsAction="never"
-        android:title="@string/menu_text_bible_version_niv"
-        />
-
-        <item
-        android:id="@+id/menu_old_testament1"
-        android:orderInCategory="100"
-        android:showAsAction="never"
-        android:title="@string/menu_old_testament"
-        />
 
     <item
-        android:id="@+id/menu_new_testament1"
+        android:id="@+id/action_settings"
         android:orderInCategory="100"
         android:showAsAction="never"
-        android:title="@string/menu_new_testament"/>
-    <item
-        android:id="@+id/menu_settings"
-        android:orderInCategory="100"
-        android:showAsAction="never"
-        android:title="@string/menu_settings"/>
-    <item
-        android:id="@+id/menu_share"
-        android:orderInCategory="100"
-        android:showAsAction="never"
-        android:title="@string/menu_text_share"/>
+        android:title="@string/action_settings"/>
+
 </menu>
