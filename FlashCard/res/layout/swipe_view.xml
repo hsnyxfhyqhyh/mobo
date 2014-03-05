@@ -1,0 +1,36 @@
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+   >
+<TableRow android:layout_width="wrap_content">
+      <Button android:id="@+id/buttonSwipe"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:text="NEXT"
+         />
+ </TableRow> 
+<TableRow
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    >
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+       
+         >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" 
+            android:id="@+id/swip_card_container">
+       
+        </LinearLayout>
+    </ScrollView>
+
+</TableRow>  
+
+</TableLayout>
