@@ -1,3 +1,5 @@
+package com.ying.flashcard.java.util;
+
 import java.io.FileInputStream;
 import java.io.InputStream;
 import java.util.ArrayList;
@@ -9,6 +11,9 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 import org.xml.sax.InputSource;
+
+import com.ying.flashcard.java.dto.QuestionDTO;
+import com.ying.flashcard.java.dto.SetDTO;
 
 public class XmlParserUtil {
 	

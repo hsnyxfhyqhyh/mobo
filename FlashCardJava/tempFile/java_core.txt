@@ -1,0 +1,15 @@
+>>Give a few reasons for using Java?
+Java is a fun language. Let’s look at some of the reasons: 
+Built-in support for multi-threading, socket communication, and memory management (automatic garbage collection). 
+Object Oriented (OO). 
+Better portability than other languages across operating systems. 
+Supports Web based applications (Applet, Servlet, and JSP), distributed applications (sockets, RMI, EJB etc) and network protocols (HTTP, JRMP etc) with the help of extensive standardized APIs (Application 
+Programming Interfaces). 
+####
+
+>>What is the main difference between the Java platform and the other software platforms?
+Java platform is a software-only platform, which runs on top of other hardware-based platforms like UNIX, NT etc
+The Java platform has 2 components: 
+Java Virtual Machine (JVM) – ‘JVM’ is a software that can be ported onto various hardware platforms. Byte codes are the machine language of the JVM. 
+Java Application Programming Interface (Java API) – set of classes written using the Java language and run on the JVM. 
+####

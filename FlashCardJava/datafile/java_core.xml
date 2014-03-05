@@ -1,0 +1,24 @@
+<Sets>
+<Set name="Java - Java core">
+<Question>
+<Title>Give a few reasons for using Java?</Title>
+<Answer>
+<Line number="1">Java is a fun language. Let’s look at some of the reasons: </Line>
+<Line number="2">Built-in support for multi-threading, socket communication, and memory management (automatic garbage collection). </Line>
+<Line number="3">Object Oriented (OO). </Line>
+<Line number="4">Better portability than other languages across operating systems. </Line>
+<Line number="5">Supports Web based applications (Applet, Servlet, and JSP), distributed applications (sockets, RMI, EJB etc) and network protocols (HTTP, JRMP etc) with the help of extensive standardized APIs (Application </Line>
+<Line number="6">Programming Interfaces). </Line>
+</Answer>
+</Question>
+<Question>
+<Title>What is the main difference between the Java platform and the other software platforms?</Title>
+<Answer>
+<Line number="1">Java platform is a software-only platform, which runs on top of other hardware-based platforms like UNIX, NT etc</Line>
+<Line number="2">The Java platform has 2 components: </Line>
+<Line number="3">Java Virtual Machine (JVM) – ‘JVM’ is a software that can be ported onto various hardware platforms. Byte codes are the machine language of the JVM. </Line>
+<Line number="4">Java Application Programming Interface (Java API) – set of classes written using the Java language and run on the JVM. </Line>
+</Answer>
+</Question>
+</Set>
+</Sets>

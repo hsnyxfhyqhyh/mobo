@@ -1,7 +1,11 @@
+package com.ying.flashcard.java.db;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
+
+import com.ying.flashcard.java.dto.QuestionDTO;
+import com.ying.flashcard.java.dto.SetDTO;
 
 /*
  * 

@@ -1,5 +1,6 @@
 eclipse.preferences.version=1
-encoding//src/DBHelper.java=UTF-8
-encoding//src/LoadData.java=UTF-8
-encoding//src/XmlParserUtil.java=UTF-8
+encoding//src/com/ying/flashcard/java/db/DBHelper.java=UTF-8
+encoding//src/com/ying/flashcard/java/helper/TempFileTemplateGenerator.java=UTF-8
+encoding//src/com/ying/flashcard/java/main/LoadData.java=UTF-8
+encoding//src/com/ying/flashcard/java/util/XmlParserUtil.java=UTF-8
 encoding/<project>=UTF-8
