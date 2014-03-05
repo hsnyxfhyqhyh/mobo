@@ -1,0 +1,82 @@
+<Sets>
+	<Set name="JAVA - AMQP">
+		<Question>
+			<Title>What is AMQP?</Title>
+			<Answer>
+				<Line number="1">Advanced Message Queuing Protocol. </Line>
+				<Line number="2">It provides standard messaging protocols across all platform. </Line>
+				<Line number="3">AMQP has taken the broker-agnostic benefits of JMS within the java platform and escalated that concept to all platforms.</Line>
+			</Answer>
+		</Question>
+	<Question>
+			<Title>How JMS handles Message?</Title>
+			<Answer>
+				<Line number="1">JMS uses a simple message routing scheme where both the message producer and message consumer exchange messages by connecting to the same named queue or topic</Line>
+			
+			</Answer>
+		</Question>		
+		<Question>
+			<Title>How AMQP handles message?</Title>
+			<Answer>
+				<Line number="1">Message producer sends a message to an exchange along with a routing key. Exchanges are bound to queues in AMQP through what are called bindings</Line>
+				<Line number="2">A binding is a directive indicating what messages should be routed from an exchange to a queue. Message consumer attach to a queue and receive messages from the queue that is bound to an exchange. </Line>
+				<Line number="3">JUNK</Line>
+			</Answer>
+		</Question>
+		
+		<Question>
+			<Title>What is consumer driven messaging?</Title>
+			<Answer>
+				<Line number="1">JUNK</Line>
+				<Line number="2">JUNK</Line>
+				<Line number="3">JUNK</Line>
+			</Answer>
+		</Question>
+		<Question>
+			<Title>What are the 2 messaging model suported by JMS?</Title>
+			<Answer>
+				<Line number="1">1. Point-To-Point (queues)</Line>
+				<Line number="2">only one message consumer can receive the message</Line>
+				<Line number="3">2. Publish-and-subscribe (Topics)</Line>
+				<Line number="4">multiple message consumers can receive the same message</Line>
+			</Answer>
+		</Question>
+		<Question>
+			<Title>What are the messaging model suported by AMQP?</Title>
+			<Answer>
+				<Line number="1">1. Direct Exchange --  It matches the p-2-p messaging model in JMS. However an important difference between JMS and AMQP is that with the AMQP direct exchange you can bind multiple direct queues to the exchange (meaning it is possible for more than one consumer to receive the message).  http://qpid.apache.org/releases/qpid-0.26/java-broker/Set/images/Exchange-Direct.png</Line>
+				<Line number="2">2. Fanout exchange --  It is essentially the same as the p-2-s messaging model in JMS, without the use of message selector</Line>
+				<Line number="3">3. Topic Exchange</Line>
+				<Line number="4">4. Headers Exchange</Line>
+				<Line number="5">5. System Exchange (not available in the QPID)</Line>
+			</Answer>
+		</Question>
+		<Question>
+			<Title>What is exchange?</Title>
+			<Answer>
+				<Line number="1">An Exchange is a named entity within the Virtual Host which receives messages from producers and routes them to matching Queues within the Virtual Host.</Line>
+				<Line number="2">The number of exchanges within a virtual host is limited only by resource constraints.</Line>
+			</Answer>
+		</Question>
+		<Question>
+			<Title>What is Queue? </Title>
+			<Answer>
+				<Line number="1">named entities within a Virtual Host that hold/buffer messages for delivery to consumer applications.</Line>
+				<Line number="2">The following Queues types are currently supported:   
+				    Standard: a simple First-In-First-Out (FIFO) queue
+				    Priority: delivery order depends on the priority of each message
+				    Sorted: delivery order depends on the value of the sorting key property in each message
+				    Last Value Queue: also known as an LVQ, retains only the last (newest) message received with a given LVQ key value.
+				</Line>
+			</Answer>
+		</Question>
+		<Question>
+			<Title>What is the default port number for AMQP </Title>
+			<Answer>
+				<Line number="1">qpid.amqp_port	 Port number used for the brokers default AMQP messaging port	 "5672"</Line>
+			</Answer>
+		</Question>
+		
+		
+	</Set>
+</Sets>
