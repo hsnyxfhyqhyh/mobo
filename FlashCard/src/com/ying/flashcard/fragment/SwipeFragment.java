@@ -15,6 +15,7 @@ import com.ying.flashcard.util.MainActivityPreferences;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -24,6 +25,8 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+//txtCardHeader
 
 public class SwipeFragment extends Fragment {
 
@@ -43,6 +46,7 @@ public class SwipeFragment extends Fragment {
 	
 	private int count = 0;
 	private TextView textCard = null;
+	private TextView txtCardHeader = null;
 	
 	private String QUESTION_ANSWER_LINE_BREAK = "\n\n";
 	private int FONT_SIZE = 20;
@@ -90,6 +94,10 @@ public class SwipeFragment extends Fragment {
 //		    }
 //		});
 		
+		if (!isSetEmpty()) {
+			txtCardHeader = (TextView)getActivity().findViewById(R.id.txtCardHeader);
+			txtCardHeader.setBackgroundColor(Color.parseColor(this.getString(R.color.bible_header_gray)));
+		}
 		updateCardDetailView();
 	}
 
@@ -105,13 +113,16 @@ public class SwipeFragment extends Fragment {
     	container.removeAllViewsInLayout();	//reset
 
     	if (!isSetEmpty()) {
+    		
     		String cardText = determineText();
     		
     		if (cardText.equals(CARD_MODE_DONE)) {
-    			resetTextView();
-    	    	textCard.setText(CARD_MODE_DONE);
-    	    	
-    	    	container.addView(textCard);
+//    			resetTextView();
+//    	    	textCard.setText(CARD_MODE_DONE);
+//    	    	
+//    	    	container.addView(textCard);
+    			FlashCardDetailActivity activity = (FlashCardDetailActivity) this.getActivity();
+    			activity.doneSet();
     	    	
     	    	return;
     		} else {
@@ -170,12 +181,14 @@ public class SwipeFragment extends Fragment {
 		if (count == questions.size()){
 			cardText = CARD_MODE_DONE;
 		} else {
-		
+			txtCardHeader.setText(questions.get(count).getTitle());
+			txtCardHeader.setTextSize(FONT_SIZE + 2);
 			if (mode.equals(CARD_MODE_QUESTION)) {
 				mode = CARD_MODE_ANSWER;
-				cardText = questions.get(count).getTitle();
+				
+				cardText = "";
 			} else {
-				cardText = questions.get(count).getTitle() + QUESTION_ANSWER_LINE_BREAK + questions.get(count).getAnswer();
+				cardText = questions.get(count).getAnswer();
 				count++;
 				mode = CARD_MODE_QUESTION;
 			}
@@ -184,6 +197,7 @@ public class SwipeFragment extends Fragment {
 	}
 	
 	private void resetTextView() {
+		
 		textCard = new TextView(this.getActivity());
 		textCard.setTextSize(FONT_SIZE);
 		

@@ -13,6 +13,8 @@ import com.ying.flashcard.util.MainActivityPreferences;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -143,9 +145,70 @@ public class FlashCardDetailActivity extends FragmentActivity implements
 		case R.id.menu_next_card:
 			firstFragment.updateCardDetailView();
 			break;
+		case R.id.menu_back_to_set_list:
+			backToSet();
+			break;
 		}
 		
 		
 		return true;
+	}
+	
+	@Override
+	public void onBackPressed() {
+		
+		AlertDialog.Builder builder = new AlertDialog.Builder(this);
+	    builder.setTitle(this.getString(R.string.alert_dialog_title_back));
+
+	    builder.setPositiveButton(this.getString(R.string.alert_dialog_ok_button_text), new DialogInterface.OnClickListener() {
+	            public void onClick(DialogInterface dialog, int which) {
+	                    dialog.dismiss();
+	                    
+	                    backToSet();
+	                    finish();
+	            }
+	        });
+
+	    builder.setNegativeButton(this.getString(R.string.alert_dialog_notok_button_text), new DialogInterface.OnClickListener() {
+	        @Override
+	        public void onClick(DialogInterface dialog, int which) {
+	            dialog.dismiss();
+	        }
+	    });
+	    AlertDialog alert = builder.create();
+	    alert.show();
+	    
+	    
+	}
+	
+	public void backToSet() {
+		Intent intentNew = new Intent(this, SetsListActivity.class);
+		this.startActivity(intentNew);
+	}
+	
+	public void doneSet() {
+		
+		AlertDialog.Builder builder = new AlertDialog.Builder(this);
+	    builder.setTitle(this.getString(R.string.alert_dialog_title_done_set));
+
+	    builder.setPositiveButton(this.getString(R.string.alert_dialog_ok_button_text), new DialogInterface.OnClickListener() {
+	            public void onClick(DialogInterface dialog, int which) {
+	                    dialog.dismiss();
+	                    
+	                    backToSet();
+	                    finish();
+	            }
+	        });
+
+	    builder.setNegativeButton(this.getString(R.string.alert_dialog_notok_button_text), new DialogInterface.OnClickListener() {
+	        @Override
+	        public void onClick(DialogInterface dialog, int which) {
+	            dialog.dismiss();
+	        }
+	    });
+	    AlertDialog alert = builder.create();
+	    alert.show();
+	    
+	    
 	}
 }

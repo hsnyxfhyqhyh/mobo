@@ -17,6 +17,14 @@
         />
     
     <item
+        android:id="@+id/menu_back_to_set_list"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="回到上层"
+        android:icon="@drawable/ic_action_next_item"
+        />
+    
+    <item
         android:id="@+id/menu_settings"
         android:orderInCategory="100"
         android:showAsAction="never"

@@ -13,6 +13,9 @@
     <string name="menu_text_share">分享</string>
     
     <string name="alert_dialog_title">退出卡片应用</string>
+    <string name="alert_dialog_title_back">重新选择</string>
+    <string name="alert_dialog_title_done_set">已经学完，重新选择</string>
+    
     <string name="alert_dialog_ok_button_text">是</string>
     <string name="alert_dialog_notok_button_text">否</string>
     <string name="alert_first_card_already">已经是第一张卡片</string>
