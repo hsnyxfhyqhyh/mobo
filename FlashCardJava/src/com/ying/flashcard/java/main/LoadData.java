@@ -17,6 +17,8 @@ public class LoadData {
 		
 		addSet(String.format("%s/java_amqp.xml", DATA_FOLDER), "电脑");
 		addSet(String.format("%s/java_core.xml", DATA_FOLDER), "电脑");
+		addSet(String.format("%s/computer_brainstorm.xml", DATA_FOLDER), "电脑");
+		addSet(String.format("%s/bible_brainstorm.xml", DATA_FOLDER), "圣经");
 				
 		System.out.println("ALL DONE");
 	}

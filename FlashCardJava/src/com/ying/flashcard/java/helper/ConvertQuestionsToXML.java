@@ -14,9 +14,13 @@ public class ConvertQuestionsToXML {
 	/**********************************************/
 	/*THE FOLLOWING NEED TO BE MODIFIED - START	  */
 	/**********************************************/
-	private static final String TEMP_FILE_NAME = "tempFile\\java_core.txt";
-	private static final String DATA_FILE_NAME = "datafile\\java_core.xml";
-	private static final String SET_NAME = "Java - Java core";
+//	private static final String TEMP_FILE_NAME = "tempFile\\computer_brainstorm.txt";
+//	private static final String DATA_FILE_NAME = "datafile\\computer_brainstorm.xml";
+	
+	private static final String TEMP_FILE_NAME = "tempFile\\bible_brainstorm.txt";
+	private static final String DATA_FILE_NAME = "datafile\\bible_brainstorm.xml";
+	
+	private static final String SET_NAME = "computer - brainstorm";
 	/**********************************************/
 	/*THE FOLLOWING NEED TO BE MODIFIED - END	  */
 	/**********************************************/
