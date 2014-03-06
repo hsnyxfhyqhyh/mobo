@@ -5,7 +5,7 @@
         android:orderInCategory="100"
         android:showAsAction="always"
         android:title="@string/menu_text_previous_card"
-        android:icon="@drawable/ic_action_previous_item"
+        android:icon="@drawable/kao"
         />
        
     <item
@@ -13,15 +13,15 @@
         android:orderInCategory="100"
         android:showAsAction="always"
         android:title="@string/menu_text_next_card"
-        android:icon="@drawable/ic_action_next_item"
+        android:icon="@drawable/hou"
         />
     
     <item
         android:id="@+id/menu_back_to_set_list"
         android:orderInCategory="100"
-        android:showAsAction="never"
+        android:showAsAction="always"
         android:title="回到上层"
-        android:icon="@drawable/ic_action_next_item"
+        android:icon="@drawable/ic_action_home"
         />
     
     <item

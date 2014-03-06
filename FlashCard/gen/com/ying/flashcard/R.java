@@ -44,17 +44,20 @@ public final class R {
         public static final int article_view_text_size=0x7f050001;
     }
     public static final class drawable {
-        public static final int ic_action_back=0x7f020000;
-        public static final int ic_action_collapse=0x7f020001;
-        public static final int ic_action_forward=0x7f020002;
-        public static final int ic_action_help=0x7f020003;
-        public static final int ic_action_next_item=0x7f020004;
-        public static final int ic_action_previous_item=0x7f020005;
-        public static final int ic_action_save=0x7f020006;
-        public static final int ic_action_search=0x7f020007;
-        public static final int ic_action_share=0x7f020008;
-        public static final int ic_launcher=0x7f020009;
-        public static final int list_item_icon2=0x7f02000a;
+        public static final int hou=0x7f020000;
+        public static final int ic_action_back=0x7f020001;
+        public static final int ic_action_collapse=0x7f020002;
+        public static final int ic_action_forward=0x7f020003;
+        public static final int ic_action_help=0x7f020004;
+        public static final int ic_action_home=0x7f020005;
+        public static final int ic_action_next_item=0x7f020006;
+        public static final int ic_action_previous_item=0x7f020007;
+        public static final int ic_action_save=0x7f020008;
+        public static final int ic_action_search=0x7f020009;
+        public static final int ic_action_share=0x7f02000a;
+        public static final int ic_launcher=0x7f02000b;
+        public static final int kao=0x7f02000c;
+        public static final int list_item_icon2=0x7f02000d;
     }
     public static final class id {
         public static final int SetListContainer=0x7f090004;
