@@ -1,6 +1,7 @@
 package com.ying.flashcard.db;
 
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -12,6 +13,7 @@ import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteException;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.os.Environment;
 
 public class DataBaseHelper extends SQLiteOpenHelper {
 	private Context mycontext;
@@ -23,7 +25,9 @@ public class DataBaseHelper extends SQLiteOpenHelper {
 	
 	// private String DB_PATH =
 	// mycontext.getApplicationContext().getPackageName()+"/databases/";
-	private static final String DB_NAME = "FlashCard.db";
+	private static final String DB_NAME_TEMPLATE = "FlashCard%s.db";
+	
+	private static final String DB_NAME = String.format(DB_NAME_TEMPLATE , "");
 	public SQLiteDatabase myDataBase;
 
 	/*
@@ -78,7 +82,11 @@ public class DataBaseHelper extends SQLiteOpenHelper {
 	private void copydatabase() throws IOException {
 
 		// Open your local db as the input stream
-		InputStream myinput = mycontext.getAssets().open(DB_NAME);
+//		InputStream myinput = mycontext.getAssets().open(DB_NAME);
+		String backupDBName = DB_NAME;
+		String subBackupDBPath = String.format("/Download/flashcard/%s" , DB_NAME);
+		
+		InputStream myinput  = new FileInputStream(new File(Environment.getExternalStorageDirectory() + subBackupDBPath));
 
 		// Path to the just created empty db
 		String outfilename = DB_PATH + DB_NAME;
@@ -124,5 +132,13 @@ public class DataBaseHelper extends SQLiteOpenHelper {
 	public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
 		// TODO Auto-generated method stub
 
+	}
+	
+	public static String getDbNameTemplate() {
+		return DB_NAME_TEMPLATE;
+	}
+	
+	public static String getDBName(){
+		return DB_NAME;
 	}
 }

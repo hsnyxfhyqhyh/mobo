@@ -11,6 +11,7 @@ import com.ying.flashcard.db.DataBaseHelper;
 import com.ying.flashcard.util.MainActivityPreferences;
 
 import android.os.Bundle;
+import android.os.Environment;
 import android.app.Activity;
 import android.content.Intent;
 import android.view.Menu;
@@ -28,6 +29,16 @@ public class ApplicationInitializeActivity extends Activity  implements OnClickL
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.application_initialize);
+		
+		File direct = new File(Environment.getExternalStorageDirectory() + "/Download/"
+				+ "/flashcard");
+
+		if (!direct.exists()) {
+			if (direct.mkdir()) {
+				// directory is created;
+			}
+
+		}
 		
 		buttonApplicationInitialize = (Button) findViewById(R.id.buttonApplicationInitialize);
 		buttonApplicationInitialize.setOnClickListener(this);
