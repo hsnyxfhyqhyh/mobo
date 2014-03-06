@@ -14,7 +14,7 @@ public class ConvertQuestionsToXML {
 	/**********************************************/
 	/*THE FOLLOWING NEED TO BE MODIFIED - START	  */
 	/**********************************************/
-	private static final String TEMP_FILE_NAME = "tempFile\\interview-general.txt";
+	private static final String TEMP_FILE_NAME = "tempFile\\java_core.txt";
 	private static final String DATA_FILE_NAME = "datafile\\java_core.xml";
 	private static final String SET_NAME = "Java - Java core";
 	/**********************************************/

@@ -20,5 +20,30 @@
 <Line number="4">Java Application Programming Interface (Java API) – set of classes written using the Java language and run on the JVM. </Line>
 </Answer>
 </Question>
+<Question>
+<Title>What is the difference between C++ and Java?</Title>
+<Answer>
+<Line number="1">Both C++ and Java use similar syntax and are Object Oriented, but:</Line>
+<Line number="2">Java does not support pointers. Pointers are inherently tricky to use and troublesome.</Line>
+<Line number="3">Java does not support multiple inheritances because it causes more problems than it solves. Instead Java supports multiple interface inheritance, which allows an object to inherit many method signatures from different interfaces with the condition that the inheriting object must implement those inherited methods. The multiple interface inheritance also allows an object to behave polymorphically on those methods. </Line>
+<Line number="4">Java does not support destructors but adds a finalize() method. Finalize methods are invoked by the garbage collector prior to reclaiming the memory occupied by the object, which has the finalize() method. This means you do not know when the objects are going to be finalized. Avoid using finalize() method to release nonmemory resources like file handles, sockets, database connections etc because Java has only a finite number of these resources and you do not know when the garbage collection is going to kick in to release these resources through the finalize() method.</Line>
+<Line number="5">Java does not include structures or unions because the traditional data structures are implemented as an object oriented framework </Line>
+<Line number="6">All the code in Java program is encapsulated within classes therefore Java does not have global variables or functions.</Line>
+<Line number="7">C++ requires explicit memory management, while Java includes automatic garbage collection. </Line>
+</Answer>
+</Question>
+<Question>
+<Title>What are the usages of Java packages?</Title>
+<Answer>
+<Line number="1">It helps resolve naming conflicts when different packages have classes with the same names. This also helps you organize files within your project. </Line>
+<Line number="2">	For example: java.io package do something related to I/O and java.net package do something to do with network and so on. </Line>
+<Line number="3">If we tend to put all .java files into a single package, as the project gets bigger, then it would become a nightmare to manage all your files.</Line>
+<Line number="4">You can create a package as follows with package keyword, which is the first keyword in any Java program followed by import statements. </Line>
+<Line number="5">The java.lang package is imported implicitly by default and all the other packages must be explicitly imported.</Line>
+<Line number="6">package com.xyz.client ;</Line>
+<Line number="7">import java.io.File;</Line>
+<Line number="8">import java.net.URL;</Line>
+</Answer>
+</Question>
 </Set>
 </Sets>
