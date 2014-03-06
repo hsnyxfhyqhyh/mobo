@@ -2,11 +2,12 @@ package com.ying.flashcard.java.main;
 
 import com.ying.flashcard.java.db.DBHelper;
 import com.ying.flashcard.java.dto.SetDTO;
+import com.ying.flashcard.java.util.SetLoader;
 import com.ying.flashcard.java.util.XmlParserUtil;
 
 public class LoadData {
 	
-	private static final String DATA_FOLDER = "datafile" ; 
+	private static final String DATA_FOLDER = "tempFile" ; 
 	
 	
 	public static void main(String[] args) {
@@ -15,15 +16,15 @@ public class LoadData {
 		 ******************************************************************/
 		DBHelper.initializeDB();
 		
-		addSet(String.format("%s/java_amqp.xml", DATA_FOLDER), "电脑");
-		addSet(String.format("%s/java_core.xml", DATA_FOLDER), "电脑");
-		addSet(String.format("%s/computer_brainstorm.xml", DATA_FOLDER), "电脑");
-		addSet(String.format("%s/bible_brainstorm.xml", DATA_FOLDER), "圣经");
+		addSet(String.format("%s/java_amqp.txt", DATA_FOLDER), "电脑", "JAVA - AMQP");
+		addSet(String.format("%s/java_core.txt", DATA_FOLDER), "电脑", "JAVA - CORE");
+		addSet(String.format("%s/computer_brainstorm.txt", DATA_FOLDER), "电脑", "电脑 - 头脑风暴");
+		addSet(String.format("%s/bible_brainstorm.txt", DATA_FOLDER), "圣经","圣经 - 基础");
 				
 		System.out.println("ALL DONE");
 	}
 
-	private static void addSet(String fileName, String categoryName) {
+	private static void addSet(String fileName, String categoryName, String setName) {
 		
 		int categoryID = DBHelper.getCategoryID(categoryName);
 		
@@ -33,14 +34,14 @@ public class LoadData {
 		}
 		
 		
-		addSet(fileName, categoryID);
+		addSet(fileName, setName, categoryID);
 		
 
 	}
 	
-	private static void addSet(String fileName, int categoryFK) {
+	private static void addSet(String fileName, String setName, int categoryFK) {
 
-		SetDTO setDTO = XmlParserUtil.getSetContent(fileName);
+		SetDTO setDTO = SetLoader.loadTxt(fileName, setName);
 		
 		boolean createSuccessful = false;
 

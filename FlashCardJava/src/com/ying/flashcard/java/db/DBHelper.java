@@ -228,14 +228,21 @@ public class DBHelper {
 	}
 
 	
-	public static boolean addSet(SetDTO setDTO, int categoryFK) {
-
-		boolean createSuccessful = false;
+	public static void addSet(SetDTO setDTO, int categoryFK) {
 
 		String fieldId = "id";
 		String fieldName = "name";
 		String fieldCategoryFK = "categoryFK";
 
+		int setFK = setExists(setDTO.getName(), categoryFK);
+		if (setFK > 0 ) {
+			for (int i = 0; i < setDTO.getQuestions().size(); i++) {
+				insertQuestion(setDTO.getQuestions().get(i), setFK);
+			}
+			
+			return;
+		} 
+		
 		Statement stmt = null;
 		try {
 			Class.forName(DBHelper.JDBC_CLASS_STRING);
@@ -254,19 +261,52 @@ public class DBHelper {
 			c.commit();
 			c.close();
 
-			int setFK = DBHelper.getSetFK(setDTO.getName());
+			setFK = setExists(setDTO.getName(), categoryFK);
 
 			for (int i = 0; i < setDTO.getQuestions().size(); i++) {
 				insertQuestion(setDTO.getQuestions().get(i), setFK);
 			}
 			
-			createSuccessful = true;
 		} catch (Exception e) {
 			System.err.println(e.getClass().getName() + ": " + e.getMessage());
 			System.exit(0);
 		}
 
-		return createSuccessful;
+	}
+	
+	private static int setExists(String setName_, int categoryFK) {
+		int setFK = 0;
+		String tableName = "FlashCardSet";
+		String fieldName = "name";
+		String fieldId = "id";
+		String fieldCategoryID = "categoryFK";
+		
+		// select query
+		String sql = "";
+		sql += "SELECT * FROM " + tableName;
+		sql += " WHERE " + fieldName + " = '" + setName_ + "'";
+		sql += " AND " + fieldCategoryID + " = " + categoryFK + "";
+		sql += " LIMIT 0,5";
+
+		try {
+			Class.forName(DBHelper.JDBC_CLASS_STRING);
+			Connection c = DriverManager.getConnection(DBHelper.JDBC_CONNECTION_STRING);
+			c.setAutoCommit(false);
+
+			Statement stmt = c.createStatement();
+			ResultSet rs = stmt.executeQuery(sql);
+			if (rs.next()) {
+				setFK = rs.getInt(fieldId);
+			}
+			rs.close();
+			stmt.close();
+			c.close();
+		} catch (Exception e) {
+			setFK = -1;
+			System.err.println(e.getClass().getName() + ": " + e.getMessage());
+		}
+		
+		return setFK;
 	}
 
 	

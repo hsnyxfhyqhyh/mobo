@@ -1,5 +1,17 @@
 >>What is stack overflow
-Stack Overflow is a privately held website, the flagship site of the Stack Exchange Network,[2][3] created in 2008 by Jeff Atwood and Joel Spolsky,[4][5] as a more open alternative to earlier Q and A sites such as Experts Exchange. The name for the website was chosen by voting in April 2008 by readers of Coding Horror, Atwood's popular programming blog.
+Stack Overflow is a privately held website, the flagship site of the Stack Exchange Network,[2][3] created in 2008 by Jeff Atwood and Joel Spolsky,[4][5] as a more open alternative to earlier Q&A sites such as Experts Exchange. The name for the website was chosen by voting in April 2008 by readers of Coding Horror, Atwood's popular programming blog.
 Website:
 	http://en.wikipedia.org/wiki/Stack_Overflow_(website)
+####
+
+>>What is DevOps all about?
+
+	http://dev2ops.org/2010/02/what-is-devops/
+
+DevOps is a response to the growing awareness that there is a disconnect between what is traditionally considered development activity and what is traditionally considered operations activity. This disconnect often manifests itself as conflict and inefficiency.
+
+Agile promises close interaction and fast feedback between the business stakeholders making the decisions and the developers acting on those decisions.
+
+(Business) ----Agile--- (Developers) ----DevOps---- (Operation)
+
 ####

@@ -46,297 +46,108 @@ import java.net.URL;
 
 ####
 
->>
-####
-
->>
-####
-
->>
-####
-
->>
-####
-
->>
-####
-
->>
-####
-
->>
-####
-
->>
-####
-
->>
-####
-
->>
-####
-
->>
-####
-
->>
-####
-
->>
-####
-
->>
-####
-
->>
-####
-
->>
-####
-
->>
-####
-
->>
-####
-
->>
-####
-
->>
-####
-
->>
-####
-
->>
-####
-
->>
-####
-
->>
-####
-
->>
-####
-
->>
-####
-
->>
-####
-
->>
-####
-
->>
-####
-
->>
-####
-
->>
-####
-
->>
-####
-
->>
-####
-
->>
-####
-
->>
-####
-
->>
-####
-
->>
-####
-
->>
-####
-
->>
-####
-
->>
-####
 
->>
-####
-
->>
-####
-
->>
-####
-
->>
-####
-
->>
-####
-
->>
-####
-
->>
-####
-
->>
-####
-
->>
-####
-
->>
-####
-
->>
-####
-
->>
-####
-
->>
-####
-
->>
-####
-
->>
-####
-
->>
-####
-
->>
-####
-
->>
-####
-
->>
-####
-
->>
-####
-
->>
-####
-
->>
-####
-
->>
-####
-
->>
-####
-
->>
-####
-
->>
-####
-
->>
-####
-
->>
-####
-
->>
-####
-
->>
-####
-
->>
-####
-
->>
-####
+>>Java class Loaders
+Class loaders are hierarchical. (1. bootstrap 2. Extension 3. System)
 
->>
-####
+Siblings cannot see each other.  
 
->>
-####
+Classes are introduced into the JVM as they are referenced by name in a class that is already running in the JVM. 
+So, how is the very first class loaded? The very first class is especially loaded with the help of static main( ) method declared in your class. 
+All the subsequently loaded classes are loaded by the classes, which are already loaded and running. 
+A class loader creates a namespace. All JVMs include at least one class loader that is embedded within the JVM called the primordial (or bootstrap) class loader. 
+Now let’s look at non-primordial class loaders. The JVM has hooks in it to allow user defined class loaders to be used in place of primordial class loader. 
+Let us look at the class loaders created by the JVM.
 
->>
-####
 
->>
+	Bootstrap: 
+	Loads JDK internal classes, java.* packages. (as defined in the sun.boot.class.path system property, typically loads rt.jar and i18n.jar)
+	
+		
+	Extensions:
+ 	Loads jar files from JDK extensions directory (as defined in the java.ext.dirs system property – usually lib/ext directory of the JRE)
+ 	
+ 	System: 
+ 	Loads classes from system classpath (as defined by the java.class.path property, which is set by the CLASSPATH environment variable or –classpath or –cp command line options)
 ####
 
->>
-####
+>>What is static and dynamic class loading
 
->>
+	static 
+	Classes are statically loaded with Java’s “new” operator.
+	
+	Dynamic class loading
+	Dynamic loading is a technique for programmatically invoking the functions of a class loader at run time. Let us look at how to load classes dynamically.
+	
 ####
+	
+>>What is the difference between constructors and other regular methods?
+Constructors must have the same name as the class name and cannot return a value. 
+The constructors are called only once per creation of an object while regular methods can be called many times.
 
->>
 ####
 
->>
+>>What happens if you do not provide a constructor?
+If you do not include a constructor, the Java compiler will create a default constructor in the byte code with an empty argument.
 ####
 
->>
-####
+>>Can you call one constructor from another?
+Yes, by using this() syntax.
 
->>
-####
+public Pet(int id) {
+	this.id = id; 
+}
 
->>
+public Pet (int id, String type) {
+	this(id); // calls constructor public Pet(int id)
+	this.type = type; 
+}
 ####
 
->>
-####
 
->>
+>>How to call the superclass constructor?
+use the keyword “super” to invoke the superclass’s constructor. And it must be the first statement in the constructor
 ####
 
->>
-####
 
->>
+>>How to call the superclass method
+To call a regular method in the super class use: “super.myMethod( );”. This can be called at any line.
 ####
 
->>
-####
 
->>
-####
+>>What are the advantages of Object Oriented Programming Languages (OOPL)?
+represent the real life objects 		like Car, Jeep, Account, Customer
 
->>
-####
+PIE: 
+	polymorphism, 
+	inheritance  
+	encapsulation
 
->>
-####
+>>How do you express an ‘is a’ relationship and a ‘has a’ relationship or explain inheritance and composition?
+The ‘is a’ relationship is expressed with inheritance
+The ‘has a’ relationship is expressed with composition.
 
->>
-####
+Inheritance is uni-directional.For example 
+	House is a Building. 
+	But Building is not a House. 
+Inheritance uses extends key word.
 
->>
-####
 
->>
 ####
 
->>
-####
+>>Two of the main techniques for code reuse are ?
+	class inheritance 
+	object composition.
+	
+Don’t use inheritance just to get code reuse. If there is no ‘is a’ relationship then use composition for code reuse. 
+Overuse of implementation inheritance (uses the “extends” key word) can break all the subclasses, if the superclass is modified.
 
->>
+Do not use inheritance just to get polymorphism. If there is no ‘is a’ relationship and all you want is polymorphism then use interface inheritance with composition, which gives you code reuse
+	
 ####
 
->>
-####
+>>What is the difference between aggregation and composition?
+Aggregation is an association in which one class belongs to a collection. This is a part of a whole relationship where a part can exist without a whole.
+Composition is an association in which one class belongs to a collection. This is a part of a whole relationship where a part cannot exist without a whole. If a whole is deleted then all parts are deleted
 
->>
 ####
-

@@ -1,0 +1,57 @@
+>>What is AMQP?
+Advanced Message Queuing Protocol. 
+It provides standard messaging protocols across all platform. 
+AMQP has taken the broker-agnostic benefits of JMS within the java platform and escalated that concept to all platforms.
+####
+
+>>How JMS handles Message?
+JMS uses a simple message routing scheme where both the message producer and message consumer exchange messages by connecting to the same named queue or topic
+####
+
+>>How AMQP handles message?
+
+Message producer sends a message to an exchange along with a routing key. Exchanges are bound to queues in AMQP through what are called bindings
+A binding is a directive indicating what messages should be routed from an exchange to a queue. Message consumer attach to a queue and receive messages from the queue that is bound to an exchange. 
+JUNK
+####
+
+>>What is consumer driven messaging?
+JUNK
+JUNK
+JUNK
+####
+
+>>What are the 2 messaging model suported by JMS?
+1. Point-To-Point (queues)
+only one message consumer can receive the message
+2. Publish-and-subscribe (Topics)
+multiple message consumers can receive the same message
+####
+
+>>What are the messaging model suported by AMQP?
+1. Direct Exchange --  It matches the p-2-p messaging model in JMS. However an important difference between JMS and AMQP is that with the AMQP direct exchange you can bind multiple direct queues to the exchange (meaning it is possible for more than one consumer to receive the message).  http://qpid.apache.org/releases/qpid-0.26/java-broker/Set/images/Exchange-Direct.png
+2. Fanout exchange --  It is essentially the same as the p-2-s messaging model in JMS, without the use of message selector
+3. Topic Exchange
+4. Headers Exchange
+5. System Exchange (not available in the QPID)
+####
+
+>>What is exchange?
+An Exchange is a named entity within the Virtual Host which receives messages from producers and routes them to matching Queues within the Virtual Host.
+The number of exchanges within a virtual host is limited only by resource constraints.
+####
+
+>>What is Queue? 
+named entities within a Virtual Host that hold/buffer messages for delivery to consumer applications.
+The following Queues types are currently supported:   
+Standard: a simple First-In-First-Out (FIFO) queue
+Priority: delivery order depends on the priority of each message
+Sorted: delivery order depends on the value of the sorting key property in each message
+Last Value Queue: also known as an LVQ, retains only the last (newest) message received with a given LVQ key value.
+####
+
+
+
+>>What is the default port number for AMQP 
+qpid.amqp_port	 Port number used for the brokers default AMQP messaging port	 "5672"
+####
