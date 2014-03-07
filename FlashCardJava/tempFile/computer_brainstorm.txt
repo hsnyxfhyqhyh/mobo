@@ -15,3 +15,11 @@ Agile promises close interaction and fast feedback between the business stakehol
 (Business) ----Agile--- (Developers) ----DevOps---- (Operation)
 
 ####
+
+
+>>What is OASIS (organization)?
+OASIS: The Organization for the Advancement of Structured Information Standards 
+
+(OASIS) is a global consortium that drives the development, convergence, and adoption of e-business and web service standards. 
+With its headquarters in the United States, members of the consortium decide how and what work is undertaken through an open, democratic process
+####
