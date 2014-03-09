@@ -96,7 +96,7 @@ public class SwipeFragment extends Fragment {
 		
 		if (!isSetEmpty()) {
 			txtCardHeader = (TextView)getActivity().findViewById(R.id.txtCardHeader);
-			txtCardHeader.setBackgroundColor(Color.parseColor(this.getString(R.color.bible_header_gray)));
+//			txtCardHeader.setBackgroundColor(Color.parseColor(this.getString(R.color.white)));
 		}
 		updateCardDetailView();
 	}
@@ -182,7 +182,8 @@ public class SwipeFragment extends Fragment {
 			cardText = CARD_MODE_DONE;
 		} else {
 			txtCardHeader.setText(questions.get(count).getTitle());
-			txtCardHeader.setTextSize(FONT_SIZE + 2);
+			txtCardHeader.setTextSize(FONT_SIZE + 4);
+			txtCardHeader.setTypeface(null, Typeface.BOLD);
 			if (mode.equals(CARD_MODE_QUESTION)) {
 				mode = CARD_MODE_ANSWER;
 				
