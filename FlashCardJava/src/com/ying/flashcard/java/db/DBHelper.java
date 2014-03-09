@@ -15,11 +15,18 @@ public class DBHelper {
 	public static final String JDBC_CLASS_STRING = "org.sqlite.JDBC"; 
 	public static final String JDBC_CONNECTION_STRING = "jdbc:sqlite:" + DB_NAME;
 	
+	private static final String TABLE_NAME_USER = "User";
 	private static final String TABLE_NAME_CATEGORY = "FlashCardCategory";
 	private static final String TABLE_NAME_SET = "FlashCardSet";
 	private static final String TABLE_NAME_QUESTION = "FlashCardSetQuestions";
 	
 	public static void initializeDB() {
+		createUserTable();
+		addUser("影辉");
+		addUser("雪梅");
+		addUser("宁宁");
+		addUser("小玉");
+		
 		createCategoryTable();
 		createSetTable();
 		createQuestionTable();
@@ -37,10 +44,43 @@ public class DBHelper {
 
 			String fieldId = "id";
 			String fieldName = "name";
+			String fieldUserFK = "userFK";
 
 			String sql = "";
 
 			sql += "CREATE TABLE " + TABLE_NAME_CATEGORY;
+			sql += " ( ";
+			sql += fieldId + " INTEGER PRIMARY KEY AUTOINCREMENT, ";
+			sql += fieldName + " TEXT, ";
+			sql += fieldUserFK + " INTEGER ";
+			sql += " ); ";
+
+			stmt.executeUpdate(sql);
+			
+			stmt.close();
+			c.close();
+		} catch (Exception e) {
+			System.err.println(e.getClass().getName() + ": " + e.getMessage());
+			System.exit(0);
+		}
+	}
+	
+	private static void createUserTable() {
+		Connection c = null;
+		Statement stmt = null;
+		try {
+			Class.forName(JDBC_CLASS_STRING);
+			c = DriverManager.getConnection(JDBC_CONNECTION_STRING);
+
+			stmt = c.createStatement();
+
+
+			String fieldId = "id";
+			String fieldName = "name";
+
+			String sql = "";
+
+			sql += "CREATE TABLE " + TABLE_NAME_USER;
 			sql += " ( ";
 			sql += fieldId + " INTEGER PRIMARY KEY AUTOINCREMENT, ";
 			sql += fieldName + " TEXT ";
@@ -123,16 +163,53 @@ public class DBHelper {
 		}
 	}
 	
-	
-	public static int getCategoryID(String categoryName_) {
-		int categoryFK = 0;
+	public static int getUserID(String userName_) {
+		int userId = 0;
 		String fieldName = "name";
 		String fieldId = "id";
 
 		// select query
 		String sql = "";
+		sql += "SELECT * FROM " + TABLE_NAME_USER;
+		sql += " WHERE " + fieldName + " = '" + userName_ + "'";
+		sql += " LIMIT 0,5";
+
+		try {
+			Class.forName(DBHelper.JDBC_CLASS_STRING);
+			Connection c = DriverManager.getConnection(DBHelper.JDBC_CONNECTION_STRING);
+			c.setAutoCommit(false);
+
+			Statement stmt = c.createStatement();
+			ResultSet rs = stmt.executeQuery(sql);
+			if (rs.next()) {
+				userId = rs.getInt(fieldId);
+			}
+			rs.close();
+			stmt.close();
+			c.close();
+		} catch (Exception e) {
+			System.err.println(e.getClass().getName() + ": " + e.getMessage());
+			System.exit(0);
+		}
+		
+		
+		System.out.println(userName_ + " has user ID " + userId);
+				
+		return userId;
+	}
+	
+	
+	public static int getCategoryID(String categoryName_, String userFK) {
+		int categoryFK = 0;
+		String fieldName = "name";
+		String fieldId = "id";
+		String fieldUserFK = "userFK";
+
+		// select query
+		String sql = "";
 		sql += "SELECT * FROM " + TABLE_NAME_CATEGORY;
-		sql += " WHERE " + fieldName + " = '" + categoryName_ + "'";
+		sql += " WHERE " + fieldName + " = '" + categoryName_ + "' ";
+		sql += " AND " + fieldUserFK + " = " + userFK + "";
 		sql += " LIMIT 0,5";
 
 		try {
@@ -195,7 +272,7 @@ public class DBHelper {
 	}
 	
 	
-	public static boolean addCategory(String categoryName) {
+	public static boolean addUser(String userName) {
 		boolean createSuccessful = false;
 		
 		String fieldId = "id";
@@ -210,7 +287,40 @@ public class DBHelper {
 			stmt = c.createStatement();
 			String sql = "INSERT INTO %s (%s) " + "VALUES ('%s');";
 
-			sql = String.format(sql, TABLE_NAME_CATEGORY, fieldName, categoryName);
+			sql = String.format(sql, TABLE_NAME_USER, fieldName, userName);
+
+			System.out.println(sql);
+			stmt.executeUpdate(sql);
+
+			stmt.close();
+			c.commit();
+			c.close();
+			createSuccessful = true;
+		} catch (Exception e) {
+			System.err.println(e.getClass().getName() + ": " + e.getMessage());
+			System.exit(0);
+		}
+
+		return createSuccessful;
+	}
+	
+	public static boolean addCategory(String categoryName, String userFK) {
+		boolean createSuccessful = false;
+		
+		String fieldId = "id";
+		String fieldName = "name";
+		String fieldUserFK = "userFK";
+		
+		Statement stmt = null;
+		try {
+			Class.forName(DBHelper.JDBC_CLASS_STRING);
+			Connection c = DriverManager.getConnection(DBHelper.JDBC_CONNECTION_STRING);
+			c.setAutoCommit(false);
+
+			stmt = c.createStatement();
+			String sql = "INSERT INTO %s (%s, %s) " + "VALUES ('%s', %s);";
+
+			sql = String.format(sql, TABLE_NAME_CATEGORY, fieldName, fieldUserFK, categoryName, userFK);
 
 			System.out.println(sql);
 			stmt.executeUpdate(sql);
