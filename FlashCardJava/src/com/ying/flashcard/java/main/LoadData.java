@@ -24,6 +24,8 @@ public class LoadData {
 		addSet(String.format("%s/bible_brainstorm.txt", DATA_FOLDER), "圣经","圣经 - 基础");
 		addSet(String.format("%s/bible_verses.txt", DATA_FOLDER), "圣经","圣经 - 经文");
 				
+		
+		addSet(String.format("%s/MyDailyLife.txt", DATA_FOLDER), "日常","日常 - 我的日常");
 		System.out.println("ALL DONE");
 	}
 

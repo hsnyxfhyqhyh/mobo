@@ -23,3 +23,41 @@ OASIS: The Organization for the Advancement of Structured Information Standards
 (OASIS) is a global consortium that drives the development, convergence, and adoption of e-business and web service standards. 
 With its headquarters in the United States, members of the consortium decide how and what work is undertaken through an open, democratic process
 ####
+
+
+>>What is groovy?
+Groovy is a powerful high level language for the Java platform which compiles down to Java bytecode.
+Think of it as a Ruby or Python like language that is tightly integrated with the Java platform – 
+allowing you the same powerful and concise coding syntax as Ruby or Pyton but allowing you to stay on the JVM and protect your investment in J2SE, J2EE and all the plethora of great useful Java code out there.
+####
+
+>>Why Groovy?
+One of the main design goals of Groovy is to be a scripting language for Java developers to use. So we wanted to reuse both Java’s semantics and the whole set of J2SE APIs rather than introduce a port of a different language with different semantics and APIs to learn and implement/maintain.
+
+In other words we wanted the Groovy language to be very easy to pick up if you’re already a Java developer and for there to be a very small number of new APIs to learn. By this statement we’re not implying that Python / Ruby / JavaScript are hard to learn per se – its just there’s more to know, things are more different and there’s more APIs to learn
+
+>>What are the dependencies for Groovy?
+As well as Java 1.4 and the Groovy jar we also depend at runtime on the ASM library.
+####
+
+>>What is Grails?
+Grails is an open source web application framework that uses the Groovy programming language (which is in turn based on the Java platform).
+It is intended to be a high-productivity framework by following the "coding by convention" paradigm, providing a stand-alone development environment and hiding much of the configuration detail from the developer.
+
+Grails was previously known as 'Groovy on Rails';
+####
+
+>>What are the goals of Grails :
+Provide a web framework for the Java platform.
+Re-use existing Java technologies such as Hibernate and Spring under a single interface
+Offer a consistent development framework.
+Offer documentation for key portions of the framework:
+The Persistence framework.
+Templates using GSP (Groovy Server Pages).
+Dynamic tag libraries for creating web page components.
+Customizable and extensible Ajax support.
+Provide sample applications that demonstrate the framework.
+Provide a complete development mode, including a web server and automatic reload of resources.
+
+https://www.youtube.com/watch?v=8d1hp8n1stA
+####
