@@ -1,0 +1,21 @@
+import java.io.File;
+
+
+public class Test {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+//		for (int i = 1; i<= 537; i++ ) {
+//			String number = "" + i;
+//			while (number.length()< 3){
+//				number = "0" + number; 
+//			}
+//				
+//			System.out.println("#" + number + "\n\n\n");
+//		}
+		FileUtil.getContents(new File("input.txt"));
+	}
+
+}

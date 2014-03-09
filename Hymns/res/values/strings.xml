@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">生命圣诗</string>
+    <string name="action_settings">设置</string>
+    <string name="text_hymn_number_hint">请输入1-536</string>
+    <string name="text_hymn_number_non_number">请输入诗歌号码</string>
+    <string name="text_hymn_number_max_number">诗歌号码应小于537</string>
+    
+    <string name="menu_text_choose_hymn">选取诗歌</string>
+    <string name="menu_text_choose_hymn_multiple">选取多首诗歌</string>
+    
+    <string name="alert_dialog_title">退出生命圣诗应用</string>
+    <string name="alert_dialog_ok_button_text">是</string>
+    <string name="alert_dialog_notok_button_text">否</string>
+    
+    <string name="color_hymn_header">#C0C0C0</string>
+</resources>

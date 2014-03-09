@@ -1,0 +1,79 @@
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.PrintWriter;
+import java.io.FileOutputStream;
+
+public class FileUtil {
+	/*
+	 * Write something to a file
+	 */
+	public static void writeFile(String content, String filename) {
+		try {
+			PrintWriter out = new PrintWriter(new FileOutputStream(filename));
+
+			out.print(content);
+			out.flush();
+			out.close();
+			out = null;
+		} catch (Exception e) {
+		}
+	}
+
+	/*
+	 * Get each line from the text file and add it to the arraylist passed in.
+	 */
+	public static String getContents(File aFile) {
+
+		String fileName = "";
+
+		StringBuffer contents = new StringBuffer();
+
+		boolean hasFirst = false;
+		;
+
+		try {
+			// use buffering, reading one line at a time
+			// FileReader always assumes default encoding is OK!
+			BufferedReader input = new BufferedReader(new FileReader(aFile));
+			int i = 0;
+
+			try {
+				String line = null; // not declared within while loop
+				while ((line = input.readLine()) != null && i < 100000) {
+					if (line.startsWith("#")) {
+						hasFirst = false;
+						if (!line.substring(1).equals("001")) {
+							writeFile(contents.toString(), "h" + fileName
+									+ ".txt");
+						}
+						fileName = line.substring(1);
+
+						contents = new StringBuffer();
+					} else {
+						if (hasFirst) {
+							contents.append(line + "\n");
+						} else {
+							if (line.trim().equals("")) {
+								// don't do anthing
+							} else {
+								hasFirst = true;
+								contents.append(line + "\n");
+							}
+
+						}
+
+					}
+
+					i++;
+
+				}
+			} finally {
+				input.close();
+			}
+		} catch (Exception ex) {
+			ex.printStackTrace();
+		}
+		return contents.toString();
+	}
+}
