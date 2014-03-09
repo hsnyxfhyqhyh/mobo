@@ -63,9 +63,9 @@ public final class R {
         public static final int SetListContainer=0x7f090004;
         public static final int action_settings=0x7f090007;
         public static final int buttonApplicationInitialize=0x7f090000;
-        public static final int card_detail=0x7f090001;
         public static final int export_db=0x7f09000d;
         public static final int flashcard_container=0x7f090002;
+        public static final int fragment_container=0x7f090001;
         public static final int menu_back_to_set_list=0x7f09000a;
         public static final int menu_next_card=0x7f090009;
         public static final int menu_previous_card=0x7f090008;
