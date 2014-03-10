@@ -10,8 +10,9 @@ public class MainActivityPreferences {
 	SharedPreferences settings;
 	SharedPreferences.Editor editor;
 	
-	private String setId = "";
-	private String setName = "";
+	private String userId = "";
+	private String userName = "";
+	private String locationId = "1";
 	
 	private String fontFamily = "fonts/STKAITI.TTF";
 	
@@ -63,22 +64,31 @@ public class MainActivityPreferences {
 		editor.putString("theme", theme);
 	}
 	
-	public String getSetId() {
-		return settings.getString("setId", "");
+	public String getUserId() {
+		return settings.getString("userId", "");
 	}
 
-	public void setSetId(String setId) {
-		editor.putString("setId", setId);
+	public void setUserId(String userId) {
+		editor.putString("userId", userId);
 	}
 
-	public String getSetName() {
-		return settings.getString("setName", "");
+	public String getUserName() {
+		return settings.getString("userName", "");
 	}
 
-	public void setSetName(String setName) {
-		editor.putString("setName", setName);
+	public void setUserName(String userName) {
+		editor.putString("userName", userName);
 	}
 
+	public String getLocationId() {
+		return settings.getString("locationId", "");
+	}
+
+	public void setLocationId(String locationId) {
+		
+		editor.putString("locationId", locationId);
+	}
+	
 	public void commit() {
 		editor.commit();
 	}

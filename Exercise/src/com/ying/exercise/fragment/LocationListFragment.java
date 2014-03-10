@@ -3,9 +3,10 @@ package com.ying.exercise.fragment;
 import java.util.ArrayList;
 import com.ying.exercise.util.MainActivityPreferences;
 import com.ying.exercise.activity.ApplicationInitializeActivity;
+import com.ying.exercise.activity.DayListActivity;
 import com.ying.exercise.activity.UsersListActivity;
-import com.ying.exercise.db.UserHandler;
-import com.ying.exercise.dto.UserDTO;
+import com.ying.exercise.db.LocationHandler;
+import com.ying.exercise.dto.LocationDTO;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -15,7 +16,7 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-public class UserListFragment extends ListFragment {
+public class LocationListFragment extends ListFragment {
 
 	// Will monitor if a headline is clicked on
 	OnChoiceSelectedListener mCallback;
@@ -23,9 +24,9 @@ public class UserListFragment extends ListFragment {
 	UsersListActivity parentActivity = null;
 	MainActivityPreferences preferences = null;
 
-	UserHandler userHandler = null;
+	LocationHandler locationHandler = null;
 	
-	ArrayList<UserDTO> users = null;
+	ArrayList<LocationDTO> locations = null;
 
 	/*
 	 *  The container Activity must implement this interface so the fragment can deliver messages
@@ -44,13 +45,13 @@ public class UserListFragment extends ListFragment {
 		
 		String userName = preferences.getUserName();
 
-		userHandler = new UserHandler(this.getActivity());
+		locationHandler = new LocationHandler(this.getActivity());
 
-		users = userHandler.getUsers();
+		locations = locationHandler.getLocations();
 
-		String[] titles = new String[users.size()];
-		for (int i = 0; i < users.size(); i++) {
-			titles[i] = users.get(i).getName();
+		String[] titles = new String[locations.size()];
+		for (int i = 0; i < locations.size(); i++) {
+			titles[i] = locations.get(i).getName();
 		}
 
 		int layout = android.R.layout.simple_list_item_1;
@@ -78,13 +79,11 @@ public class UserListFragment extends ListFragment {
 
 	@Override
 	public void onListItemClick(ListView l, View v, int position, long id) {
-		preferences.setUserName(users.get(position).getName());
-		preferences.setUserId(users.get(position).getId());
+		preferences.setLocationId(locations.get(position).getId());
 		preferences.commit();
-		
-		Intent intent = new Intent(this.getActivity(), UsersListActivity.class);
+
+		Intent intent = new Intent(this.getActivity(), DayListActivity.class);
 		this.startActivity(intent);
 		this.getActivity().finish();
-
 	}
 }

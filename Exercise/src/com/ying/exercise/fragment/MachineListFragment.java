@@ -3,29 +3,28 @@ package com.ying.exercise.fragment;
 import java.util.ArrayList;
 import com.ying.exercise.util.MainActivityPreferences;
 import com.ying.exercise.activity.ApplicationInitializeActivity;
-import com.ying.exercise.activity.UsersListActivity;
-import com.ying.exercise.db.UserHandler;
-import com.ying.exercise.dto.UserDTO;
+import com.ying.exercise.activity.MachineListActivity;
+import com.ying.exercise.db.MachineHandler;
+import com.ying.exercise.dto.MachineDTO;
 
 import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.ListFragment;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-public class UserListFragment extends ListFragment {
+public class MachineListFragment extends ListFragment {
 
 	// Will monitor if a headline is clicked on
 	OnChoiceSelectedListener mCallback;
 	
-	UsersListActivity parentActivity = null;
+	MachineListActivity parentActivity = null;
 	MainActivityPreferences preferences = null;
 
-	UserHandler userHandler = null;
+	MachineHandler machineHandler = null;
 	
-	ArrayList<UserDTO> users = null;
+	ArrayList<MachineDTO> machines = null;
 
 	/*
 	 *  The container Activity must implement this interface so the fragment can deliver messages
@@ -41,16 +40,17 @@ public class UserListFragment extends ListFragment {
 		super.onCreate(savedInstanceState);
 
 		preferences = ApplicationInitializeActivity.preferences;
+		String locationFK = preferences.getLocationId();
 		
 		String userName = preferences.getUserName();
 
-		userHandler = new UserHandler(this.getActivity());
+		machineHandler = new MachineHandler(this.getActivity());
 
-		users = userHandler.getUsers();
+		machines = machineHandler.getMachines(locationFK);
 
-		String[] titles = new String[users.size()];
-		for (int i = 0; i < users.size(); i++) {
-			titles[i] = users.get(i).getName();
+		String[] titles = new String[machines.size()];
+		for (int i = 0; i < machines.size(); i++) {
+			titles[i] = machines.get(i).getName() + "\n\t" + machines.get(i).getDescription();
 		}
 
 		int layout = android.R.layout.simple_list_item_1;
@@ -78,13 +78,8 @@ public class UserListFragment extends ListFragment {
 
 	@Override
 	public void onListItemClick(ListView l, View v, int position, long id) {
-		preferences.setUserName(users.get(position).getName());
-		preferences.setUserId(users.get(position).getId());
-		preferences.commit();
-		
-		Intent intent = new Intent(this.getActivity(), UsersListActivity.class);
-		this.startActivity(intent);
-		this.getActivity().finish();
+//		preferences.setLocationId(days.get(position).getId());
+//		preferences.commit();
 
 	}
 }

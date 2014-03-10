@@ -3,29 +3,31 @@ package com.ying.exercise.fragment;
 import java.util.ArrayList;
 import com.ying.exercise.util.MainActivityPreferences;
 import com.ying.exercise.activity.ApplicationInitializeActivity;
+import com.ying.exercise.activity.DayListActivity;
 import com.ying.exercise.activity.UsersListActivity;
-import com.ying.exercise.db.UserHandler;
-import com.ying.exercise.dto.UserDTO;
+import com.ying.exercise.db.DayHandler;
+import com.ying.exercise.db.LocationHandler;
+import com.ying.exercise.dto.DayDTO;
+import com.ying.exercise.dto.LocationDTO;
 
 import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.ListFragment;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-public class UserListFragment extends ListFragment {
+public class DayListFragment extends ListFragment {
 
 	// Will monitor if a headline is clicked on
 	OnChoiceSelectedListener mCallback;
 	
-	UsersListActivity parentActivity = null;
+	DayListActivity parentActivity = null;
 	MainActivityPreferences preferences = null;
 
-	UserHandler userHandler = null;
+	DayHandler dayHandler = null;
 	
-	ArrayList<UserDTO> users = null;
+	ArrayList<DayDTO> days = null;
 
 	/*
 	 *  The container Activity must implement this interface so the fragment can deliver messages
@@ -41,16 +43,17 @@ public class UserListFragment extends ListFragment {
 		super.onCreate(savedInstanceState);
 
 		preferences = ApplicationInitializeActivity.preferences;
+		String userFk = preferences.getUserId();
 		
 		String userName = preferences.getUserName();
 
-		userHandler = new UserHandler(this.getActivity());
+		dayHandler = new DayHandler(this.getActivity());
 
-		users = userHandler.getUsers();
+		days = dayHandler.getDays(userFk);
 
-		String[] titles = new String[users.size()];
-		for (int i = 0; i < users.size(); i++) {
-			titles[i] = users.get(i).getName();
+		String[] titles = new String[days.size()];
+		for (int i = 0; i < days.size(); i++) {
+			titles[i] = days.get(i).getName();
 		}
 
 		int layout = android.R.layout.simple_list_item_1;
@@ -78,13 +81,8 @@ public class UserListFragment extends ListFragment {
 
 	@Override
 	public void onListItemClick(ListView l, View v, int position, long id) {
-		preferences.setUserName(users.get(position).getName());
-		preferences.setUserId(users.get(position).getId());
-		preferences.commit();
-		
-		Intent intent = new Intent(this.getActivity(), UsersListActivity.class);
-		this.startActivity(intent);
-		this.getActivity().finish();
+//		preferences.setLocationId(days.get(position).getId());
+//		preferences.commit();
 
 	}
 }

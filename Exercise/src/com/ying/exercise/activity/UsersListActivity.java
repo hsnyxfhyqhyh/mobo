@@ -11,6 +11,7 @@ import com.ying.exercise.R;
 import com.ying.exercise.db.DataBaseHelper;
 import com.ying.exercise.db.UserHandler;
 import com.ying.exercise.dto.UserDTO;
+import com.ying.exercise.fragment.LocationListFragment;
 import com.ying.exercise.fragment.UserListFragment;
 import com.ying.exercise.util.MainActivityPreferences;
 
@@ -18,6 +19,7 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.support.v4.app.FragmentActivity;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -41,12 +43,26 @@ public class UsersListActivity extends FragmentActivity  {
 				return;
 			}
 
-			UserListFragment firstFragment = new UserListFragment();
+			if (preferences.getUserName().equals("")) {
+				UserListFragment firstFragment = new UserListFragment();
 
-			firstFragment.setArguments(getIntent().getExtras());
+				firstFragment.setArguments(getIntent().getExtras());
 
-			getSupportFragmentManager().beginTransaction()
-					.add(R.id.fragment_container, firstFragment).commit();
+				getSupportFragmentManager().beginTransaction()
+						.add(R.id.fragment_container, firstFragment).commit();	
+			}  else if (preferences.getLocationId().equals("")) {
+				LocationListFragment firstFragment = new LocationListFragment();
+
+				firstFragment.setArguments(getIntent().getExtras());
+
+				getSupportFragmentManager().beginTransaction()
+						.add(R.id.fragment_container, firstFragment).commit();	
+			} else {
+				Intent intent = new Intent(this, DayListActivity.class);
+				this.startActivity(intent);
+				this.finish();
+			}
+			
 		}
 	}
 

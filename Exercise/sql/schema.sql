@@ -19,6 +19,10 @@ CREATE TABLE tblMachine (
     "description" TEXT
 , "locationFK" INTEGER);
 
+CREATE TABLE tblDay (
+    "id" INTEGER PRIMARY KEY AUTOINCREMENT,
+    "day" TEXT,
+    "userFK" INTEGER);
 
 
 CREATE TABLE tblPerformance (

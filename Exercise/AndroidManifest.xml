@@ -7,8 +7,8 @@
     <uses-sdk
         android:minSdkVersion="8"
         android:targetSdkVersion="18" />
-	
-	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -28,6 +28,14 @@
             android:name="com.ying.exercise.activity.UsersListActivity"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ying.exercise.activity.DayListActivity"
+            android:label="@string/title_activity_performance" >
+        </activity>
+        <activity
+            android:name="com.ying.exercise.activity.MachineListActivity"
+            android:label="@string/title_activity_machine_list" >
+        </activity>
     </application>
 
 </manifest>

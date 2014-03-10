@@ -1,0 +1,19 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    
+
+    <item
+        android:id="@+id/menu_add_day"
+        android:orderInCategory="100"
+        android:showAsAction="always"
+        android:title="Add Today"
+        />
+    
+    <item
+        android:id="@+id/menu_machines"
+        android:orderInCategory="100"
+        android:showAsAction="always"
+        android:title="Machines"
+        />
+   
+</menu>
