@@ -7,8 +7,10 @@ import com.ying.exercise.activity.DayListActivity;
 import com.ying.exercise.activity.UsersListActivity;
 import com.ying.exercise.db.DayHandler;
 import com.ying.exercise.db.LocationHandler;
+import com.ying.exercise.db.PerformanceHandler;
 import com.ying.exercise.dto.DayDTO;
 import com.ying.exercise.dto.LocationDTO;
+import com.ying.exercise.dto.PerformanceDTO;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -25,9 +27,9 @@ public class DayMachineListFragment extends ListFragment {
 	DayListActivity parentActivity = null;
 	MainActivityPreferences preferences = null;
 
-	DayHandler dayHandler = null;
+	PerformanceHandler handler = null;
 	
-	ArrayList<DayDTO> days = null;
+	ArrayList<PerformanceDTO> dtos = null;
 
 	/*
 	 *  The container Activity must implement this interface so the fragment can deliver messages
@@ -44,16 +46,17 @@ public class DayMachineListFragment extends ListFragment {
 
 		preferences = ApplicationInitializeActivity.preferences;
 		String userFk = preferences.getUserId();
+		String day = preferences.getDay();
 		
 		String userName = preferences.getUserName();
 
-		dayHandler = new DayHandler(this.getActivity());
+		handler = new PerformanceHandler(this.getActivity());
 
-		days = dayHandler.getDays(userFk);
+		dtos = handler.getPerformances(userFk, day);
 
-		String[] titles = new String[days.size()];
-		for (int i = 0; i < days.size(); i++) {
-			titles[i] = days.get(i).getName();
+		String[] titles = new String[dtos.size()];
+		for (int i = 0; i < dtos.size(); i++) {
+			titles[i] = dtos.get(i).getMachineName() + "\n\t" + dtos.get(i).getDescription();
 		}
 
 		int layout = android.R.layout.simple_list_item_1;

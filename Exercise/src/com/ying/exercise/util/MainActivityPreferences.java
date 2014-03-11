@@ -14,6 +14,10 @@ public class MainActivityPreferences {
 	private String userName = "";
 	private String locationId = "1";
 	
+	private String day = "";
+	
+
+
 	private String fontFamily = "fonts/STKAITI.TTF";
 	
 	
@@ -87,6 +91,16 @@ public class MainActivityPreferences {
 	public void setLocationId(String locationId) {
 		
 		editor.putString("locationId", locationId);
+	}
+	
+	
+	public String getDay() {
+		return settings.getString("day", "");
+		
+	}
+
+	public void setDay(String day) {
+		editor.putString("day", day);
 	}
 	
 	public void commit() {
