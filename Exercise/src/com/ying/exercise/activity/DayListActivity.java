@@ -105,7 +105,13 @@ public class DayListActivity extends FragmentActivity {
 		case R.id.menu_add_day:
 			showDialog();
 			break;
-		case R.id.action_settings:
+			
+			
+		case R.id.menu_logout:
+			preferences.logout();
+			Intent intentLogout = new Intent(this, UsersListActivity.class);
+			this.startActivity(intentLogout);
+			this.finish();
 			break;
 		}
 

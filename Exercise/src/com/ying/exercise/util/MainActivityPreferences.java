@@ -100,4 +100,11 @@ public class MainActivityPreferences {
 	public void resetPreferenceMessage() {
 		preferenceMessage = null;
 	}
+	
+	public void logout() {
+		editor.putString("userId", "");
+		editor.putString("userName", "");
+		editor.putString("locationId", "");
+		commit();
+	}
 }
