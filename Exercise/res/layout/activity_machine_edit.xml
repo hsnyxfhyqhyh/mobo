@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+ 
+       <TextView
+        android:id="@+id/txtAddMainceLabel"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#FFF" 
+        android:text="设备"
+        />
+        <EditText
+         android:id="@+id/txtAddMaince"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_below="@+id/txtAddMainceLabel"
+         android:layout_marginLeft="21dp"
+         android:ems="10" />
+       
+        <TextView
+        android:id="@+id/txtAddMainceDescriptionLabel"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#FFF" 
+        android:text="描述"
+        android:layout_below="@+id/txtAddMaince"
+        />
+ 		<EditText
+         android:id="@+id/txtAddMachineDescription"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_below="@+id/txtAddMainceDescriptionLabel"
+         android:layout_marginLeft="21dp"
+         android:ems="10" 
+         />
+     <Button
+        android:id="@+id/dialogButtonOK"
+        android:layout_width="100px"
+        android:layout_height="wrap_content"
+        android:text=" Ok "
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_below="@+id/txtAddMachineDescription"
+        />
+
+    
+  
+ 
+</RelativeLayout>

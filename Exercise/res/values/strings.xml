@@ -6,5 +6,6 @@
     <string name="hello_world">Hello world!</string>
     <string name="title_activity_performance">PerformanceActivity</string>
     <string name="title_activity_machine_list">MachineListActivity</string>
+    <string name="title_activity_machine_edit">MachineEditActivity</string>
 
 </resources>
