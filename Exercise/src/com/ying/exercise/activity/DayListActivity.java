@@ -1,5 +1,8 @@
 package com.ying.exercise.activity;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+
 import com.ying.exercise.R;
 import android.os.Bundle;
 import android.view.Menu;
@@ -85,10 +88,10 @@ public class DayListActivity extends FragmentActivity {
 
 		switch (item.getItemId()) {
 
-		case R.id.menu_add_day:
+		case R.id.menu_add_today:
 			dayHandler = new DayHandler(this);
 			DayDTO today =new DayDTO();
-			today.setName("2014-03-09");
+			today.setName(getToday());
 			today.setUserFK(preferences.getUserId());
 			dayHandler.create(today);
 			
@@ -109,5 +112,11 @@ public class DayListActivity extends FragmentActivity {
 		return true;
 	}
 	
+	private String getToday(){
+		Calendar cal = Calendar.getInstance();
+		SimpleDateFormat format1 = new SimpleDateFormat("yyyy-MM-dd");
 
+		return format1.format(cal.getTime());
+	}
+	
 }

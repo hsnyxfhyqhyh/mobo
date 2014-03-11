@@ -79,6 +79,14 @@ public class MachineListActivity extends FragmentActivity {
 		return true;
 	}
 	
+	@Override
+	public void onBackPressed() {
+		Intent intent = new Intent(this, DayListActivity.class);
+		this.startActivity(intent);
+		this.finish();
+	}
+
+	
 	public void showDialog() {
 		// custom dialog
 		final Dialog dialog = new Dialog(context);

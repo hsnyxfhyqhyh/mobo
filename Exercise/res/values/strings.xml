@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Exercise</string>
-    <string name="action_settings">Settings</string>
+    <string name="app_name">健身</string>
+    <string name="action_settings">设置</string>
     <string name="hello_world">Hello world!</string>
-    <string name="title_activity_performance">PerformanceActivity</string>
-    <string name="title_activity_machine_list">MachineListActivity</string>
-    <string name="title_activity_machine_edit">MachineEditActivity</string>
-
+    <string name="title_activity_performance">历史记录</string>
+    <string name="title_activity_machine_list">设备清单</string>
+    
+    <string name="menu_machines">设备清单</string>
+    
+    <string name="menu_add_today">添加今天</string>
+    <string name="menu_add_day">添加日期</string>
+    <string name="menu_add_machine_to_location">添加设备</string>
 </resources>

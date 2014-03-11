@@ -4,6 +4,6 @@
         android:id="@+id/menu_add_machine_to_location"
         android:orderInCategory="100"
         android:showAsAction="always"
-        android:title="Add Machine"
+        android:title="@string/menu_add_machine_to_location"
         />
 </menu>
