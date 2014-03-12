@@ -94,8 +94,10 @@ public class PerformanceHandler extends SQLiteOpenHelper {
         boolean recordExists = false;
         
         SQLiteDatabase db = this.getWritableDatabase();
-        String sql = "SELECT " + fieldMachineFK + " FROM " + tableName + " WHERE " + fieldMachineFK + " = '" 
-        			+ dto.getMachineFK() + "' AND " + fieldUserFK + " = " + dto.getUserFK();
+        String sql = "SELECT " + fieldMachineFK + " FROM " + tableName; 
+        sql += " WHERE " + fieldMachineFK + " = '"  + dto.getMachineFK() + "'"; 
+        sql += " AND " + fieldUserFK + " = " + dto.getUserFK();
+        sql += " AND " + fieldCreateDate + " = '" + dto.getCreateDate() + "'";
         Cursor cursor = db.rawQuery(sql , null);
         
         if(cursor!=null) {
