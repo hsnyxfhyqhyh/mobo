@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import com.ying.exercise.util.MainActivityPreferences;
 import com.ying.exercise.activity.ApplicationInitializeActivity;
 import com.ying.exercise.activity.DayListActivity;
+import com.ying.exercise.activity.MachinePerformanceListActivity;
 import com.ying.exercise.activity.UsersListActivity;
 import com.ying.exercise.db.DayHandler;
 import com.ying.exercise.db.LocationHandler;
@@ -13,6 +14,7 @@ import com.ying.exercise.dto.LocationDTO;
 import com.ying.exercise.dto.PerformanceDTO;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.ListFragment;
 import android.view.View;
@@ -84,8 +86,12 @@ public class DayMachineListFragment extends ListFragment {
 
 	@Override
 	public void onListItemClick(ListView l, View v, int position, long id) {
-//		preferences.setLocationId(days.get(position).getId());
-//		preferences.commit();
+		preferences.setMachineFK(dtos.get(position).getMachineFK());
+		preferences.commit();
+		
+		Intent intent = new Intent(this.getActivity(), MachinePerformanceListActivity.class);
+		this.startActivity(intent);
+		this.getActivity().finish();
 
 	}
 }
