@@ -211,5 +211,58 @@ public class PerformanceHandler extends SQLiteOpenHelper {
         return dtos;
         
     }
+
+	public ArrayList<PerformanceDTO> getPerformancesByMachine(String userFK,String machineFK) {
+		String tableMachineName = "tblMachine";
+    	
+    	ArrayList <PerformanceDTO> dtos = new ArrayList<PerformanceDTO> ();
+    	
+    	 // select query
+        String sql = "";
+        sql += "SELECT p.id AS id, p.description AS description, p.machineFK AS machineFK, p.userFK AS userFK, " +
+        		"p.createDate AS createDate, m.name AS machineName FROM " + tableName + " AS p";
+        sql += " JOIN " + tableMachineName + " AS m ";
+        sql += " ON p.machineFK = m.id" ;
+        sql += " WHERE p." + fieldUserFK + " = '" + userFK + "'";
+        sql += " AND p." + fieldMachineFK + " = '" + machineFK + "'";
+        sql += " ORDER BY " + fieldId + " DESC";
+        
+        System.out.println(sql);
+
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        // execute the query
+        Cursor cursor = db.rawQuery(sql, null);
+
+        int recCount = cursor.getCount();
+        
+        PerformanceDTO dto = null;
+        
+        // looping through all rows and adding to list
+        if (cursor.moveToFirst()) {
+            do {
+            	 String id = cursor.getString(cursor.getColumnIndex(fieldId));
+                 String description = cursor.getString(cursor.getColumnIndex(fieldDescription));
+                 
+                 String machineName = cursor.getString(cursor.getColumnIndex(fieldMachineName));
+                 String createDate = cursor.getString(cursor.getColumnIndex(fieldCreateDate));
+
+                 
+                 dto = new PerformanceDTO();
+                 dto.setId(id);
+                 dto.setDescription (description);
+                 dto.setMachineFK(machineFK);
+                 dto.setMachineName(machineName);
+                 dto.setUserFK(userFK);
+                 dto.setCreateDate(createDate);
+                 dtos.add(dto);
+            } while (cursor.moveToNext());
+        }
+
+        cursor.close();
+        db.close();
+
+        return dtos;
+	}
     
 }

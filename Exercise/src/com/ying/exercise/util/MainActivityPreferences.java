@@ -15,8 +15,11 @@ public class MainActivityPreferences {
 	private String locationId = "1";
 	
 	private String day = "";
+	private String machineFK = "";
 	
 
+
+	
 
 	private String fontFamily = "fonts/STKAITI.TTF";
 	
@@ -103,6 +106,17 @@ public class MainActivityPreferences {
 		editor.putString("day", day);
 	}
 	
+	
+	public String getMachineFK() {
+		return settings.getString("machineFK", "");
+		
+	}
+
+	public void setMachineFK(String machineFK) {
+		editor.putString("machineFK", machineFK);
+		
+	}
+	
 	public void commit() {
 		editor.commit();
 	}
@@ -119,6 +133,8 @@ public class MainActivityPreferences {
 		editor.putString("userId", "");
 		editor.putString("userName", "");
 		editor.putString("locationId", "");
+		editor.putString("day", "");
+		editor.putString("machineFK", "");
 		commit();
 	}
 }
