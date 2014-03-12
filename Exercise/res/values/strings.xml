@@ -29,6 +29,7 @@
     
     <string name="dialog_title_user_list_exit">是否退出</string>
     <string name="dialog_title_add_user">添加用户</string>
+    <string name="dialog_title_add_location">添加地点</string>
     
     <string name="alert_dialog_ok_button_text">是</string>
     <string name="alert_dialog_notok_button_text">否</string>

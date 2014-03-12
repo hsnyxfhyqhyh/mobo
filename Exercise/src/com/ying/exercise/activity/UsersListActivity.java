@@ -9,12 +9,11 @@ import java.util.Calendar;
 
 import com.ying.exercise.R;
 import com.ying.exercise.db.DataBaseHelper;
-import com.ying.exercise.db.MachineHandler;
+import com.ying.exercise.db.LocationHandler;
 import com.ying.exercise.db.UserHandler;
-import com.ying.exercise.dto.MachineDTO;
+import com.ying.exercise.dto.LocationDTO;
 import com.ying.exercise.dto.UserDTO;
 import com.ying.exercise.fragment.LocationListFragment;
-import com.ying.exercise.fragment.MachineListFragment;
 import com.ying.exercise.fragment.UserListFragment;
 import com.ying.exercise.util.MainActivityPreferences;
 
@@ -32,7 +31,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.FrameLayout;
-import android.widget.TextView;
 import android.widget.Toast;
 
 
@@ -44,6 +42,7 @@ public class UsersListActivity extends FragmentActivity  {
 	private ArrayList<UserDTO> users;
 	
 	EditText txt_dialog_add_user;
+	EditText txt_dialog_add_location;
 
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -101,6 +100,9 @@ public class UsersListActivity extends FragmentActivity  {
 			break;
 		case R.id.menu_add_user:
 			showAddUserDialog();
+			break;
+		case R.id.menu_add_location:
+			showAddLocationDialog();
 			break;
 		}
 
@@ -203,6 +205,40 @@ public class UsersListActivity extends FragmentActivity  {
 					Toast.makeText(getBaseContext(), txt_dialog_add_user.getText() + " is added" , Toast.LENGTH_SHORT).show();
 				} else {
 					Toast.makeText(getBaseContext(), "add a valid user name please" , Toast.LENGTH_SHORT).show();
+				}
+				
+				displayList();
+				dialog.dismiss();
+			}
+		});
+
+		dialog.show();
+	 }
+	
+	public void showAddLocationDialog() {
+		// custom dialog
+		final Dialog dialog = new Dialog(context);
+		dialog.setContentView(R.layout.dialog_location_add);
+		dialog.setTitle(R.string.dialog_title_add_location);
+
+		// set the custom dialog components - text, image and button
+		txt_dialog_add_location = (EditText)dialog.findViewById(R.id.txt_dialog_add_location);
+
+		Button dialogButton = (Button) dialog.findViewById(R.id.dialogButtonOK);
+		
+		// if button is clicked, close the custom dialog
+		dialogButton.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				if(!txt_dialog_add_location.getText().toString().trim().equals("")){
+					LocationHandler dbHandler = new LocationHandler(context);
+					LocationDTO dto = new LocationDTO();
+					dto.setName(txt_dialog_add_location.getText().toString());
+					dbHandler.create(dto);
+					
+					Toast.makeText(getBaseContext(), txt_dialog_add_location.getText() + " is added" , Toast.LENGTH_SHORT).show();
+				} else {
+					Toast.makeText(getBaseContext(), "add a valid location name please" , Toast.LENGTH_SHORT).show();
 				}
 				
 				displayList();

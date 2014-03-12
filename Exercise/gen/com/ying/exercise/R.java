@@ -43,6 +43,7 @@ public final class R {
         public static final int fragment_container=0x7f080009;
         public static final int menu_add_day=0x7f08000f;
         public static final int menu_add_day_performance=0x7f080012;
+        public static final int menu_add_location=0x7f080015;
         public static final int menu_add_machine_to_location=0x7f080011;
         public static final int menu_add_today=0x7f08000d;
         public static final int menu_add_user=0x7f080014;
@@ -81,10 +82,11 @@ public final class R {
     }
     public static final class string {
         public static final int action_settings=0x7f050001;
-        public static final int alert_dialog_notok_button_text=0x7f050015;
-        public static final int alert_dialog_ok_button_text=0x7f050014;
+        public static final int alert_dialog_notok_button_text=0x7f050016;
+        public static final int alert_dialog_ok_button_text=0x7f050015;
         public static final int app_name=0x7f050000;
         public static final int dialog_title_add_day=0x7f050010;
+        public static final int dialog_title_add_location=0x7f050014;
         public static final int dialog_title_add_machine=0x7f050011;
         public static final int dialog_title_add_user=0x7f050013;
         public static final int dialog_title_user_list_exit=0x7f050012;
