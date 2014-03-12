@@ -61,7 +61,7 @@ public final class R {
         public static final int activity_day_edit=0x7f030001;
         public static final int activity_machine_edit=0x7f030002;
         public static final int activity_machine_list=0x7f030003;
-        public static final int activity_performance_list=0x7f030004;
+        public static final int activity_performance_add=0x7f030004;
         public static final int application_initialize=0x7f030005;
         public static final int article_view=0x7f030006;
     }

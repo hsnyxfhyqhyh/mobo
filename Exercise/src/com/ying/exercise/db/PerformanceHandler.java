@@ -165,12 +165,14 @@ public class PerformanceHandler extends SQLiteOpenHelper {
     	 // select query
         String sql = "";
         sql += "SELECT p.id AS id, p.description AS description, p.machineFK AS machineFK, p.userFK AS userFK, " +
-        		"p.createDate AS createDate, m.name AS MachineName FROM " + tableName + " AS p";
+        		"p.createDate AS createDate, m.name AS machineName FROM " + tableName + " AS p";
         sql += " JOIN " + tableMachineName + " AS m ";
         sql += " ON p.machineFK = m.id" ;
         sql += " WHERE p." + fieldUserFK + " = '" + userFK + "'";
-        sql += " AND p." + fieldCreateDate + " = " + createDate + "";
+        sql += " AND p." + fieldCreateDate + " = '" + createDate + "'";
         sql += " ORDER BY " + fieldId + " DESC";
+        
+        System.out.println(sql);
 
         SQLiteDatabase db = this.getWritableDatabase();
 
