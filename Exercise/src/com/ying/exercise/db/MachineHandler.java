@@ -154,7 +154,7 @@ public class MachineHandler extends SQLiteOpenHelper {
         String sql = "";
         sql += "SELECT * FROM " + tableName;
         sql += " WHERE " + fieldLocationFK + " = " + locationFK + "";
-        sql += " ORDER BY " + fieldId + " DESC";
+        sql += " ORDER BY " + fieldName + " ASC";
 
         SQLiteDatabase db = this.getWritableDatabase();
 
