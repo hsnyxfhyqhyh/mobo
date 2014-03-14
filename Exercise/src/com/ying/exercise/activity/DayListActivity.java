@@ -38,7 +38,11 @@ public class DayListActivity extends FragmentActivity {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.article_view);
-
+		
+		String userName = preferences.getUserName();
+		String title = userName  + " - " +this.getTitle();
+		this.setTitle(title);
+		
 		displayList();
 	}
 

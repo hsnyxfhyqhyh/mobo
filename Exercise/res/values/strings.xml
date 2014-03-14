@@ -4,17 +4,17 @@
     <string name="app_name">健身</string>
     <string name="action_settings">设置</string>
     <string name="hello_world">Hello world!</string>
-    <string name="title_activity_performance">历史记录</string>
-    <string name="title_activity_machine_list">设备清单</string>
-    <string name="title_activity_performance_list">锻炼列表</string>
-    <string name="title_activity_performance_mlist">设备进步一览</string>
+    <string name="title_activity_performance">锻炼日期</string>
+    <string name="title_activity_machine_list">项目清单</string>
+    <string name="title_activity_performance_list">已锻炼</string>
+    <string name="title_activity_performance_mlist">该项目进步历史</string>
     
-    <string name="menu_machines">设备清单</string>
+    <string name="menu_machines">项目清单</string>
     <string name="menu_add_today">添加今天</string>
     <string name="menu_add_day">添加日期</string>
     <string name="menu_add_day_performance">添加项目</string>
     
-    <string name="menu_add_machine_to_location">添加设备</string>
+    <string name="menu_add_machine_to_location">添加项目</string>
     <string name="menu_logout">退出</string>
     
     

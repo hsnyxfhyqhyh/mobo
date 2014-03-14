@@ -37,7 +37,7 @@ public final class R {
         public static final int list_item_icon2=0x7f02000d;
     }
     public static final class id {
-        public static final int action_settings=0x7f08000c;
+        public static final int action_settings=0x7f080010;
         public static final int buttonApplicationInitialize=0x7f080008;
         public static final int dialogButtonOK=0x7f080001;
         public static final int fragment_container=0x7f080009;
@@ -45,11 +45,11 @@ public final class R {
         public static final int menu_add_day_performance=0x7f080012;
         public static final int menu_add_location=0x7f080015;
         public static final int menu_add_machine_to_location=0x7f080011;
-        public static final int menu_add_today=0x7f08000d;
+        public static final int menu_add_today=0x7f08000e;
         public static final int menu_add_user=0x7f080014;
         public static final int menu_export_db=0x7f080013;
-        public static final int menu_logout=0x7f080010;
-        public static final int menu_machines=0x7f08000e;
+        public static final int menu_logout=0x7f08000c;
+        public static final int menu_machines=0x7f08000d;
         public static final int spinnerMachines=0x7f080006;
         public static final int txtAddDate=0x7f080000;
         public static final int txtAddMachineDescription=0x7f080005;

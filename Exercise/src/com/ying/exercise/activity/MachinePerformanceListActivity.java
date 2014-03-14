@@ -40,14 +40,18 @@ public class MachinePerformanceListActivity extends FragmentActivity {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.article_view);
-
+		
+		String userName = preferences.getUserName();
+		String title = userName  + " - " +this.getTitle();
+		this.setTitle(title);
+		
 		displayList();
 	}
 
 	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
-		getMenuInflater().inflate(R.menu.performance_list, menu);
+		getMenuInflater().inflate(R.menu.application_initial, menu);
 		return true;
 	}
 
@@ -66,8 +70,11 @@ public class MachinePerformanceListActivity extends FragmentActivity {
 
 		switch (item.getItemId()) {
 
-		case R.id.menu_add_day_performance:
-			showDialog();
+		case R.id.menu_logout:
+			preferences.logout();
+			Intent intentLogout = new Intent(this, UsersListActivity.class);
+			this.startActivity(intentLogout);
+			this.finish();
 			break;
 		
 		}

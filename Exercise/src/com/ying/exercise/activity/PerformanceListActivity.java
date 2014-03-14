@@ -40,6 +40,11 @@ public class PerformanceListActivity extends FragmentActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.article_view);
 
+		String userName = preferences.getUserName();
+		createDate = preferences.getDay();
+		String title = userName  + " - " + createDate + " - " + this.getTitle();
+		this.setTitle(title);
+		
 		displayList();
 	}
 
