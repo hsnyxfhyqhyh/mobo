@@ -109,7 +109,8 @@ public class SetsListActivity extends FragmentActivity implements
 		case R.id.menu_add_set:
 			showDialog();
 			break;
-		case R.id.action_settings:
+		case R.id.menu_about:
+			Toast.makeText(getBaseContext(), "DEVELOPED BY - Yinghui Hu\n" + this.getString(R.string.version_number)  , Toast.LENGTH_SHORT).show();
 			break;
 		}
 

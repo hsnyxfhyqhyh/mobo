@@ -13,6 +13,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import android.support.v4.app.FragmentActivity;
 
@@ -88,6 +89,9 @@ public class FlashCardDetailActivity extends FragmentActivity {
 			break;
 		case R.id.menu_back_to_set_list:
 			backToSet();
+			break;
+		case R.id.menu_about:
+			Toast.makeText(getBaseContext(), "DEVELOPED BY - Yinghui Hu\n" + this.getString(R.string.version_number)  , Toast.LENGTH_SHORT).show();
 			break;
 		}
 		
