@@ -2,11 +2,21 @@
 
     
 
-    <item
-        android:id="@+id/export_db"
+    
+    
+    <item 
+        android:id="@+id/menu_add_set"
         android:orderInCategory="100"
         android:showAsAction="always"
-        android:title="备份"
+        android:title=""
+        android:icon="@drawable/ic_action_edit"
+        />
+    
+    <item
+        android:id="@+id/menu_export_db"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="menu_export_db"
         android:icon="@drawable/ic_action_save"
         />
     
