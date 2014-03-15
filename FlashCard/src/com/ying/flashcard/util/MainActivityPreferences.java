@@ -14,6 +14,8 @@ public class MainActivityPreferences {
 	private String setId = "";
 	private String setName = "";
 	
+	private String questionId = "";
+	
 	private String fontFamily = "fonts/STKAITI.TTF";
 	
 	
@@ -78,6 +80,14 @@ public class MainActivityPreferences {
 
 	public void setSetName(String setName) {
 		editor.putString("setName", setName);
+	}
+
+	public String getQuestionId() {
+		return settings.getString("questionId", "");
+	}
+
+	public void setQuestionId(String questionId) {
+		editor.putString("questionId", questionId);
 	}
 
 	public void commit() {

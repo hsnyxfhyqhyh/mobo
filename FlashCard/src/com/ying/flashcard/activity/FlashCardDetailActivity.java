@@ -90,11 +90,18 @@ public class FlashCardDetailActivity extends FragmentActivity {
 		case R.id.menu_back_to_set_list:
 			backToSet();
 			break;
+		case R.id.menu_add_question:
+			Intent intentAddQuestion = new Intent(this, FlashCardAddUpdateActivity.class);
+			this.startActivity(intentAddQuestion);
+			break;
+		case R.id.menu_edit_question:
+			Intent intentEditQuestion = new Intent(this, FlashCardAddUpdateActivity.class);
+			this.startActivity(intentEditQuestion);
+			break;
 		case R.id.menu_about:
 			Toast.makeText(getBaseContext(), "DEVELOPED BY - Yinghui Hu\n" + this.getString(R.string.version_number)  , Toast.LENGTH_SHORT).show();
 			break;
 		}
-		
 		
 		return true;
 	}

@@ -8,14 +8,18 @@
     
     
     <string name="menu_about">About</string>
+    
+    
     <string name="menu_add_set">添加类</string>
-    
     <string name="menu_export_db">备份</string>
-    
     <string name="menu_text_previous_card">前</string>
     <string name="menu_text_next_card">后</string>
     <string name="menu_settings">设置</string>
     <string name="menu_text_share">分享</string>
+    
+    <string name="menu_add_question">添加卡片</string>
+    <string name="menu_edit_question">修改卡片</string>
+    
     <string name="alert_dialog_title">退出卡片应用</string>
     <string name="alert_dialog_title_back">重新选择</string>
     <string name="alert_dialog_title_done_set">已经学完，重新选择</string>
@@ -31,12 +35,10 @@
     <string name="setting_font_size_textview_description">设置文本字体大小</string>
     <string name="setting_font_size_chapterChooser_title">Category/SET选取字体</string>
     <string name="setting_font_size_chapterChooser_description">设置Category/SET选取字体大小</string>
-    
     <string name="title_activity_export_import_db">ExportImportDBActivity</string>
     <string name="hello_world">Hello world!</string>
-    
     <string name="dialog_set_add">添加类</string>
     <string name="version_number">Version 0.0.3 - 03/15/2014</string>
-    
+    <string name="title_activity_flash_card_add_update">FlashCardAddUpdateActivity</string>
 
 </resources>

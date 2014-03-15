@@ -52,7 +52,7 @@
       	 <activity
             android:name="com.chccc.bible.activity.SettingsActivity" 
 			android:configChanges="orientation|keyboardHidden"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait" />
         -->
         <activity
             android:name="com.ying.flashcard.activity.FlashCardDetailActivity"
@@ -61,6 +61,10 @@
         <activity
             android:name="com.ying.flashcard.activity.ExportImportDBActivity"
             android:label="@string/title_activity_export_import_db" >
+        </activity>
+        <activity
+            android:name="com.ying.flashcard.activity.FlashCardAddUpdateActivity"
+            android:label="@string/title_activity_flash_card_add_update" >
         </activity>
     </application>
 
