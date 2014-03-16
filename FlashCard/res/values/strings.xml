@@ -17,6 +17,7 @@
     <string name="menu_delete_question">删除卡片</string>
     <string name="menu_exam">考试</string>
     
+    <string name="menu_save_card">更新</string>
     
     
     <string name="alert_dialog_title">退出卡片应用</string>
@@ -37,7 +38,7 @@
     <string name="title_activity_export_import_db">ExportImportDBActivity</string>
     <string name="hello_world">Hello world!</string>
     <string name="dialog_set_add">添加类</string>
-    <string name="version_number">Version 0.0.3 - 03/15/2014</string>
+    <string name="version_number">Version 0.0.4 - 03/15/2014</string>
     <string name="title_activity_flash_card_add_update">卡片</string>
     <string name="btnAddQuestion">添加卡片</string>
     <string name="btnUpdateQuestion">修改卡片</string>

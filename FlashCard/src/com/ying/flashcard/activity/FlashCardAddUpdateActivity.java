@@ -19,7 +19,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class FlashCardAddUpdateActivity extends Activity implements OnClickListener{
+public class FlashCardAddUpdateActivity extends Activity {
 
 	public MainActivityPreferences preferences = ApplicationInitializeActivity.preferences;
 	final Context context = this;
@@ -35,7 +35,6 @@ public class FlashCardAddUpdateActivity extends Activity implements OnClickListe
 	EditText txtQuestionTitle;
 	EditText txtQuestionsContent;
 	
-	Button btnAddUpdateQuestion ;
 	
 	QuestionDTO question ;
 	
@@ -50,8 +49,7 @@ public class FlashCardAddUpdateActivity extends Activity implements OnClickListe
 		txtQuestionTitle = (EditText) this.findViewById(R.id.txtQuestionTitle);
 		txtQuestionsContent =  (EditText)this.findViewById(R.id.txtQuestionsContent);
 		
-		btnAddUpdateQuestion =  (Button)this.findViewById(R.id.btnAddUpdateQuestion);
-		btnAddUpdateQuestion.setOnClickListener(this );
+	
 		
 		if (!questionId.equals("")) {
 			question = questionHandler.getQuestionById(questionId);
@@ -59,7 +57,7 @@ public class FlashCardAddUpdateActivity extends Activity implements OnClickListe
 			txtQuestionTitle.setText(question.getTitle());
 			txtQuestionsContent.setText(question.getAnswer());
 			
-			btnAddUpdateQuestion.setText(this.getString(R.string.btnUpdateQuestion));
+			
 		}
 		
 		
@@ -77,6 +75,9 @@ public class FlashCardAddUpdateActivity extends Activity implements OnClickListe
 		super.onMenuItemSelected(featureId, item);
 
 		switch (item.getItemId()) {
+		case R.id.menu_save_card:
+			saveCard();
+			break;
 		case R.id.menu_about:
 			Toast.makeText(getBaseContext(), "DEVELOPED BY - Yinghui Hu\n" + this.getString(R.string.version_number)  , Toast.LENGTH_SHORT).show();
 			break;
@@ -84,6 +85,7 @@ public class FlashCardAddUpdateActivity extends Activity implements OnClickListe
 
 		return true;
 	}
+	
 	
 	@Override
 	public void onBackPressed() {
@@ -113,8 +115,9 @@ public class FlashCardAddUpdateActivity extends Activity implements OnClickListe
 //	    
 	}
 
-	@Override
-	public void onClick(View arg0) {
+	
+	
+	private void saveCard() {
 		String title = txtQuestionTitle.getText().toString().trim();
 		String content = txtQuestionsContent.getText().toString().trim();
 		
@@ -150,4 +153,5 @@ public class FlashCardAddUpdateActivity extends Activity implements OnClickListe
 		}
 		
 	}
+
 }
