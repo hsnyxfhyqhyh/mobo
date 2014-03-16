@@ -92,7 +92,7 @@ public class FlashCardAddUpdateActivity extends Activity {
 		    builder.setPositiveButton(this.getString(R.string.alert_dialog_ok_button_text), new DialogInterface.OnClickListener() {
 		            public void onClick(DialogInterface dialog, int which) {
 		                    dialog.dismiss();
-		            		jumpToCardList();
+		            		
 		            }
 		        });
 
@@ -104,7 +104,10 @@ public class FlashCardAddUpdateActivity extends Activity {
 		    });
 		    AlertDialog alert = builder.create();
 		    alert.show();
+		} else {
+			jumpToCardList();
 		}
+		
 	}
 
 	private void jumpToCardList() {
