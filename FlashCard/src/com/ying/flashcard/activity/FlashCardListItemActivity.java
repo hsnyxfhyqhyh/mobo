@@ -6,6 +6,7 @@ import com.ying.flashcard.R;
 import com.ying.flashcard.db.QuestionHandler;
 import com.ying.flashcard.dto.QuestionDTO;
 import com.ying.flashcard.util.MainActivityPreferences;
+import com.ying.flashcard.util.VersionUtil;
 
 import android.os.Bundle;
 import android.app.Activity;
@@ -16,6 +17,7 @@ import android.content.Intent;
 import android.graphics.Typeface;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -26,8 +28,8 @@ public class FlashCardListItemActivity extends Activity {
 	
 	public ArrayList<QuestionDTO> questions = new ArrayList<QuestionDTO>() ; 
 	
-	TextView lblQuestionTitle;
-	TextView lblQuestionContent;
+	TextView txtCardHeader;
+	TextView textCard;
 	
 	QuestionHandler questionHandler = null;
 	
@@ -50,15 +52,18 @@ public class FlashCardListItemActivity extends Activity {
 		} else {
 			QuestionDTO question = questionHandler.getQuestionById(questionId);
 			
-			lblQuestionTitle = (TextView) this.findViewById(R.id.lblQuestionTitle);
-			lblQuestionContent =  (TextView)this.findViewById(R.id.lblQuestionContent);
+			txtCardHeader = (TextView) this.findViewById(R.id.txtCardHeader);
+			textCard =  new TextView(this);
 			
-			lblQuestionTitle.setText( question.getTitle());
-			lblQuestionTitle.setTextSize(FONT_SIZE + 4);
-			lblQuestionTitle.setTypeface(null, Typeface.BOLD);
+			txtCardHeader.setText( question.getTitle());
+			txtCardHeader.setTextSize(FONT_SIZE + 4);
+			txtCardHeader.setTypeface(null, Typeface.BOLD);
 			
-			lblQuestionContent.setText( question.getAnswer());
-			lblQuestionContent.setTextSize(FONT_SIZE);
+			textCard.setText( question.getAnswer());
+			textCard.setTextSize(FONT_SIZE);
+			
+			LinearLayout container = (LinearLayout)this.findViewById(R.id.card_container);
+			container.addView(textCard);
 		}
 	}
 
@@ -88,7 +93,7 @@ public class FlashCardListItemActivity extends Activity {
 			jumpToEditCard();
 			break;
 		case R.id.menu_about:
-			Toast.makeText(getBaseContext(), "DEVELOPED BY - Yinghui Hu\n" + this.getString(R.string.version_number)  , Toast.LENGTH_SHORT).show();
+			Toast.makeText(getBaseContext(), VersionUtil.getVersionInfo(this)  , Toast.LENGTH_SHORT).show();
 			break;
 		}
 

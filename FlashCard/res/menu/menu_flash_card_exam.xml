@@ -24,6 +24,7 @@
         android:icon="@drawable/ic_action_home"
         />
     
+    <!-- 
     <item
         android:id="@+id/menu_settings"
         android:orderInCategory="100"
@@ -34,18 +35,7 @@
         android:orderInCategory="100"
         android:showAsAction="never"
         android:title="@string/menu_text_share"/>
-    
-    <item
-        android:id="@+id/menu_add_question"
-        android:orderInCategory="100"
-        android:showAsAction="never"
-        android:title="@string/menu_add_question"/>
-    
-    <item
-        android:id="@+id/menu_edit_question"
-        android:orderInCategory="100"
-        android:showAsAction="never"
-        android:title="@string/menu_edit_question"/>
+     -->
     
      <item
         android:id="@+id/menu_about"

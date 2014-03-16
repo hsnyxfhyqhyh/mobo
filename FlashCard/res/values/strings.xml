@@ -2,6 +2,7 @@
 <resources>
 
     <string name="app_name">卡片</string>
+    
     <string name="action_settings">Settings</string>
     <string name="title_activity_flash_card_detail">卡片</string>
     <string name="text_set_input">请输入Set名</string>
@@ -22,6 +23,8 @@
     
     <string name="alert_dialog_title">退出卡片应用</string>
     <string name="alert_dialog_title_back">重新选择</string>
+    <string name="alert_dialog_title_add_update_card">放弃更新</string>
+    
     <string name="alert_dialog_title_done_set">已经学完，重新选择</string>
     <string name="alert_dialog_ok_button_text">是</string>
     <string name="alert_dialog_notok_button_text">否</string>
@@ -35,16 +38,18 @@
     <string name="setting_font_size_textview_description">设置文本字体大小</string>
     <string name="setting_font_size_chapterChooser_title">Category/SET选取字体</string>
     <string name="setting_font_size_chapterChooser_description">设置Category/SET选取字体大小</string>
-    <string name="title_activity_export_import_db">ExportImportDBActivity</string>
+    
     <string name="hello_world">Hello world!</string>
     <string name="dialog_set_add">添加类</string>
-    <string name="version_number">Version 0.0.4 - 03/15/2014</string>
+    
     <string name="title_activity_flash_card_add_update">卡片</string>
     <string name="btnAddQuestion">添加卡片</string>
     <string name="btnUpdateQuestion">修改卡片</string>
     <string name="lblQuestionTitle">卡片标题</string>
     <string name="lblQuestionContent">卡片内容</string>
+    
     <string name="title_activity_flash_card_list">卡片</string>
     <string name="title_activity_flash_card_list_item">卡片</string>
-
+    
+    <string name="version_number">Version 0.0.5 - 03/16/2014</string>
 </resources>

@@ -12,6 +12,7 @@ import com.ying.flashcard.db.DataBaseHelper;
 import com.ying.flashcard.db.SetHandler;
 import com.ying.flashcard.dto.SetDTO;
 import com.ying.flashcard.util.MainActivityPreferences;
+import com.ying.flashcard.util.VersionUtil;
 import com.ying.flashcard.fragment.FlashcardSetListFragment;
 import android.os.Bundle;
 import android.os.Environment;
@@ -110,7 +111,7 @@ public class SetsListActivity extends FragmentActivity implements
 			showDialog();
 			break;
 		case R.id.menu_about:
-			Toast.makeText(getBaseContext(), "DEVELOPED BY - Yinghui Hu\n" + this.getString(R.string.version_number)  , Toast.LENGTH_SHORT).show();
+			Toast.makeText(getBaseContext(), VersionUtil.getVersionInfo(this)  , Toast.LENGTH_SHORT).show();
 			break;
 		}
 

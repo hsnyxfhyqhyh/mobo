@@ -6,16 +6,16 @@ import com.ying.flashcard.db.SetHandler;
 import com.ying.flashcard.dto.QuestionDTO;
 import com.ying.flashcard.dto.SetDTO;
 import com.ying.flashcard.util.MainActivityPreferences;
+import com.ying.flashcard.util.VersionUtil;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.view.View.OnClickListener;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -49,23 +49,16 @@ public class FlashCardAddUpdateActivity extends Activity {
 		txtQuestionTitle = (EditText) this.findViewById(R.id.txtQuestionTitle);
 		txtQuestionsContent =  (EditText)this.findViewById(R.id.txtQuestionsContent);
 		
-	
-		
 		if (!questionId.equals("")) {
 			question = questionHandler.getQuestionById(questionId);
 			
 			txtQuestionTitle.setText(question.getTitle());
 			txtQuestionsContent.setText(question.getAnswer());
-			
-			
 		}
-		
-		
 	}
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.flash_card_add_update, menu);
 		return true;
 	}
@@ -79,7 +72,7 @@ public class FlashCardAddUpdateActivity extends Activity {
 			saveCard();
 			break;
 		case R.id.menu_about:
-			Toast.makeText(getBaseContext(), "DEVELOPED BY - Yinghui Hu\n" + this.getString(R.string.version_number)  , Toast.LENGTH_SHORT).show();
+			Toast.makeText(getBaseContext(), VersionUtil.getVersionInfo(this)  , Toast.LENGTH_SHORT).show();
 			break;
 		}
 
@@ -89,32 +82,36 @@ public class FlashCardAddUpdateActivity extends Activity {
 	
 	@Override
 	public void onBackPressed() {
-		this.finish();
+		String title = txtQuestionTitle.getText().toString().trim();
+		String content = txtQuestionsContent.getText().toString().trim();
 		
-//		AlertDialog.Builder builder = new AlertDialog.Builder(this);
-//	    builder.setTitle(this.getString(R.string.alert_dialog_title_back));
-//
-//	    builder.setPositiveButton(this.getString(R.string.alert_dialog_ok_button_text), new DialogInterface.OnClickListener() {
-//	            public void onClick(DialogInterface dialog, int which) {
-//	                    dialog.dismiss();
-//	                    
-//	                    backToSet();
-//	                    finish();
-//	            }
-//	        });
-//
-//	    builder.setNegativeButton(this.getString(R.string.alert_dialog_notok_button_text), new DialogInterface.OnClickListener() {
-//	        @Override
-//	        public void onClick(DialogInterface dialog, int which) {
-//	            dialog.dismiss();
-//	        }
-//	    });
-//	    AlertDialog alert = builder.create();
-//	    alert.show();
-//	    
-//	    
+		if (!title.equals("") || !content.equals("")) {
+			AlertDialog.Builder builder = new AlertDialog.Builder(this);
+		    builder.setTitle(this.getString(R.string.alert_dialog_title_add_update_card));
+
+		    builder.setPositiveButton(this.getString(R.string.alert_dialog_ok_button_text), new DialogInterface.OnClickListener() {
+		            public void onClick(DialogInterface dialog, int which) {
+		                    dialog.dismiss();
+		            		jumpToCardList();
+		            }
+		        });
+
+		    builder.setNegativeButton(this.getString(R.string.alert_dialog_notok_button_text), new DialogInterface.OnClickListener() {
+		        @Override
+		        public void onClick(DialogInterface dialog, int which) {
+		            dialog.dismiss();
+		        }
+		    });
+		    AlertDialog alert = builder.create();
+		    alert.show();
+		}
 	}
 
+	private void jumpToCardList() {
+		Intent intent = new Intent(this, FlashCardListActivity.class);
+		this.startActivity(intent);
+		this.finish();
+	}
 	
 	
 	private void saveCard() {

@@ -10,6 +10,7 @@ import com.ying.flashcard.fragment.FlashcardListFragment;
 import com.ying.flashcard.fragment.FlashcardSetListFragment;
 import com.ying.flashcard.fragment.SwipeFragment;
 import com.ying.flashcard.util.MainActivityPreferences;
+import com.ying.flashcard.util.VersionUtil;
 
 import android.os.Bundle;
 import android.app.Activity;
@@ -77,7 +78,7 @@ public class FlashCardListActivity extends FragmentActivity {
 			jumpToAddCard();
 			break;
 		case R.id.menu_about:
-			Toast.makeText(getBaseContext(), "DEVELOPED BY - Yinghui Hu\n" + this.getString(R.string.version_number)  , Toast.LENGTH_SHORT).show();
+			Toast.makeText(getBaseContext(), VersionUtil.getVersionInfo(this)  , Toast.LENGTH_SHORT).show();
 			break;
 		}
 
