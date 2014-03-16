@@ -1,0 +1,36 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    
+     <item
+        android:id="@+id/menu_back_to_set_list"
+        android:orderInCategory="100"
+        android:showAsAction="always"
+        android:title="回到上层"
+        android:icon="@drawable/ic_action_home"
+        />
+    
+    <item
+        android:id="@+id/menu_edit_question"
+        android:orderInCategory="100"
+        android:showAsAction="always"
+        android:title="@string/menu_edit_question"
+        android:icon="@drawable/ic_action_edit"
+        />
+    
+    
+    
+    <item
+        android:id="@+id/menu_delete_question"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="@string/menu_delete_question"
+        android:icon="@drawable/ic_action_remove"
+        />
+    
+     <item
+        android:id="@+id/menu_about"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="@string/menu_about"/>
+
+</menu>

@@ -1,8 +1,6 @@
 package com.ying.flashcard.activity;
 
 import com.ying.flashcard.R;
-import com.ying.flashcard.R.layout;
-import com.ying.flashcard.R.menu;
 import com.ying.flashcard.db.QuestionHandler;
 import com.ying.flashcard.db.SetHandler;
 import com.ying.flashcard.dto.QuestionDTO;
@@ -129,7 +127,7 @@ public class FlashCardAddUpdateActivity extends Activity implements OnClickListe
 				
 				preferences.setQuestionId("");
 				preferences.commit();
-				Intent parent = new Intent(this, FlashCardDetailActivity.class);
+				Intent parent = new Intent(this, FlashCardListActivity.class);
 				this.startActivity(parent);
 								
 				this.finish();
@@ -141,7 +139,7 @@ public class FlashCardAddUpdateActivity extends Activity implements OnClickListe
 				question.setAnswer(content);
 				
 				questionHandler.create(question, setFK);
-				Intent parent = new Intent(this, FlashCardDetailActivity.class);
+				Intent parent = new Intent(this, FlashCardListActivity.class);
 				this.startActivity(parent);
 				
 				this.finish();

@@ -97,6 +97,11 @@ public class MainActivityPreferences {
 	public void reset() {
 		commit();
 	}
+	
+	public void setQuestionIdBlank() {
+		editor.putString("questionId", "");
+		commit();
+	}
 		
 	public void resetPreferenceMessage() {
 		preferenceMessage = null;

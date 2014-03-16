@@ -9,7 +9,7 @@
         android:orderInCategory="100"
         android:showAsAction="always"
         android:title="@string/menu_add_set"
-        android:icon="@drawable/ic_action_edit"
+        android:icon="@drawable/ic_action_new"
         />
     
     <item

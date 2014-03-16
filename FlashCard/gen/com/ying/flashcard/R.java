@@ -51,14 +51,16 @@ public final class R {
         public static final int ic_action_forward=0x7f020004;
         public static final int ic_action_help=0x7f020005;
         public static final int ic_action_home=0x7f020006;
-        public static final int ic_action_next_item=0x7f020007;
-        public static final int ic_action_previous_item=0x7f020008;
-        public static final int ic_action_save=0x7f020009;
-        public static final int ic_action_search=0x7f02000a;
-        public static final int ic_action_share=0x7f02000b;
-        public static final int ic_launcher=0x7f02000c;
-        public static final int kao=0x7f02000d;
-        public static final int list_item_icon2=0x7f02000e;
+        public static final int ic_action_new=0x7f020007;
+        public static final int ic_action_next_item=0x7f020008;
+        public static final int ic_action_previous_item=0x7f020009;
+        public static final int ic_action_remove=0x7f02000a;
+        public static final int ic_action_save=0x7f02000b;
+        public static final int ic_action_search=0x7f02000c;
+        public static final int ic_action_share=0x7f02000d;
+        public static final int ic_launcher=0x7f02000e;
+        public static final int kao=0x7f02000f;
+        public static final int list_item_icon2=0x7f020010;
     }
     public static final class id {
         public static final int SetListContainer=0x7f09000b;
@@ -72,10 +74,12 @@ public final class R {
         public static final int lblQuestionTitle=0x7f090000;
         public static final int menu_about=0x7f09000f;
         public static final int menu_add_question=0x7f090015;
-        public static final int menu_add_set=0x7f090017;
+        public static final int menu_add_set=0x7f090019;
         public static final int menu_back_to_set_list=0x7f090012;
+        public static final int menu_delete_question=0x7f090018;
         public static final int menu_edit_question=0x7f090016;
-        public static final int menu_export_db=0x7f090018;
+        public static final int menu_exam=0x7f090017;
+        public static final int menu_export_db=0x7f09001a;
         public static final int menu_next_card=0x7f090011;
         public static final int menu_previous_card=0x7f090010;
         public static final int menu_settings=0x7f090013;
@@ -90,57 +94,65 @@ public final class R {
     public static final class layout {
         public static final int activity_export_import_db=0x7f030000;
         public static final int activity_flash_card_add_update=0x7f030001;
-        public static final int application_initialize=0x7f030002;
-        public static final int article_view=0x7f030003;
-        public static final int dialog_set_add=0x7f030004;
-        public static final int flash_card_container=0x7f030005;
-        public static final int set_list=0x7f030006;
-        public static final int swipe_view=0x7f030007;
+        public static final int activity_flash_card_list=0x7f030002;
+        public static final int activity_flash_card_list_item=0x7f030003;
+        public static final int application_initialize=0x7f030004;
+        public static final int article_view=0x7f030005;
+        public static final int dialog_set_add=0x7f030006;
+        public static final int flash_card_container=0x7f030007;
+        public static final int set_list=0x7f030008;
+        public static final int swipe_view=0x7f030009;
     }
     public static final class menu {
         public static final int export_import_db=0x7f080000;
         public static final int flash_card_add_update=0x7f080001;
         public static final int flash_card_detail=0x7f080002;
-        public static final int menu_set_list=0x7f080003;
+        public static final int flash_card_list=0x7f080003;
+        public static final int flash_card_list_item=0x7f080004;
+        public static final int menu_set_list=0x7f080005;
     }
     public static final class string {
         public static final int action_settings=0x7f060001;
-        public static final int alert_dialog_notok_button_text=0x7f060011;
-        public static final int alert_dialog_ok_button_text=0x7f060010;
-        public static final int alert_dialog_title=0x7f06000d;
-        public static final int alert_dialog_title_back=0x7f06000e;
-        public static final int alert_dialog_title_done_set=0x7f06000f;
-        public static final int alert_first_card_already=0x7f060012;
-        public static final int alert_generic_error_msg=0x7f060014;
-        public static final int alert_last_card_already=0x7f060013;
+        public static final int alert_dialog_notok_button_text=0x7f060013;
+        public static final int alert_dialog_ok_button_text=0x7f060012;
+        public static final int alert_dialog_title=0x7f06000f;
+        public static final int alert_dialog_title_back=0x7f060010;
+        public static final int alert_dialog_title_done_set=0x7f060011;
+        public static final int alert_first_card_already=0x7f060014;
+        public static final int alert_generic_error_msg=0x7f060016;
+        public static final int alert_last_card_already=0x7f060015;
         public static final int app_name=0x7f060000;
-        public static final int btnAddQuestion=0x7f060021;
-        public static final int btnUpdateQuestion=0x7f060022;
-        public static final int dialog_set_add=0x7f06001e;
-        public static final int hello_world=0x7f06001d;
-        public static final int lblQuestionContent=0x7f060024;
-        public static final int lblQuestionTitle=0x7f060023;
+        public static final int btnAddQuestion=0x7f060023;
+        public static final int btnUpdateQuestion=0x7f060024;
+        public static final int dialog_set_add=0x7f060020;
+        public static final int hello_world=0x7f06001f;
+        public static final int lblQuestionContent=0x7f060026;
+        public static final int lblQuestionTitle=0x7f060025;
         public static final int menu_about=0x7f060004;
         public static final int menu_add_question=0x7f06000b;
         public static final int menu_add_set=0x7f060005;
+        public static final int menu_delete_question=0x7f06000d;
         public static final int menu_edit_question=0x7f06000c;
+        public static final int menu_exam=0x7f06000e;
         public static final int menu_export_db=0x7f060006;
         public static final int menu_settings=0x7f060009;
         public static final int menu_text_next_card=0x7f060008;
         public static final int menu_text_previous_card=0x7f060007;
         public static final int menu_text_share=0x7f06000a;
-        public static final int setting_font_size_caption=0x7f060015;
-        public static final int setting_font_size_chapterChooser_description=0x7f06001b;
-        public static final int setting_font_size_chapterChooser_title=0x7f06001a;
-        public static final int setting_font_size_header_description=0x7f060017;
-        public static final int setting_font_size_header_title=0x7f060016;
-        public static final int setting_font_size_textview_description=0x7f060019;
-        public static final int setting_font_size_textview_title=0x7f060018;
+        public static final int setting_font_size_caption=0x7f060017;
+        public static final int setting_font_size_chapterChooser_description=0x7f06001d;
+        public static final int setting_font_size_chapterChooser_title=0x7f06001c;
+        public static final int setting_font_size_header_description=0x7f060019;
+        public static final int setting_font_size_header_title=0x7f060018;
+        public static final int setting_font_size_textview_description=0x7f06001b;
+        public static final int setting_font_size_textview_title=0x7f06001a;
         public static final int text_set_input=0x7f060003;
-        public static final int title_activity_export_import_db=0x7f06001c;
-        public static final int title_activity_flash_card_add_update=0x7f060020;
+        public static final int title_activity_export_import_db=0x7f06001e;
+        public static final int title_activity_flash_card_add_update=0x7f060022;
         public static final int title_activity_flash_card_detail=0x7f060002;
-        public static final int version_number=0x7f06001f;
+        public static final int title_activity_flash_card_list=0x7f060027;
+        public static final int title_activity_flash_card_list_item=0x7f060028;
+        public static final int version_number=0x7f060021;
     }
     public static final class style {
         /** 

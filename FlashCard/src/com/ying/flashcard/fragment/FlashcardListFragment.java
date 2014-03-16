@@ -3,11 +3,11 @@ package com.ying.flashcard.fragment;
 import java.util.ArrayList;
 
 import com.ying.flashcard.activity.ApplicationInitializeActivity;
-import com.ying.flashcard.activity.FlashCardDetailActivity;
 import com.ying.flashcard.activity.FlashCardListActivity;
-import com.ying.flashcard.activity.SetsListActivity;
+import com.ying.flashcard.activity.FlashCardListItemActivity;
 import com.ying.flashcard.db.QuestionHandler;
 import com.ying.flashcard.db.SetHandler;
+import com.ying.flashcard.dto.QuestionDTO;
 import com.ying.flashcard.dto.SetDTO;
 import com.ying.flashcard.util.MainActivityPreferences;
 import android.content.Intent;
@@ -19,41 +19,37 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-public class FlashcardSetListFragment extends ListFragment {
-
-	// Will monitor if a headline is clicked on
-	OnChoiceSelectedListener mCallback;
-	
-	SetsListActivity parentActivity = null;
+public class FlashcardListFragment extends ListFragment {
+	FlashCardListActivity parentActivity = null;
 	MainActivityPreferences preferences = null;
 
-	SetHandler setHandler = null;
 	QuestionHandler questionHandler = null;
-	
-	ArrayList<SetDTO> sets = null;
-
-	/*
-	 *  The container Activity must implement this interface so the fragment can deliver messages
-	 */
-	public interface OnChoiceSelectedListener {
-		// This function is called when a list item is selected
-		public void OnChoiceSelected(int position);
-	}
-
+	SetHandler setHandler = null;
+	ArrayList<QuestionDTO> questions = null;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 
+		parentActivity =  (FlashCardListActivity)this.getActivity();
 		preferences = ApplicationInitializeActivity.preferences;
 
-		setHandler = new SetHandler(this.getActivity());
+		questionHandler = new QuestionHandler(this.getActivity());
 
-		sets = setHandler.getSets();
+		
+		setHandler = new SetHandler(parentActivity);
+		questionHandler = new QuestionHandler(parentActivity);
+		
+		String setName = preferences.getSetName();
+		SetDTO setDTO = setHandler.getSet(setName);
+		int setFK = Integer.parseInt(setDTO.getId());
+		
+		questions = questionHandler.getQuestions(setFK);
+		
 
-		String[] titles = new String[sets.size()];
-		for (int i = 0; i < sets.size(); i++) {
-			titles[i] = sets.get(i).getName();
+		String[] titles = new String[questions.size()];
+		for (int i = 0; i < questions.size(); i++) {
+			titles[i] = questions.get(i).getTitle();
 		}
 
 		int layout = android.R.layout.simple_list_item_1;
@@ -73,7 +69,7 @@ public class FlashcardSetListFragment extends ListFragment {
 		super.onAttach(activity);
 
 		try {
-			mCallback = (OnChoiceSelectedListener) activity;
+//			mCallback = (OnChoiceSelectedListener) activity;
 		} catch (ClassCastException e) {
 			throw new ClassCastException(activity.toString() + " must implement OnHeadlineSelectedListener");
 		}
@@ -81,10 +77,10 @@ public class FlashcardSetListFragment extends ListFragment {
 
 	@Override
 	public void onListItemClick(ListView l, View v, int position, long id) {
-		preferences.setSetName(sets.get(position).getName());
+		preferences.setQuestionId(questions.get(position).getId());
 		preferences.commit();
 		
-		Intent intent = new Intent(this.getActivity(), FlashCardListActivity.class);
+		Intent intent = new Intent(this.getActivity(), FlashCardListItemActivity.class);
 		startActivity(intent);
 		this.getActivity().finish();
 	}

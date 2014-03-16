@@ -103,6 +103,13 @@ public class QuestionHandler extends SQLiteOpenHelper {
         }
     }
     
+    // Deleting single contact
+    public void delete(String questionId) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.delete(tableName,  fieldId + " = ?", new String[] { questionId });
+        db.close();
+    }
+    
     public QuestionDTO getQuestion(String title) {
 
     	QuestionDTO questionDTO = null;
