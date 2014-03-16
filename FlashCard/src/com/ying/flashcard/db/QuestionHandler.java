@@ -83,6 +83,26 @@ public class QuestionHandler extends SQLiteOpenHelper {
         return createSuccessful;
     }
     
+    public boolean update(QuestionDTO questionDTO) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        
+        ContentValues values = new ContentValues();
+
+        values.put(fieldTitle, questionDTO.getTitle());
+        values.put(fieldAnswers, questionDTO.getAnswer());
+        
+        int result = db.update(tableName, values, fieldId + " = ?", new String[] { String.valueOf(questionDTO.getId()) });
+       
+        db.close();
+        
+        if(result == 1){ 
+            Log.e(TAG, questionDTO.getTitle() + " updated.");
+            return true;
+        } else {
+        	return false;
+        }
+    }
+    
     public QuestionDTO getQuestion(String title) {
 
     	QuestionDTO questionDTO = null;

@@ -61,26 +61,31 @@ public final class R {
         public static final int list_item_icon2=0x7f02000e;
     }
     public static final class id {
-        public static final int SetListContainer=0x7f090006;
-        public static final int action_settings=0x7f090009;
-        public static final int buttonApplicationInitialize=0x7f090000;
-        public static final int dialogButtonOK=0x7f090003;
-        public static final int flashcard_container=0x7f090004;
-        public static final int fragment_container=0x7f090001;
-        public static final int menu_about=0x7f09000a;
-        public static final int menu_add_question=0x7f090010;
-        public static final int menu_add_set=0x7f090012;
-        public static final int menu_back_to_set_list=0x7f09000d;
-        public static final int menu_edit_question=0x7f090011;
-        public static final int menu_export_db=0x7f090013;
-        public static final int menu_next_card=0x7f09000c;
-        public static final int menu_previous_card=0x7f09000b;
-        public static final int menu_settings=0x7f09000e;
-        public static final int menu_share=0x7f09000f;
-        public static final int scrollView1=0x7f090005;
-        public static final int swip_card_container=0x7f090008;
-        public static final int txtAddSet=0x7f090002;
-        public static final int txtCardHeader=0x7f090007;
+        public static final int SetListContainer=0x7f09000b;
+        public static final int action_settings=0x7f09000e;
+        public static final int btnAddUpdateQuestion=0x7f090004;
+        public static final int buttonApplicationInitialize=0x7f090005;
+        public static final int dialogButtonOK=0x7f090008;
+        public static final int flashcard_container=0x7f090009;
+        public static final int fragment_container=0x7f090006;
+        public static final int lblQuestionContent=0x7f090002;
+        public static final int lblQuestionTitle=0x7f090000;
+        public static final int menu_about=0x7f09000f;
+        public static final int menu_add_question=0x7f090015;
+        public static final int menu_add_set=0x7f090017;
+        public static final int menu_back_to_set_list=0x7f090012;
+        public static final int menu_edit_question=0x7f090016;
+        public static final int menu_export_db=0x7f090018;
+        public static final int menu_next_card=0x7f090011;
+        public static final int menu_previous_card=0x7f090010;
+        public static final int menu_settings=0x7f090013;
+        public static final int menu_share=0x7f090014;
+        public static final int scrollView1=0x7f09000a;
+        public static final int swip_card_container=0x7f09000d;
+        public static final int txtAddSet=0x7f090007;
+        public static final int txtCardHeader=0x7f09000c;
+        public static final int txtQuestionTitle=0x7f090001;
+        public static final int txtQuestionsContent=0x7f090003;
     }
     public static final class layout {
         public static final int activity_export_import_db=0x7f030000;
@@ -109,8 +114,12 @@ public final class R {
         public static final int alert_generic_error_msg=0x7f060014;
         public static final int alert_last_card_already=0x7f060013;
         public static final int app_name=0x7f060000;
+        public static final int btnAddQuestion=0x7f060021;
+        public static final int btnUpdateQuestion=0x7f060022;
         public static final int dialog_set_add=0x7f06001e;
         public static final int hello_world=0x7f06001d;
+        public static final int lblQuestionContent=0x7f060024;
+        public static final int lblQuestionTitle=0x7f060023;
         public static final int menu_about=0x7f060004;
         public static final int menu_add_question=0x7f06000b;
         public static final int menu_add_set=0x7f060005;

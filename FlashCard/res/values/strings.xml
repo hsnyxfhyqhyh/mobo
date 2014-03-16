@@ -40,5 +40,10 @@
     <string name="dialog_set_add">添加类</string>
     <string name="version_number">Version 0.0.3 - 03/15/2014</string>
     <string name="title_activity_flash_card_add_update">FlashCardAddUpdateActivity</string>
+    
+    <string name="btnAddQuestion">添加卡片</string>
+    <string name="btnUpdateQuestion">修改卡片</string>
+    <string name="lblQuestionTitle">卡片标题</string>
+    <string name="lblQuestionContent">卡片内容</string>
 
 </resources>

@@ -5,17 +5,23 @@ import com.ying.flashcard.R.layout;
 import com.ying.flashcard.R.menu;
 import com.ying.flashcard.db.QuestionHandler;
 import com.ying.flashcard.db.SetHandler;
+import com.ying.flashcard.dto.QuestionDTO;
 import com.ying.flashcard.dto.SetDTO;
 import com.ying.flashcard.util.MainActivityPreferences;
 
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Toast;
 
-public class FlashCardAddUpdateActivity extends Activity {
+public class FlashCardAddUpdateActivity extends Activity implements OnClickListener{
 
 	public MainActivityPreferences preferences = ApplicationInitializeActivity.preferences;
 	final Context context = this;
@@ -28,13 +34,37 @@ public class FlashCardAddUpdateActivity extends Activity {
 	
 	String  questionId = preferences.getQuestionId();
 	
+	EditText txtQuestionTitle;
+	EditText txtQuestionsContent;
+	
+	Button btnAddUpdateQuestion ;
+	
+	QuestionDTO question ;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_flash_card_add_update);
 		
 		SetDTO setDTO = setHandler.getSet(setName);
-		int setFK = Integer.parseInt(setDTO.getId());
+		setFK = Integer.parseInt(setDTO.getId());
+		
+		txtQuestionTitle = (EditText) this.findViewById(R.id.txtQuestionTitle);
+		txtQuestionsContent =  (EditText)this.findViewById(R.id.txtQuestionsContent);
+		
+		btnAddUpdateQuestion =  (Button)this.findViewById(R.id.btnAddUpdateQuestion);
+		btnAddUpdateQuestion.setOnClickListener(this );
+		
+		if (!questionId.equals("")) {
+			question = questionHandler.getQuestionById(questionId);
+			
+			txtQuestionTitle.setText(question.getTitle());
+			txtQuestionsContent.setText(question.getAnswer());
+			
+			btnAddUpdateQuestion.setText(this.getString(R.string.btnUpdateQuestion));
+		}
+		
+		
 	}
 
 	@Override
@@ -83,5 +113,43 @@ public class FlashCardAddUpdateActivity extends Activity {
 //	    alert.show();
 //	    
 //	    
+	}
+
+	@Override
+	public void onClick(View arg0) {
+		String title = txtQuestionTitle.getText().toString().trim();
+		String content = txtQuestionsContent.getText().toString().trim();
+		
+		if (!title.equals("") && !content.equals("")) {
+			if (!questionId.equals("")) {
+				question.setAnswer(content);
+				question.setTitle(title);
+
+				questionHandler.update(question);
+				
+				preferences.setQuestionId("");
+				preferences.commit();
+				Intent parent = new Intent(this, FlashCardDetailActivity.class);
+				this.startActivity(parent);
+								
+				this.finish();
+				
+			} else {
+				//add
+				question = new QuestionDTO();
+				question.setTitle(title);
+				question.setAnswer(content);
+				
+				questionHandler.create(question, setFK);
+				Intent parent = new Intent(this, FlashCardDetailActivity.class);
+				this.startActivity(parent);
+				
+				this.finish();
+			}
+			
+		} else {
+			Toast.makeText(getBaseContext(), "Please input valid question"  , Toast.LENGTH_SHORT).show();
+		}
+		
 	}
 }

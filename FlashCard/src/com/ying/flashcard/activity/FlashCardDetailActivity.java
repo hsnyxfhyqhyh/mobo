@@ -93,6 +93,7 @@ public class FlashCardDetailActivity extends FragmentActivity {
 		case R.id.menu_add_question:
 			Intent intentAddQuestion = new Intent(this, FlashCardAddUpdateActivity.class);
 			this.startActivity(intentAddQuestion);
+			this.finish();
 			break;
 		case R.id.menu_edit_question:
 			Intent intentEditQuestion = new Intent(this, FlashCardAddUpdateActivity.class);

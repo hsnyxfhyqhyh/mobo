@@ -9,8 +9,41 @@
     tools:context=".FlashCardAddUpdateActivity" >
 
     <TextView
+        android:id="@+id/lblQuestionTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
+        android:text="@string/lblQuestionTitle" />
+
+    <EditText
+        android:id="@+id/txtQuestionTitle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:layout_below="@+id/lblQuestionTitle" 
+    />
+
+    <TextView
+        android:id="@+id/lblQuestionContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtQuestionTitle"
+        android:text="@string/lblQuestionContent" />
+
+    <EditText
+        android:id="@+id/txtQuestionsContent"
+        android:layout_height="wrap_content" 
+    	android:layout_width="fill_parent"
+    	android:inputType="textMultiLine" 
+    	android:minLines="6" 
+    	android:scrollbars="vertical"
+        android:layout_below="@+id/lblQuestionContent"
+         />
+
+    <Button
+        android:id="@+id/btnAddUpdateQuestion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtQuestionsContent"
+        android:text="@string/btnAddQuestion" />
 
 </RelativeLayout>
