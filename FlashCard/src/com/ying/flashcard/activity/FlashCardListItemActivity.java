@@ -62,6 +62,15 @@ public class FlashCardListItemActivity extends Activity {
 			textCard.setText( question.getAnswer());
 			textCard.setTextSize(FONT_SIZE);
 			
+			
+
+			if (preferences.getSetName().equals(this.getString(R.string.special_font_xingshu))) {
+				Typeface face = Typeface.createFromAsset(getAssets(), preferences.getFontFamily());
+				textCard.setTypeface(face);
+				textCard.setLineSpacing(30f, 1f);	
+			}
+			
+			
 			LinearLayout container = (LinearLayout)this.findViewById(R.id.card_container);
 			container.addView(textCard);
 		}
@@ -117,7 +126,7 @@ public class FlashCardListItemActivity extends Activity {
 	private void jumpToEditCard() {
 		Intent intent= new Intent(this, FlashCardAddUpdateActivity.class);
 		this.startActivity(intent);
-		this.finish();
+		
 	}
 	
 	private void deleteQuestion() {

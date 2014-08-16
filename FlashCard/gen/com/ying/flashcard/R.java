@@ -143,12 +143,13 @@ public final class R {
         public static final int setting_font_size_header_title=0x7f06001b;
         public static final int setting_font_size_textview_description=0x7f06001e;
         public static final int setting_font_size_textview_title=0x7f06001d;
+        public static final int special_font_xingshu=0x7f060029;
         public static final int text_set_input=0x7f060003;
         public static final int title_activity_flash_card_add_update=0x7f060022;
         public static final int title_activity_flash_card_detail=0x7f060002;
         public static final int title_activity_flash_card_list=0x7f060027;
         public static final int title_activity_flash_card_list_item=0x7f060028;
-        public static final int version_number=0x7f060029;
+        public static final int version_number=0x7f06002a;
     }
     public static final class style {
         /** 

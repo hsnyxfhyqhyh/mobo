@@ -93,6 +93,7 @@ public class FlashCardAddUpdateActivity extends Activity {
 		            public void onClick(DialogInterface dialog, int which) {
 		                    dialog.dismiss();
 		            		
+		                    finish();
 		            }
 		        });
 

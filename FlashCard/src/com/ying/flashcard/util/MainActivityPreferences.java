@@ -16,7 +16,7 @@ public class MainActivityPreferences {
 	
 	private String questionId = "";
 	
-	private String fontFamily = "fonts/STKAITI.TTF";
+	private String fontFamily = "fonts/pangzhonghua.ttf";
 	
 	
 	public String getFontFamily() {

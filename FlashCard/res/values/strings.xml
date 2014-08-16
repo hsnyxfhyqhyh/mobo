@@ -55,5 +55,7 @@
     <string name="title_activity_flash_card_list">卡片</string>
     <string name="title_activity_flash_card_list_item">卡片</string>
     
-    <string name="version_number">Version 0.0.5 - 03/16/2014</string>
+    <string name="special_font_xingshu">书法</string>
+    
+    <string name="version_number">Version 0.0.6 - 08/16/2014</string>
 </resources>
