@@ -1,0 +1,11 @@
+3.11 [8/24/2014] -- clean the data. (file uploaded to google doc root)
+
+3.10 [6/30/2014] - add the version info to the menu. (file uploaded to google doc root)
+
+3.10 [2/25/2014] - can select and share the text. Also can share the whole chapter without select text first.
+					change the line separator between the verses. 
+
+3.09 [2/21/2014] - use the PreferenceActivity to control the font size of header, textview and chapter chooser. 
+
+3.08 [2/18/2014]- use the database instead of the xml file for bible data
+

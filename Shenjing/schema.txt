@@ -1,0 +1,56 @@
+***********************
+* Table verse         *
+***********************
+
+			// table details
+			String tableName = "verse";
+
+			String fieldId = "id";
+			String fieldVersion = "version";
+			String fieldContent = "content";
+			String fieldLineNumber = "lineNumber";
+			String fieldChapterNumber = "chapterNumber";
+			String fieldBookNumber = "bookNumber";
+
+			String sql = "";
+
+			sql += "CREATE TABLE " + tableName;
+			sql += " ( ";
+			sql += fieldId + " INTEGER PRIMARY KEY AUTOINCREMENT, ";
+			sql += fieldVersion + " TEXT, ";
+			sql += fieldBookNumber + " TEXT, ";
+			sql += fieldContent + " TEXT, ";
+			sql += fieldLineNumber + " INTEGER, ";
+			sql += fieldChapterNumber + " TEXT ";
+			sql += " ); ";
+			
+			
+***********************
+* Table book          *
+***********************
+			String tableName = "book";
+
+			String fieldId = "id";
+			String fieldName = "name";
+			String fieldNameEN = "nameEN";
+			String fieldSearchString = "searchString";
+			String fieldNumber = "number";
+
+			String fieldTestament = "testament";
+			String fieldChapterCount = "chapterCount";
+			String fieldInitialString = "initialString";
+
+			String sql = "";
+
+			sql += "CREATE TABLE " + tableName;
+			sql += " ( ";
+			sql += fieldId + " INTEGER PRIMARY KEY AUTOINCREMENT, ";
+			sql += fieldName + " TEXT, ";
+			sql += fieldNameEN + " TEXT, ";
+			sql += fieldSearchString + " TEXT, ";
+			sql += fieldNumber + " TEXT, ";
+			sql += fieldTestament + " TEXT, ";
+			sql += fieldChapterCount + " TEXT, ";
+			sql += fieldInitialString + " TEXT ";
+			sql += " ); ";
+			

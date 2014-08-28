@@ -1,0 +1,31 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+ 
+    <PreferenceCategory android:title="@string/setting_font_size_caption"  >
+      
+        <ListPreference
+            android:key="prefFontSizeTextView"
+            android:entries="@array/fontSizeTextViewOptions"
+            android:summary="@string/setting_font_size_textview_title"
+            android:entryValues="@array/fontSizeTextViewOptionsValues"
+            android:title="@string/setting_font_size_textview_description" />
+        
+        
+        <ListPreference
+            android:key="prefFontSizeHeader"
+            android:entries="@array/fontSizeHeaderOptions"
+            android:summary="@string/setting_font_size_header_title"
+            android:entryValues="@array/fontSizeHeaderOptionsValues"
+            android:title="@string/setting_font_size_header_description" />
+        
+        
+        <ListPreference
+            android:key="prefFontSizeChapterChooser"
+            android:entries="@array/fontSizeChapterChooserOptions"
+            android:summary="@string/setting_font_size_chapterChooser_title"
+            android:entryValues="@array/fontSizeChapterChooserOptionsValues"
+            android:title="@string/setting_font_size_chapterChooser_description" />
+        
+        
+    </PreferenceCategory>
+ 
+</PreferenceScreen>

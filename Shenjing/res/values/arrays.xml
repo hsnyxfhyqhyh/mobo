@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="fontSizeTextViewOptions">
+        <item name="14">较小-14</item>
+        <item name="16">小-16</item>
+        <item name="20">正常-20</item>
+        <item name="24">大-24</item>
+        <item name="28">特大-28</item>
+    </string-array>
+    <string-array name="fontSizeTextViewOptionsValues">
+        <item name="14">14</item>
+        <item name="16">16</item>
+        <item name="20">20</item>
+        <item name="24">24</item>
+        <item name="28">28</item>
+    </string-array>
+     
+    
+    <string-array name="fontSizeHeaderOptions">
+        <item name="20">较小-20</item>
+        <item name="24">小-24</item>
+        <item name="28">正常-28</item>
+        <item name="32">大-32</item>
+        <item name="36">特大-36</item>
+    </string-array>
+    <string-array name="fontSizeHeaderOptionsValues">
+        <item name="20">20</item>
+        <item name="24">24</item>
+        <item name="28">28</item>
+        <item name="32">32</item>
+        <item name="36">36</item>
+    </string-array>
+    
+    <string-array name="fontSizeChapterChooserOptions">
+        <item name="16">小</item>
+        <item name="18">正常</item>
+        <item name="24">大</item>
+        <item name="28">特大</item>
+    </string-array>
+    <string-array name="fontSizeChapterChooserOptionsValues">
+        <item name="16">16</item>
+        <item name="18">18</item>
+        <item name="24">24</item>
+        <item name="28">28</item>
+    </string-array>
+</resources>

@@ -1,0 +1,15 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/menu_old_testament"
+        android:orderInCategory="100"
+        android:showAsAction="always"
+        android:title="@string/text_old_testament"
+        />
+
+    <item
+        android:id="@+id/menu_new_testament"
+        android:orderInCategory="100"
+        android:showAsAction="always"
+        android:title="@string/text_new_testament"/>
+</menu>

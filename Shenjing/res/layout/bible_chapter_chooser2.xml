@@ -1,0 +1,67 @@
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingTop="@dimen/activity_vertical_marginx2"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+    >
+    
+    <TableRow >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_view_chapter_chooser_book_name_text" 
+             android:ems="20"
+            />
+    	    
+    </TableRow>
+    <TableRow>
+ 		<com.chccc.bible.chapterChooser.CustomAutoCompleteView
+	        android:id="@+id/bookJumpNumber"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+     		style="@style/editTextClassic"
+            android:textColor="#000000"
+            android:textColorHighlight="#000000"
+            android:textColorLink="#000000"
+            android:textStyle="bold"
+            android:width="250dip" >
+             <requestFocus />
+	    </com.chccc.bible.chapterChooser.CustomAutoCompleteView>
+    </TableRow>
+    
+     <TableRow android:paddingTop="@dimen/activity_vertical_marginx2">
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_view_chapter_chooser_chapter_number_text" 
+             android:ems="20"
+            />
+    </TableRow>
+    
+     <TableRow> 
+        <EditText
+	        android:id="@+id/textChapterChooserChapterNumber"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="@dimen/activity_vertical_margin"
+	        style="@style/editTextClassic"
+	        android:ems="10"
+	        android:inputType="number" >
+	
+	       
+	    </EditText>
+
+	    
+	</TableRow>
+	 <TableRow>
+        <Button
+	        android:id="@+id/buttonChapterChooserSave"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="@dimen/activity_vertical_margin"
+	        android:text="跳转" />
+    </TableRow>
+</TableLayout>
