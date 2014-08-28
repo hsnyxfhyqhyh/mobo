@@ -3,16 +3,20 @@ import java.sql.DriverManager;
 import java.sql.Statement;
 import java.util.ArrayList;
 
+
+/********************************************************************************************************************************************************************************************************
+ * History: 
+ * 2014-08-28: data clean up. modified all 仿佛 instances in data/*.xml。 Generate "Bible20140828.db", rename it to Bible.db to check in and then copied over to Shenjing apk project as Bible.
+ ********************************************************************************************************************************************************************************************************/
+
 public class LoadData {
 	/* if isPersistable is false then write the queries to the QUERY_FILE
 	 * otherwise save the data in the sqlite.
 	 */
 	private static boolean isPersistable = true;
 	
-	private static final String DB_NAME = "Bible1.db";
+	private static final String DB_NAME = "Bible20140828.db";
 	private static final String QUERY_FILE = "Query-sqlite.sql";
-	
-	
 	
 	private static StringBuffer sb = new StringBuffer();
 	
