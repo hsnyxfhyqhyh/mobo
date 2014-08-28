@@ -37,7 +37,7 @@ public class BibleBookChapterChooserActivity extends Activity implements OnClick
 		setContentView(R.layout.biblebookchapterchooser_activity_main);
 		
 		Intent intent = getIntent();
-		Typeface face = Typeface.createFromAsset(getAssets(), BibleMainActivity.preferences.getFontFamily());
+		Typeface face = Typeface.createFromAsset(getAssets(), BibleMainActivity.preferences.getDefaultFontFamily());
 
 		//book Chinese intial value passed in
 		initialString = intent.getStringExtra(BibleBookChooserActivity.EXTRA_MESSAGE);

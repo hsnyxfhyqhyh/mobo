@@ -1,4 +1,6 @@
-3.11 [8/24/2014] -- clean the data. (file uploaded to google doc root)
+3.12 [8/28/2014] -- add xing shu to the font choice
+
+3.11 [8/28/2014] -- clean the data. (file uploaded to google doc root)
 
 3.10 [6/30/2014] - add the version info to the menu. (file uploaded to google doc root)
 

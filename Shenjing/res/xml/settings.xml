@@ -25,6 +25,12 @@
             android:entryValues="@array/fontSizeChapterChooserOptionsValues"
             android:title="@string/setting_font_size_chapterChooser_description" />
         
+        <ListPreference
+            android:key="prefFontFamily"
+            android:entries="@array/fontFamilyOptions"
+            android:summary="@string/setting_font_family_title"
+            android:entryValues="@array/fontFamilyOptionValues"
+            android:title="@string/setting_font_family_description" />
         
     </PreferenceCategory>
  

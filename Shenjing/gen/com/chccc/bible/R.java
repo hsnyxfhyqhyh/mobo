@@ -9,6 +9,8 @@ package com.chccc.bible;
 
 public final class R {
     public static final class array {
+        public static final int fontFamilyOptionValues=0x7f050007;
+        public static final int fontFamilyOptions=0x7f050006;
         public static final int fontSizeChapterChooserOptions=0x7f050004;
         public static final int fontSizeChapterChooserOptionsValues=0x7f050005;
         public static final int fontSizeHeaderOptions=0x7f050002;
@@ -129,6 +131,8 @@ public final class R {
         public static final int menu_text_previous_chapter=0x7f08000a;
         public static final int menu_text_share=0x7f08000e;
         public static final int menu_version=0x7f08000f;
+        public static final int setting_font_family_description=0x7f080021;
+        public static final int setting_font_family_title=0x7f080020;
         public static final int setting_font_size_caption=0x7f080019;
         public static final int setting_font_size_chapterChooser_description=0x7f08001f;
         public static final int setting_font_size_chapterChooser_title=0x7f08001e;
@@ -141,7 +145,7 @@ public final class R {
         public static final int text_old_testament=0x7f080007;
         public static final int text_view_chapter_chooser_book_name_text=0x7f080002;
         public static final int text_view_chapter_chooser_chapter_number_text=0x7f080003;
-        public static final int version_number=0x7f080020;
+        public static final int version_number=0x7f080022;
     }
     public static final class style {
         /** 

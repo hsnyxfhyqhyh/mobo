@@ -35,15 +35,17 @@ public class BibleMainActivityPreferences {
 	private String fontFamily = "fonts/STKAITI.TTF";
 	
 	
-	
-	
-	public String getFontFamily() {
+	public String getDefaultFontFamily (){
 		return fontFamily;
 	}
-
-	public void setFontFamily(String fontFamily) {
-		this.fontFamily = fontFamily;
+	
+	public String getFontFamily() {
+		return settings.getString("prefFontFamily", "fonts/STKAITI.TTF");
 	}
+
+//	public void setFontFamily(String fontFamily) {
+//		this.fontFamily = fontFamily;
+//	}
 
 	private int fontSizeHeader = 30;
 	

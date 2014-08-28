@@ -301,8 +301,21 @@ public class BibleMainActivity extends Activity {
 		textChapterContent.setTextIsSelectable(true);
 		textChapterContent.setTextSize(preferences.getFontSizeText());
 		textChapterContent.setText(chapterContent);
-		Typeface face = Typeface.createFromAsset(getAssets(), preferences.getFontFamily());
+		
+		String fontFamily = preferences.getFontFamily();
+		
+		if (!version.equals("hhb")) {
+			fontFamily = preferences.getDefaultFontFamily();
+		}
+		
+		Typeface face = Typeface.createFromAsset(getAssets(), fontFamily);
+		
 		textChapterContent.setTypeface(face);
+		
+		if (version.equalsIgnoreCase("hhb") && fontFamily.endsWith("pangzhonghua.ttf")) {
+			textChapterContent.setLineSpacing(30f, 1f);	
+		}
+		
 		bibleContainer.addView(textChapterContent);
 		
 		ScrollView scrv = (ScrollView)findViewById(R.id.scrollView1);
@@ -321,6 +334,8 @@ public class BibleMainActivity extends Activity {
               String dataToShare = textChapterContent.getText().toString();
               selectedText = dataToShare;
           }
+           
+           selectedText = txtChapterHeader.getText().toString().trim() + "\n\n" + selectedText;
 
           //Share the text
           Intent sendIntent = new Intent(); 

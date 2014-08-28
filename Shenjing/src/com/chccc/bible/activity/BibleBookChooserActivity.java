@@ -49,7 +49,7 @@ public class BibleBookChooserActivity extends Activity implements OnClickListene
 
 		testament = intent.getStringExtra(BibleMainActivity.EXTRA_MESSAGE);
 		
-		Typeface face = Typeface.createFromAsset(getAssets(), BibleMainActivity.preferences.getFontFamily());
+		Typeface face = Typeface.createFromAsset(getAssets(), BibleMainActivity.preferences.getDefaultFontFamily());
 		
 		bookHandler = new BookHandler(BibleBookChooserActivity.this);
 		books = bookHandler.getBooks(testament);	

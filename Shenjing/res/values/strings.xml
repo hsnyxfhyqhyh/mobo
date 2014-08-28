@@ -34,17 +34,20 @@
     
     <string name="setting_font_size_caption">设置字体大小</string>
     
-    <string name="setting_font_size_header_title">标题字体</string>
+    <string name="setting_font_size_header_title">标题字体大小</string>
     <string name="setting_font_size_header_description">设置标题字体大小</string>
     
     
-    <string name="setting_font_size_textview_title">圣经正文字体</string>
+    <string name="setting_font_size_textview_title">圣经正文字体大小</string>
     <string name="setting_font_size_textview_description">设置文本字体大小</string>
     
-    <string name="setting_font_size_chapterChooser_title">圣经章节选取字体</string>
+    <string name="setting_font_size_chapterChooser_title">圣经章节选取字体大小</string>
     <string name="setting_font_size_chapterChooser_description">设置章节选取字体大小</string>
     
-    <string name="version_number">3.11--[8/28/2014]</string>
     
+    <string name="setting_font_family_title">字体选择</string>
+    <string name="setting_font_family_description">字体选择</string>
+    
+    <string name="version_number">3.12--[8/28/2014]</string>
 
 </resources>
