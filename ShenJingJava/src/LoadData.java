@@ -7,6 +7,7 @@ import java.util.ArrayList;
 /********************************************************************************************************************************************************************************************************
  * History: 
  * 2014-08-28: data clean up. modified all 仿佛 instances in data/*.xml。 Generate "Bible20140828.db", rename it to Bible.db to check in and then copied over to Shenjing apk project as Bible.
+ * 2014-09-03: Fixed the book for 雅歌。Generate "Bible20140903.db", rename it to Bible.db to check in and then copied over to Shenjing apk project as Bible.
  ********************************************************************************************************************************************************************************************************/
 
 public class LoadData {
@@ -15,7 +16,7 @@ public class LoadData {
 	 */
 	private static boolean isPersistable = true;
 	
-	private static final String DB_NAME = "Bible20140828.db";
+	private static final String DB_NAME = "Bible20140903.db";
 	private static final String QUERY_FILE = "Query-sqlite.sql";
 	
 	private static StringBuffer sb = new StringBuffer();
@@ -181,7 +182,7 @@ public class LoadData {
 		create(new BookDTO("诗篇", "Psalms", "sp", "19", "OLD", "150", "诗"));
 		create(new BookDTO("箴言", "Proverbs", "zy", "20", "OLD", "31", "箴"));
 		create(new BookDTO("传道书", "Ecclesiastes", "cds", "21", "OLD", "12", "传"));
-		create(new BookDTO("雅歌", "Song of Songs", "yg", "22", "OLD", "8", "雅"));
+		create(new BookDTO("雅歌", "Song of Songs", "yg", "22", "OLD", "8", "歌"));
 		create(new BookDTO("以赛亚书", "Isaiah", "ysys", "23", "OLD", "66", "赛"));
 		create(new BookDTO("耶利米书", "Jeremiah", "ylms", "24", "OLD", "52", "耶"));
 		create(new BookDTO("耶利米哀歌", "Lamentations", "ylmag", "25", "OLD", "5", "哀"));
