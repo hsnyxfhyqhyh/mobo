@@ -65,7 +65,7 @@ public final class R {
         public static final int list_item_icon2=0x7f02000a;
     }
     public static final class id {
-        public static final int action_contextual_Share=0x7f0b001c;
+        public static final int action_contextual_Share=0x7f0b001d;
         public static final int bibleContainer=0x7f0b0004;
         public static final int bookChapterChooserContainer=0x7f0b000a;
         public static final int bookChooserContainer=0x7f0b000b;
@@ -76,15 +76,16 @@ public final class R {
         public static final int fragmentContainer=0x7f0b0000;
         public static final int icon=0x7f0b000c;
         public static final int menu_chapter_chooser=0x7f0b0013;
-        public static final int menu_new_testament=0x7f0b001b;
+        public static final int menu_history_back=0x7f0b0017;
+        public static final int menu_new_testament=0x7f0b001c;
         public static final int menu_new_testament1=0x7f0b0016;
         public static final int menu_next_chapter=0x7f0b0010;
-        public static final int menu_old_testament=0x7f0b001a;
+        public static final int menu_old_testament=0x7f0b001b;
         public static final int menu_old_testament1=0x7f0b0015;
         public static final int menu_previous_chapter=0x7f0b000f;
-        public static final int menu_settings=0x7f0b0017;
-        public static final int menu_share=0x7f0b0018;
-        public static final int menu_version=0x7f0b0019;
+        public static final int menu_settings=0x7f0b0018;
+        public static final int menu_share=0x7f0b0019;
+        public static final int menu_version=0x7f0b001a;
         public static final int menu_version_hhb=0x7f0b0011;
         public static final int menu_version_mix=0x7f0b0012;
         public static final int menu_version_niv=0x7f0b0014;
@@ -111,41 +112,42 @@ public final class R {
         public static final int menu_context=0x7f0a0002;
     }
     public static final class string {
-        public static final int alert_chapter_number_exceed_max=0x7f080014;
-        public static final int alert_dialog_notok_button_text=0x7f080013;
-        public static final int alert_dialog_ok_button_text=0x7f080012;
-        public static final int alert_dialog_title=0x7f080011;
-        public static final int alert_first_chapter_already=0x7f080015;
-        public static final int alert_generic_error_msg=0x7f080017;
-        public static final int alert_last_chapter_already=0x7f080016;
+        public static final int alert_chapter_number_exceed_max=0x7f080015;
+        public static final int alert_dialog_notok_button_text=0x7f080014;
+        public static final int alert_dialog_ok_button_text=0x7f080013;
+        public static final int alert_dialog_title=0x7f080012;
+        public static final int alert_first_chapter_already=0x7f080016;
+        public static final int alert_generic_error_msg=0x7f080018;
+        public static final int alert_last_chapter_already=0x7f080017;
         public static final int app_name=0x7f080000;
-        public static final int btn_intialize=0x7f080018;
+        public static final int btn_intialize=0x7f080019;
+        public static final int menu_history_back=0x7f08000e;
         public static final int menu_new_testament=0x7f080006;
         public static final int menu_old_testament=0x7f080005;
-        public static final int menu_settings=0x7f080010;
+        public static final int menu_settings=0x7f080011;
         public static final int menu_text_bible_version_hhb=0x7f08000b;
         public static final int menu_text_bible_version_mix=0x7f08000d;
         public static final int menu_text_bible_version_niv=0x7f08000c;
         public static final int menu_text_choose_bible=0x7f080004;
         public static final int menu_text_next_chapter=0x7f080009;
         public static final int menu_text_previous_chapter=0x7f08000a;
-        public static final int menu_text_share=0x7f08000e;
-        public static final int menu_version=0x7f08000f;
-        public static final int setting_font_family_description=0x7f080021;
-        public static final int setting_font_family_title=0x7f080020;
-        public static final int setting_font_size_caption=0x7f080019;
-        public static final int setting_font_size_chapterChooser_description=0x7f08001f;
-        public static final int setting_font_size_chapterChooser_title=0x7f08001e;
-        public static final int setting_font_size_header_description=0x7f08001b;
-        public static final int setting_font_size_header_title=0x7f08001a;
-        public static final int setting_font_size_textview_description=0x7f08001d;
-        public static final int setting_font_size_textview_title=0x7f08001c;
+        public static final int menu_text_share=0x7f08000f;
+        public static final int menu_version=0x7f080010;
+        public static final int setting_font_family_description=0x7f080022;
+        public static final int setting_font_family_title=0x7f080021;
+        public static final int setting_font_size_caption=0x7f08001a;
+        public static final int setting_font_size_chapterChooser_description=0x7f080020;
+        public static final int setting_font_size_chapterChooser_title=0x7f08001f;
+        public static final int setting_font_size_header_description=0x7f08001c;
+        public static final int setting_font_size_header_title=0x7f08001b;
+        public static final int setting_font_size_textview_description=0x7f08001e;
+        public static final int setting_font_size_textview_title=0x7f08001d;
         public static final int text_chapter_number_input=0x7f080001;
         public static final int text_new_testament=0x7f080008;
         public static final int text_old_testament=0x7f080007;
         public static final int text_view_chapter_chooser_book_name_text=0x7f080002;
         public static final int text_view_chapter_chooser_chapter_number_text=0x7f080003;
-        public static final int version_number=0x7f080022;
+        public static final int version_number=0x7f080023;
     }
     public static final class style {
         /** 

@@ -1,5 +1,11 @@
 package com.chccc.bible.util;
 
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.Set;
+import java.util.StringTokenizer;
+
 import com.chccc.bible.activity.BibleMainActivity;
 import com.chccc.bible.db.BookHandler;
 import com.chccc.bible.dto.BookDTO;
@@ -11,6 +17,9 @@ public class BibleMainActivityPreferences {
 	public static final String PREFS_NAME = "com.chccc.bible";
 	SharedPreferences settings;
 	SharedPreferences.Editor editor;
+	
+
+	private int MAX_HISTORY_ITEMS = 20;
 	
 	private String bibleVersion = "";
 	private String bookNumber = "";
@@ -76,6 +85,7 @@ public class BibleMainActivityPreferences {
 			editor.putString("bookNumber", "40");
 			editor.putString("chapterNumber", "1");
 			editor.putBoolean("preference_setted", true);
+			editor.putString("prefHistoryItems", "401,");
 		}
 	}
 	
@@ -172,6 +182,8 @@ public class BibleMainActivityPreferences {
 				commit();
 			}
 		}
+		
+		addToHistory(getBookNumber(),  getChapterNumber());
 	}
 	
 	public void moveToNextChapter() {
@@ -207,6 +219,8 @@ public class BibleMainActivityPreferences {
 			}
 			
 		}
+		
+		addToHistory(getBookNumber(),  getChapterNumber());
 	}
 	
 	private int getCurrentBookNumber (String currentBookNumber) {
@@ -228,4 +242,68 @@ public class BibleMainActivityPreferences {
 	public void resetPreferenceMessage() {
 		preferenceMessage = null;
 	}
+	
+	
+	public void addToHistory(String bookNumber, String chapterNumber) {
+		//Every history item will have at least 3 characters, 
+		//the 1st 2 characters are for book number; if book number is 1-9 , then a leading zero is added to the beginning.
+		//chapter number is integer without leading zero. 
+		ArrayList<String> historyItems = getHistoryItems();
+		
+		if (!historyItems.isEmpty() && historyItems.size() >= MAX_HISTORY_ITEMS) {
+			historyItems.remove(0);		//remove the 1st element
+		} 
+		
+		historyItems.add(bookNumber + "" + chapterNumber);
+		
+		String values = "";
+		for (String s: historyItems) {
+			values = values + s + ",";
+		}
+		
+		editor = settings.edit();
+		editor.putString("prefHistoryItems", values);
+		commit();
+		
+	}
+	
+	public void backToHistory() {
+		ArrayList<String> historyItems = getHistoryItems();
+		
+		if (historyItems.size() < 2) {
+			preferenceMessage = "现在还没有历史记录";
+			return;
+		}
+		
+		String value = historyItems.get(historyItems.size() - 2);
+		
+		//set the book number and chapter number in the preference
+		String bookNumber = value.substring(0,2); 
+		String chapterNumber = value.substring(2);
+
+		setBookNumber(bookNumber);
+		setChapterNumber(chapterNumber);
+		
+		commit();
+		
+		//add the history entry back to the end of the array.  
+		addToHistory(bookNumber, chapterNumber);
+		
+		
+	}
+	
+	private ArrayList<String> getHistoryItems() {
+		ArrayList<String> historyItems = new ArrayList<String>();
+		String value = settings.getString("prefHistoryItems", "");
+		StringTokenizer st = new StringTokenizer(value, ",");
+		while (st.hasMoreTokens()){
+			String s = st.nextToken();
+			if (!s.trim().equals("")) {
+				historyItems.add(s);				
+			}
+		}
+		
+		return historyItems;
+	}
+	
 }

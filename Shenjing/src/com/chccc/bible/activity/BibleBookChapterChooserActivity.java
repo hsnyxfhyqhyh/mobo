@@ -130,7 +130,9 @@ public class BibleBookChapterChooserActivity extends Activity implements OnClick
 		
         BibleMainActivity.preferences.setBookNumber(book.getNumber());
         BibleMainActivity.preferences.setChapterNumber(btn.getText().toString());
+        
         BibleMainActivity.preferences.commit();
+        BibleMainActivity.preferences.addToHistory(book.getNumber(), btn.getText().toString());
 		Intent intent = new Intent(this, BibleMainActivity.class);
 		startActivity(intent);
 		finish();

@@ -60,6 +60,12 @@
         android:showAsAction="never"
         android:title="@string/menu_new_testament"/>
     <item
+        android:id="@+id/menu_history_back"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="@string/menu_history_back"/>
+    
+    <item
         android:id="@+id/menu_settings"
         android:orderInCategory="100"
         android:showAsAction="never"

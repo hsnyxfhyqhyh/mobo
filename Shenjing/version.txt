@@ -1,3 +1,4 @@
+3.14 [9/8/2014] -- add the back to history function
 3.13 [9/3/2014] -- fixed the problem for 雅歌
 
 3.12 [8/28/2014] -- add xing shu to the font choice

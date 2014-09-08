@@ -130,6 +130,17 @@ public class BibleMainActivity extends Activity {
 			readBible();
 			
 			break;
+		case R.id.menu_history_back:
+			preferences.backToHistory();
+
+			if (preferences.getPreferenceMessage() != null) {
+				Toast.makeText(getApplicationContext(), preferences.getPreferenceMessage(), Toast.LENGTH_SHORT).show();
+				preferences.resetPreferenceMessage();
+			}
+			
+			readBible();
+			
+			break;
 		case R.id.menu_next_chapter:
 			
 			preferences.moveToNextChapter();
