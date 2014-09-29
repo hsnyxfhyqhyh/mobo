@@ -101,4 +101,44 @@ public class ChapterXmlParser {
 		
 		return chapterCount;
 	}
+	
+	public static String getBookName(String bookNumber) {
+		ArrayList<VerseDTO> lines = new ArrayList();
+		
+		String bookName = "";
+		
+		int chapterCount = 0;
+		
+		ChapterDTO chapter = new ChapterDTO();
+		
+		try {
+			InputStream is = null;
+			is = new FileInputStream (String.format("data/%s/%s%s.xml", "hhb", "hhb", bookNumber));
+
+			DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
+			DocumentBuilder db = dbf.newDocumentBuilder();
+			Document doc = db.parse(new InputSource(is));
+			doc.getDocumentElement().normalize();
+
+			NodeList bookNodeList = doc.getElementsByTagName("Book");
+			
+			if (bookNodeList !=null) {
+				Element bookElement = (Element) bookNodeList.item(0);
+				
+				bookName = bookElement.getAttribute("name") + " (" + bookElement.getAttribute("englishName") + ")"; 
+				chapter.setBookChineseName(bookElement.getAttribute("name"));
+				chapter.setBookEnglishName(bookElement.getAttribute("englishName"));
+				chapterCount = Integer.parseInt(bookElement.getAttribute("chapters"));
+				
+			}
+			
+			chapter.setVerses(lines);
+			
+
+		} catch (Exception e) {
+			System.out.println("XML Pasing Excpetion = " + e);
+		}
+		
+		return bookName;
+	}
 }
