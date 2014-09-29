@@ -1,5 +1,6 @@
 package com.chccc.bible.activity;
 
+import java.io.File;
 import java.util.ArrayList;
 
 import com.chccc.bible.activity.SettingsActivity;
@@ -18,9 +19,12 @@ import com.chccc.bible.plan.ReadBiblePlan2014;
 import com.chccc.bible.plan.ReadPlanInterface;
 import com.chccc.bible.util.BibleMainActivityPreferences;
 import com.chccc.bible.util.ChapterXmlParser;
+import com.chccc.bible.util.FileUtility;
+import com.chccc.bible.util.StringUtility;
 import com.chccc.bible.util.VersionUtil;
 
 import android.os.Bundle;
+import android.os.Environment;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -58,6 +62,7 @@ public class BibleMainActivity extends Activity {
 	
 	MenuItem hhbMenu = null;
 	MenuItem mixMenu = null;
+	MenuItem noteMenu = null;
 	
 	public final static String EXTRA_MESSAGE = "com.chccc.bible.BibleMainActivity.MESSAGE";
 
@@ -92,6 +97,7 @@ public class BibleMainActivity extends Activity {
 		getMenuInflater().inflate(R.menu.main, menu);
 		hhbMenu = menu.getItem(2);
 		mixMenu = menu.getItem(3);
+		noteMenu = menu.getItem(8);
 		
 		readBible();
 		return true;
@@ -174,6 +180,20 @@ public class BibleMainActivity extends Activity {
 			this.startActivity(intentOld);
 			this.finish();
 			break;
+		case R.id.menu_note: 
+			Intent intentNote = new Intent(this, BibleWebViewActivity.class);
+			
+			String noteFilePath = getNoteFileName();
+			
+			if (noteFilePath!=null) {
+				intentNote.putExtra(BibleWebViewActivity.EXTRA_MESSAGE, noteFilePath);
+				this.startActivity(intentNote);
+				this.finish();
+			} else {
+				Toast.makeText(getApplicationContext(), R.string.alert_no_file_webview, Toast.LENGTH_LONG).show();
+			}
+			
+			break;
 			
 		case R.id.menu_new_testament1: 
 			Intent intentNew = new Intent(this, BibleBookChooserActivity.class);
@@ -233,6 +253,23 @@ public class BibleMainActivity extends Activity {
 	    alert.show();
 	}
 	
+	private String getNoteFileName() {
+		String bookNumber = preferences.getBookNumber();
+		
+		String chapterNumber = preferences.getChapterNumber();
+		chapterNumber = StringUtility.paddingLeadingzeros(3,  Integer.parseInt(chapterNumber));
+		
+		String fileTempPath = FileUtility.NOTE_FILE_PATH + "%s/%s-%s.html";
+		String filePath = String.format(fileTempPath, bookNumber, bookNumber, chapterNumber);
+		
+		File lFile = new File(Environment.getExternalStorageDirectory() + filePath);
+		
+		if (lFile.exists()) {
+			return "file:///" + lFile.getAbsolutePath();
+		} else {
+			return null;
+		}
+	}
 	
 	private void readBible() {
 		try {

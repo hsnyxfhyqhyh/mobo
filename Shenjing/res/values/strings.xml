@@ -17,8 +17,14 @@
     <string name="menu_text_bible_version_mix">中/英</string>
     
     <string name="menu_history_back">历史记录</string>
+    
+    <string name="menu_back">返回</string>
+    
+    
     <string name="menu_text_share">共享</string>
     <string name="menu_version">版本</string>
+    
+    <string name="menu_note">笔记</string>
     
     
     <string name="menu_settings">设置</string>
@@ -30,6 +36,8 @@
     <string name="alert_first_chapter_already">已经是第一章</string>
     <string name="alert_last_chapter_already">已经是最后一章</string>
     <string name="alert_generic_error_msg">错误发生！</string>
+    
+    <string name="alert_no_file_webview">文件不存在！</string>
     
     <string name="btn_intialize">初始化</string>
     
@@ -50,6 +58,6 @@
     <string name="setting_font_family_title">字体选择</string>
     <string name="setting_font_family_description">字体选择</string>
     
-    <string name="version_number">3.14--[9/8/2014]</string>
+    <string name="version_number">3.15--[9/29/2014]</string>
 
 </resources>
