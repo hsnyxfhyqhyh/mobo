@@ -50,7 +50,8 @@
       	 <activity
             android:name="com.chccc.bible.activity.BibleWebViewActivity" 
 			android:configChanges="orientation|keyboardHidden"
-            android:screenOrientation="portrait" />
+			android:screenOrientation="portrait"
+            />
       	 
       	 
     </application>

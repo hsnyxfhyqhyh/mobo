@@ -25,6 +25,8 @@
     <string name="menu_version">版本</string>
     
     <string name="menu_note">笔记</string>
+    <string name="menu_rotate">旋转</string>
+   
     
     
     <string name="menu_settings">设置</string>
@@ -58,6 +60,6 @@
     <string name="setting_font_family_title">字体选择</string>
     <string name="setting_font_family_description">字体选择</string>
     
-    <string name="version_number">3.15--[9/29/2014]</string>
+    <string name="version_number">3.16--[10/01/2014]</string>
 
 </resources>

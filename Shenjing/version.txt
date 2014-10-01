@@ -1,3 +1,5 @@
+3.16 [10/1/2014] -- add the ability to force rotate the webview. , can view the book's note if chapter note is not available yet. 
+3.15 [9/29/2014] -- add the ability to view note as html file. Generice web view activity can be reused.
 3.14 [9/8/2014] -- add the back to history function
 3.13 [9/3/2014] -- fixed the problem for 雅歌
 
@@ -13,4 +15,5 @@
 3.09 [2/21/2014] - use the PreferenceActivity to control the font size of header, textview and chapter chooser. 
 
 3.08 [2/18/2014]- use the database instead of the xml file for bible data
+
 

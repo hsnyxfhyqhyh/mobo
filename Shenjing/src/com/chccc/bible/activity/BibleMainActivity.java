@@ -267,7 +267,15 @@ public class BibleMainActivity extends Activity {
 		if (lFile.exists()) {
 			return "file:///" + lFile.getAbsolutePath();
 		} else {
-			return null;
+			//try the book level introduction.
+			filePath = String.format(fileTempPath, bookNumber, bookNumber, "000");
+			lFile = new File(Environment.getExternalStorageDirectory() + filePath);
+			
+			if (lFile.exists()) {
+				return "file:///" + lFile.getAbsolutePath();
+			} else {
+				return null;
+			}
 		}
 	}
 	
