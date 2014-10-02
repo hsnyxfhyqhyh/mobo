@@ -53,6 +53,12 @@
 			android:screenOrientation="portrait"
             />
       	 
+      	  <activity
+            android:name="com.chccc.bible.activity.BibleReferenceChooserActivity" 
+			android:configChanges="orientation|keyboardHidden"
+			android:screenOrientation="portrait"
+            />
+      	 
       	 
     </application>
 <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />

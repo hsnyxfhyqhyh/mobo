@@ -194,6 +194,11 @@ public class BibleMainActivity extends Activity {
 			}
 			
 			break;
+		case R.id.menu_references:
+			Intent intentReferences = new Intent(this, BibleReferenceChooserActivity.class);
+			this.startActivity(intentReferences);
+			this.finish();
+			break;
 			
 		case R.id.menu_new_testament1: 
 			Intent intentNew = new Intent(this, BibleBookChooserActivity.class);
