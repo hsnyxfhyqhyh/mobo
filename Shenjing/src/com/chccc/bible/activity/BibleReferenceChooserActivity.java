@@ -1,5 +1,9 @@
 package com.chccc.bible.activity;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
 
@@ -13,8 +17,10 @@ import org.xml.sax.InputSource;
 
 import com.chccc.bible.R;
 import com.chccc.bible.db.BookHandler;
+import com.chccc.bible.util.FileUtility;
 
 import android.os.Bundle;
+import android.os.Environment;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
@@ -39,8 +45,11 @@ public final static String EXTRA_MESSAGE = "com.chccc.bible.BibleReferenceChoose
 		String bookNumber = BibleMainActivity.preferences.getBookNumber();
 		
 		String htmlString = getReferenceInHTML(bookNumber);
+//		htmlString = new String(htmlString, )
 		
-		myWebView.loadData(htmlString, "text/html", "UTF-8");		
+//		myWebView.loadData(htmlString, "text/html", "GBK");		
+		myWebView.loadDataWithBaseURL (null, htmlString,  "text/html", "utf-8", null);
+		
 //		String webViewFithPath = intent.getStringExtra(EXTRA_MESSAGE);
 		
 //		myWebView.loadUrl(webViewFithPath);
@@ -99,13 +108,14 @@ public final static String EXTRA_MESSAGE = "com.chccc.bible.BibleReferenceChoose
 		StringBuffer sb = new StringBuffer();
 		sb.append("<HTML>");
 		sb.append("<HEAD>" +
-				//"<meta http-equiv=\"Content-Type\" content=\"text/html; charset=GBK\"/>" +
+				"<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\"/>" +
 				"</HEAD>");
 		sb.append("<BODY>");
 		
 		try {
 			InputStream is = null;
-			is = this.getAssets().open(String.format("references/studyGuide.xml"));
+//			is = this.getAssets().open(String.format("references/studyGuide.xml"));
+			is = getReferenceConfigureXMLFromStorage();
 
 			DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
 			DocumentBuilder db = dbf.newDocumentBuilder();
@@ -151,5 +161,39 @@ public final static String EXTRA_MESSAGE = "com.chccc.bible.BibleReferenceChoose
 		
 		html = sb.toString();
 		return html;
+	}
+	
+//	private String getReferenceConfigureXMLFromStorage () {
+//		int ch;
+//		StringBuffer fileContent = new StringBuffer("");
+//		FileInputStream fis;
+//		try {
+//			String filename = Environment.getExternalStorageDirectory() + FileUtility.REFERENCE_FILE_PATH;
+//		    fis =new FileInputStream ( new File(filename));
+//		    try {
+//		        while( (ch = fis.read()) != -1)
+//		            fileContent.append((char)ch);
+//		    } catch (IOException e) {
+//		        e.printStackTrace();
+//		    }
+//		} catch (Exception e) {
+//		    e.printStackTrace();
+//		}
+//
+//		return new String(fileContent);
+//	}
+	
+	private InputStream getReferenceConfigureXMLFromStorage () {
+		StringBuffer fileContent = new StringBuffer("");
+		FileInputStream fis = null;
+		try {
+			String filename = Environment.getExternalStorageDirectory() + FileUtility.REFERENCE_FILE_PATH;
+		    fis =new FileInputStream ( new File(filename));
+		   
+		} catch (Exception e) {
+		    e.printStackTrace();
+		}
+	
+		return fis;
 	}
 }
