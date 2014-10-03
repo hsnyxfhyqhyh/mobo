@@ -2,9 +2,9 @@
 <StudyBible root="/Download/studybible/References">
 	<Book index="01" name="创世纪 (Genesis)">
 		<Study>
-			<Name/>
-			<Abbreviation/>
-			<Root></Root>
+			<Name>丁道尔圣经注释</Name>
+			<Abbreviation>DDESJZC</Abbreviation>
+			<Root>01/DDESJZC/index.html</Root>
 		</Study>
 	</Book>
 	<Book index="02" name="出埃及记 (Exodus)">
