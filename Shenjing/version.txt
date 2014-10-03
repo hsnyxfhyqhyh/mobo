@@ -1,3 +1,4 @@
+3.17 [10/2/2014] -- add the ability to load references xml configuration file and generate the link to reference books related to the current bible book number.
 3.16 [10/1/2014] -- add the ability to force rotate the webview. , can view the book's note if chapter note is not available yet. 
 3.15 [9/29/2014] -- add the ability to view note as html file. Generice web view activity can be reused.
 3.14 [9/8/2014] -- add the back to history function

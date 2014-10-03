@@ -29,6 +29,7 @@ import android.graphics.Color;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.webkit.WebView;
+import android.webkit.WebViewClient;
 
 public class BibleReferenceChooserActivity extends Activity {
 public final static String EXTRA_MESSAGE = "com.chccc.bible.BibleReferenceChooser.MESSAGE";
@@ -54,6 +55,7 @@ public final static String EXTRA_MESSAGE = "com.chccc.bible.BibleReferenceChoose
 		
 //		myWebView.loadUrl(webViewFithPath);
 		myWebView.setBackgroundColor(Color.TRANSPARENT);
+//		myWebView.setWebViewClient(new WebViewClient());
 		
 	}
 	
@@ -142,7 +144,8 @@ public final static String EXTRA_MESSAGE = "com.chccc.bible.BibleReferenceChoose
 							Element studyRoot = (Element) studyElement.getElementsByTagName("Root").item(0);
 							
 							if (studyName!=null && studyName.getTextContent()!=null && !studyName.getTextContent().equals("")) {
-								sb.append(String.format(hrefTemplate, studyRoot.getTextContent(), studyName.getTextContent()));
+								String bookIndexHtmlFileFullPath = "file://" + Environment.getExternalStorageDirectory()  +  FileUtility.REFERENCE_ROOT + studyRoot.getTextContent();
+								sb.append(String.format(hrefTemplate, bookIndexHtmlFileFullPath, studyName.getTextContent()));
 							} else {
 								sb.append("没有参考书");
 							}
