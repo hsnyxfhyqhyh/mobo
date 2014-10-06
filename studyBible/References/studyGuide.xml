@@ -4,35 +4,35 @@
 		<Study>
 			<Name>丁道尔圣经注释</Name>
 			<Abbreviation>DDESJZC</Abbreviation>
-			<Root>01/DDESJZC/index.html</Root>
+			<Root>01/DDESJZC/01index.htm</Root>
 		</Study>
 	</Book>
 	<Book index="02" name="出埃及记 (Exodus)">
 		<Study>
 			<Name>丁道尔圣经注释</Name>
 			<Abbreviation>DDESJZC</Abbreviation>
-			<Root>02/DDESJZC/index.html</Root>
+			<Root>02/DDESJZC/02index.htm</Root>
 		</Study>
 	</Book>
 	<Book index="03" name="利未记 (Leviticus)">
 		<Study>
 			<Name>丰盛生命研读本</Name>
 			<Abbreviation>FSSMYDB</Abbreviation>
-			<Root>03/FSSMYDB/index.html</Root>
+			<Root>03/FSSMYDB/03index.htm</Root>
 		</Study>
 	</Book>
 	<Book index="04" name="民数记 (Numbers)">
 		<Study>
 			<Name>每日研经丛书</Name>
 			<Abbreviation>MRYJCS</Abbreviation>
-			<Root>04/MRYJCS/index.html</Root>
+			<Root>04/MRYJCS/04index.htm</Root>
 		</Study>
 	</Book>
 	<Book index="05" name="申命记 (Deuteronomy)">
 		<Study>
 			<Name>每日研经丛书</Name>
 			<Abbreviation>MRYJCS</Abbreviation>
-			<Root>05/MRYJCS/index.html</Root>
+			<Root>05/MRYJCS/05index.htm</Root>
 		</Study>
 	</Book>
 	<Book index="06" name="约书亚记 (Joshua)">
