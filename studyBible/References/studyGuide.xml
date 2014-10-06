@@ -457,20 +457,21 @@
 	</Book>
 	<Book index="66" name="启示录 (Revelation)">
 		<Study>
-			<Name>启示录释义-陈终道</Name>
-			<Abbreviation>QSLSY</Abbreviation>
-			<Root>66/QSLSY/66index.htm</Root>
-		</Study>
-		<Study>
-			<Name>圣灵所说的话-倪柝声</Name>
-			<Abbreviation>SLSSDH</Abbreviation>
-			<Root>66/SLSSDH/66index.htm</Root>
-		</Study>
-		<Study>
 			<Name>活石新约圣经注释</Name>
 			<Abbreviation>HSXYSJZS</Abbreviation>
 			<Root>66/HSXYSJZS/66index.htm</Root>
 		</Study>
+		<Study>
+			<Name>启示录释义-倪柝声</Name>
+			<Abbreviation>QSLSY</Abbreviation>
+			<Root>66/QSLSY/66index.htm</Root>
+		</Study>
+		<Study>
+			<Name>启示录中的七个教会-陈终道</Name>
+			<Abbreviation>SLSSDH</Abbreviation>
+			<Root>66/SLSSDH/66index.htm</Root>
+		</Study>
+		
 		
 	</Book>
 </StudyBible>
