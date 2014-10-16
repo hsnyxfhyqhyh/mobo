@@ -1,0 +1,599 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 14 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:SimSun;
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+@font-face
+	{font-family:SimSun;
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+@font-face
+	{font-family:Cambria;
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:"\@SimSun";
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:10.0pt;
+	margin-left:0in;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";}
+h1
+	{mso-style-link:"Heading 1 Char";
+	margin-top:24.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:"Cambria","serif";
+	color:#365F91;
+	font-weight:bold;}
+h2
+	{mso-style-link:"Heading 2 Char";
+	margin-top:10.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	page-break-after:avoid;
+	font-size:13.0pt;
+	font-family:"Cambria","serif";
+	color:#4F81BD;
+	font-weight:bold;}
+h3
+	{mso-style-link:"Heading 3 Char";
+	margin-top:10.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	page-break-after:avoid;
+	font-size:11.0pt;
+	font-family:"Cambria","serif";
+	color:#4F81BD;
+	font-weight:bold;}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;}
+p
+	{margin-right:0in;
+	margin-left:0in;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";}
+p.MsoAcetate, li.MsoAcetate, div.MsoAcetate
+	{mso-style-link:"Balloon Text Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	font-size:8.0pt;
+	font-family:"Calibri","sans-serif";}
+p.MsoNoSpacing, li.MsoNoSpacing, div.MsoNoSpacing
+	{margin:0in;
+	margin-bottom:.0001pt;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";}
+p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:10.0pt;
+	margin-left:.5in;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";}
+span.Heading1Char
+	{mso-style-name:"Heading 1 Char";
+	mso-style-link:"Heading 1";
+	font-family:"Cambria","serif";
+	color:#365F91;
+	font-weight:bold;}
+span.Heading2Char
+	{mso-style-name:"Heading 2 Char";
+	mso-style-link:"Heading 2";
+	font-family:"Cambria","serif";
+	color:#4F81BD;
+	font-weight:bold;}
+span.Heading3Char
+	{mso-style-name:"Heading 3 Char";
+	mso-style-link:"Heading 3";
+	font-family:"Cambria","serif";
+	color:#4F81BD;
+	font-weight:bold;}
+span.BalloonTextChar
+	{mso-style-name:"Balloon Text Char";
+	mso-style-link:"Balloon Text";}
+p.msolistparagraphcxspfirst, li.msolistparagraphcxspfirst, div.msolistparagraphcxspfirst
+	{mso-style-name:msolistparagraphcxspfirst;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";}
+p.msolistparagraphcxspmiddle, li.msolistparagraphcxspmiddle, div.msolistparagraphcxspmiddle
+	{mso-style-name:msolistparagraphcxspmiddle;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";}
+p.msolistparagraphcxsplast, li.msolistparagraphcxsplast, div.msolistparagraphcxsplast
+	{mso-style-name:msolistparagraphcxsplast;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:10.0pt;
+	margin-left:.5in;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";}
+p.msochpdefault, li.msochpdefault, div.msochpdefault
+	{mso-style-name:msochpdefault;
+	margin-right:0in;
+	margin-left:0in;
+	font-size:12.0pt;
+	font-family:"Calibri","sans-serif";}
+p.msopapdefault, li.msopapdefault, div.msopapdefault
+	{mso-style-name:msopapdefault;
+	margin-right:0in;
+	margin-bottom:10.0pt;
+	margin-left:0in;
+	line-height:115%;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";}
+span.apple-converted-space
+	{mso-style-name:apple-converted-space;}
+.MsoChpDefault
+	{font-size:10.0pt;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US link=blue vlink=purple>
+
+<div class=WordSection1>
+
+<h1><span lang=ZH-CN style='font-size:20.0pt;line-height:115%;font-family:SimSun'>&#32822;&#21033;&#31859;&#20070;</span></h1>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal><u><span lang=ZH-CN style='font-family:SimSun;background:
+yellow'>&#38053;&#33410;</span></u><span lang=ZH-CN style='font-family:SimSun;
+background:yellow'>&#65306;“&#20320;&#33258;&#24049;&#30340;&#24694;&#24517;&#24809;&#27835;&#20320;&#65307;&#20320;&#32972;&#36947;&#30340;&#20107;&#24517;&#36131;&#22791;&#20320;&#12290;&#30001;&#27492;&#21487;&#30693;&#21487;&#35265;&#65292;&#20320;&#31163;&#24323;&#32822;&#21644;&#21326;&#20320;&#30340;&#31070;&#65292;&#19981;&#23384;&#25964;&#30031;&#25105;&#30340;&#24515;&#65292;&#20035;&#20026;&#24694;&#20107;&#65292;&#20026;&#33510;&#20107;&#12290;”&#36825;&#26159;&#20027;&#19975;&#20891;&#20043;&#32822;&#21644;&#21326;&#35828;&#30340;&#12290;&#65288;</span><span
+style='font-family:SimSun;background:yellow'>2:19<span lang=ZH-CN>&#65289;</span></span></p>
+
+<p class=MsoNormal><u><span lang=ZH-CN style='font-family:SimSun;background:
+yellow'>&#35201;&#26088;</span></u><span lang=ZH-CN style='font-family:SimSun;
+background:yellow'>&#65306;&#24691;&#20999;&#21149;&#25106;&#31070;&#30340;&#23376;&#27665;&#31163;&#24320;&#33258;&#24049;&#30340;&#32618;&#65292;&#24402;&#21521;&#32822;&#21644;&#21326;&#31070;&#12290;</span></p>
+
+<p class=MsoNormal><u><span lang=ZH-CN style='font-family:SimSun;background:
+yellow'>&#20027;&#39064;</span></u><span lang=ZH-CN style='font-family:SimSun;
+background:yellow'>&#65306;&#21018;&#30828;&#19981;&#24724;&#25913;&#30340;&#29369;&#22823;&#32456;&#38590;&#36867;&#33073;&#31070;&#30340;&#23457;&#21028;</span></p>
+
+<p class=MsoNormal><u><span lang=ZH-CN style='font-family:SimSun;background:
+yellow'>&#20027;&#35201;&#20154;&#29289;</span></u><span lang=ZH-CN
+style='font-family:SimSun;background:yellow'>&#65306;&#29369;&#22823;&#22269;&#19978;&#36848;&#30340;&#20116;&#20301;&#26368;&#21518;&#30340;&#21531;&#29579;&#9472;&#9472;&#32422;&#35199;&#20122;&#12289;&#32422;&#21704;&#26031;&#12289;&#32422;&#38597;&#25964;&#12289;&#32422;&#38597;&#26020;&#21644;&#35199;&#24213;&#23478;&#65307;
+&#20197;&#21450; &#24052;&#24405;&#12289;&#20197;&#20271;&#31859;&#21202;&#12289;&#23612;&#24067;&#30002;&#23612;&#25746;&#29579;&#12289;&#21033;&#30002;&#26063;&#20154;</span></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<h2><span lang=ZH-CN style='font-family:SimSun'>&#20889;&#20316;&#26085;&#26399;&#19982;&#20316;&#32773;</span></h2>
+
+<p class=MsoNormal><span lang=ZH-CN style='font-family:SimSun'>&#20316;&#32773;</span><span
+lang=ZH-CN style='font-size:10.5pt;line-height:115%;font-family:SimSun;
+color:black;background:white'>&#32822;&#21033;</span><span lang=ZH-CN
+style='font-size:10.5pt;line-height:115%;font-family:SimSun;color:black;
+background:white'>&#31859;</span></span><span style='font-size:10.5pt;
+line-height:115%;font-family:SimSun;color:black;background:white'>, </span><span
+lang=ZH-CN style='font-size:10.5pt;line-height:115%;font-family:SimSun;
+color:black;background:white'>&#20889;&#20110;&#32822;&#21033;&#31859;&#20107;&#22857;&#26399;&#38388;&#65292;&#32422;&#22312;&#20844;&#20803;&#21069;</span></span><span
+style='font-size:10.5pt;line-height:115%;font-family:"Arial","sans-serif";
+color:black;background:white'><span style='orphans: auto;widows: auto;
+-webkit-text-stroke-width: 0px;word-spacing:0px'>627</span></span><span
+lang=ZH-CN style='font-size:10.5pt;line-height:115%;font-family:SimSun;
+color:black;background:white'><span style='orphans: auto;widows: auto;
+-webkit-text-stroke-width: 0px;word-spacing:0px'>&#33267;</span></span><span
+style='font-size:10.5pt;line-height:115%;font-family:"Arial","sans-serif";
+color:black;background:white'><span style='orphans: auto;widows: auto;
+-webkit-text-stroke-width: 0px;word-spacing:0px'>586</span></span><span
+lang=ZH-CN style='font-size:10.5pt;line-height:115%;font-family:SimSun;
+color:black;background:white'><span style='orphans: auto;widows: auto;
+-webkit-text-stroke-width: 0px;word-spacing:0px'>&#24180;&#38388;</span><span
+lang=ZH-CN style='font-size:10.5pt;line-height:115%;font-family:SimSun;
+color:black;background:white'>&#12290;</span> </span></p>
+
+<p class=MsoNormal><span lang=ZH-CN style='font-family:SimSun'>&#20316;&#32773;</span><span
+lang=ZH-CN style='font-size:10.5pt;line-height:115%;font-family:SimSun;
+color:black;background:white'>&#32822;&#21033;</span><span lang=ZH-CN
+style='font-size:10.5pt;line-height:115%;font-family:SimSun;color:black;
+background:white'>&#31859;</span></span><span style='font-size:10.5pt;
+line-height:115%;font-family:SimSun;color:black;background:white'>, </span></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<h2><span lang=ZH-CN style='font-family:SimSun'>&#31616;&#20171;</span></h2>
+
+<p class=MsoNoSpacing><span lang=ZH-CN style='font-family:SimSun;background:
+white'>&#22312;&#32822;&#21033;&#31859;&#20070;&#20013;&#65292;&#25551;&#32472;&#30340;&#26159;&#29369;&#22823;&#20154;&#22312;&#34987;&#25523;&#20043;&#21069;&#65292;&#22914;&#20309;&#32902;&#26080;&#24524;&#24814;&#12289;&#27627;&#26080;&#32670;&#32827;&#22320;&#25308;&#20598;&#20687;&#12290;&#20182;&#20204;&#23545;&#32822;&#21033;&#31859;&#21453;&#35206;&#23459;&#21578;&#27585;&#28781;&#30340;&#20449;&#24687;&#20805;&#32819;&#19981;&#38395;&#65292;&#26368;&#21518;&#32456;&#20110;&#25307;&#33268;&#31070;&#26089;&#24050;&#23459;&#31034;&#30340;&#28781;&#20129;</span>&nbsp;</p>
+
+<p class=MsoNoSpacing>&nbsp;</p>
+
+<p class=MsoNormal><span lang=ZH-CN style='font-family:SimSun'>&#24590;&#26679;&#25165;&#31639;&#26159;&#25104;&#21151;&#65311;&#22823;&#37096;&#20998;&#20154;&#35748;&#20026;&#25104;&#21151;&#23601;&#26159;&#36798;&#21040;&#30446;&#26631;&#12289;&#33719;&#24471;&#21517;&#21033;&#12289;&#26435;&#21147;&#21644;&#36190;&#35465;&#12290;&#25104;&#21151;&#30340;&#20154;&#20139;&#21463;&#33258;&#24049;&#21162;&#21147;&#30340;&#25104;&#26524;&#65292;&#29983;&#27963;&#32654;&#28385;&#12290;&#20182;&#20204;&#26159;&#20247;&#20154;&#30340;&#39046;&#34966;&#12289;&#20182;&#20204;&#30340;&#24847;&#35265;&#22791;&#21463;&#23562;&#37325;&#65292;&#20182;&#20204;&#30340;&#35328;&#34892;&#20154;&#20154;&#36861;&#38543;&#12290;&#27599;&#20010;&#20154;&#37117;&#25721;&#20223;&#20182;&#20204;&#12289;&#35848;&#35770;&#20182;&#20204;&#30340;&#25104;&#23601;&#12290;&#20182;&#20204;&#28165;&#26970;&#33258;&#24049;&#30340;&#29702;&#24819;&#21644;&#30446;&#26631;&#65292;&#24182;&#19988;&#20805;&#28385;&#20449;&#24515;&#65292;&#26114;&#28982;&#21521;&#30528;&#30446;&#26631;&#21069;&#36827;&#12290;&#12288;&#12288;</span></p>
+
+<p class=MsoNormal><span lang=ZH-CN style='font-family:SimSun;background:yellow'>&#26681;&#25454;&#36825;&#26679;&#30340;&#26631;&#20934;&#65292;&#32822;&#21033;&#31859;&#30340;&#30830;&#26159;&#19968;&#20010;&#21487;&#24604;&#30340;&#22833;&#36133;&#32773;</span><span
+lang=ZH-CN style='font-family:SimSun'>&#12290;&#20316;&#20026;&#31070;&#30340;&#20195;&#35328;&#20154;&#65292;&#20182;&#21521;&#29369;&#22823;&#22269;&#23459;&#35762;&#20102;&#22235;&#21313;&#24180;&#65292;&#21364;&#27809;&#26377;&#19968;&#20010;&#20154;&#21548;&#20182;&#65307;&#20182;&#24551;&#24515;&#24545;&#24545;&#22320;&#21149;&#35861;&#65292;&#23388;&#23388;&#19981;&#20518;&#22320;&#24691;&#27714;&#20182;&#20204;&#24724;&#25913;&#65292;&#21364;&#27809;&#26377;&#19968;&#20010;&#20154;&#34892;&#21160;&#12290;&#22312;&#29289;&#36136;&#19978;&#20182;&#27809;&#26377;&#24471;&#21040;&#20219;&#20309;&#22909;&#22788;&#65292;&#22312;&#23459;&#35762;&#26399;&#38388;&#65292;&#20182;&#36807;&#30528;&#36139;&#22256;&#30340;&#29983;&#27963;&#65292;&#29978;&#33267;&#21463;&#23613;&#27450;&#20940;&#65307;&#26366;&#34987;&#22234;&#36827;&#30417;&#29425;&#21644;&#20648;&#27700;&#27744;&#20013;&#65288;</span>37-38<span
+lang=ZH-CN style='font-family:SimSun'>&#31456;&#65289;&#65292;&#34987;&#24378;&#34892;&#24102;&#33267;&#22467;&#21450;&#65288;</span>43<span
+lang=ZH-CN style='font-family:SimSun'>&#31456;&#65289;&#65292;&#26356;&#36973;&#37051;&#33293;&#65288;</span>11:19-21<span
+lang=ZH-CN style='font-family:SimSun'>&#65289;&#12289;&#23478;&#20154;&#65288;</span>12:6<span
+lang=ZH-CN style='font-family:SimSun'>&#65289;&#12289;&#20551;&#31085;&#21496;&#19982;&#20808;&#30693;&#65288;</span>20:1-2<span
+lang=ZH-CN style='font-family:SimSun'>&#65307;</span>28<span lang=ZH-CN
+style='font-family:SimSun'>&#31456;&#65289;&#12289;&#26379;&#21451;&#65288;</span>20:10<span
+lang=ZH-CN style='font-family:SimSun'>&#65289;&#12289;&#30334;&#22995;&#65288;</span>26:8<span
+lang=ZH-CN style='font-family:SimSun'>&#65289;&#21644;&#21531;&#29579;&#65288;</span>36:23<span
+lang=ZH-CN style='font-family:SimSun'>&#65289;&#21822;&#24323;&#12290;&#20182;&#23377;&#28982;&#19968;&#36523;&#65292;&#23459;&#35762;&#31070;&#27585;&#28781;&#30340;&#20449;&#24687;&#24182;&#31042;&#30340;&#26032;&#32422;&#65292;&#20026;&#33258;&#24049;&#38047;&#29233;&#30340;&#22269;&#23478;&#27969;&#27882;&#12290;&#20174;&#19990;&#20439;&#30340;&#30524;&#20809;&#26469;&#30475;&#65292;&#20182;&#19997;&#27627;&#35848;&#19981;&#19978;&#25104;&#21151;&#65307;&#28982;&#32780;&#65292;&#22312;&#31070;&#30340;&#30524;&#20013;&#20182;&#26159;&#21382;&#19990;&#26368;&#25104;&#21151;&#30340;&#20154;&#20043;&#19968;&#65292;&#22240;&#20026;&#31070;&#20197;&#39034;&#26381;&#19982;&#24544;&#35802;&#26469;&#34913;&#37327;&#20154;&#30340;&#25104;&#21151;&#12290;&#32822;&#21033;&#31859;&#26080;&#24807;&#21508;&#26041;&#30340;&#21453;&#23545;&#65292;&#19981;&#24796;&#29306;&#29298;&#20010;&#20154;&#30340;&#21033;&#30410;&#65292;&#24544;&#21191;&#22320;&#23459;&#35762;&#31070;&#30340;&#20449;&#24687;&#65292;&#23653;&#34892;&#31070;&#30340;&#20351;&#21629;&#12290;&#12288;&#12288;</span></p>
+
+<p class=MsoNormal><span lang=ZH-CN style='font-family:SimSun'>&#32822;&#21033;&#31859;&#20070;&#20197;&#32822;&#21033;&#31859;&#33945;&#21484;&#24320;&#22987;&#65292;&#32487;&#32780;&#35762;&#36848;&#20182;&#23545;&#20197;&#33394;&#21015;&#65288;&#20998;&#35010;&#21069;&#65289;&#21450;&#29369;&#22823;&#65288;&#21335;&#22269;&#65289;&#30340;&#39044;&#35328;&#65306;</span>2<span
+lang=ZH-CN style='font-family:SimSun'>&#33267;</span>20<span lang=ZH-CN
+style='font-family:SimSun'>&#31456;&#27604;&#36739;&#27010;&#25324;&#65307;</span>21<span
+lang=ZH-CN style='font-family:SimSun'>&#33267;</span>39<span lang=ZH-CN
+style='font-family:SimSun'>&#31456;&#21017;&#27604;&#36739;&#20855;&#20307;&#65292;&#24182;&#21015;&#26126;&#26085;&#26399;&#12290;&#32822;&#21033;&#31859;&#30340;&#20449;&#24687;&#24456;&#31616;&#21333;&#65306;&#24724;&#25913;&#24402;&#21521;&#31070;&#65292;&#21542;&#21017;&#31070;&#24517;&#24809;&#32602;&#12290;&#20294;&#24403;&#26102;&#30340;&#20154;&#19981;&#21548;&#20182;&#30340;&#24544;&#21578;&#65292;&#20182;&#23601;&#20180;&#32454;&#39044;&#35328;&#32822;&#36335;&#25746;&#20919;&#23558;&#27814;&#38519;&#34987;&#27585;&#65288;</span>39<span
+lang=ZH-CN style='font-family:SimSun'>&#31456;&#65289;&#12290;&#32822;&#21033;&#31859;&#20070;&#36319;&#30528;&#35760;&#36848;&#32822;&#36335;&#25746;&#20919;&#27814;&#38519;&#21518;&#30340;&#24773;&#20917;&#65288;</span>40-45<span
+lang=ZH-CN style='font-family:SimSun'>&#31456;&#65289;&#65292;&#26368;&#21518;&#20197;&#39044;&#35328;&#20854;&#20182;&#21508;&#22269;&#30340;&#21629;&#36816;&#20316;&#32467;&#26463;&#65288;</span>46-52<span
+lang=ZH-CN style='font-family:SimSun'>&#31456;&#65289;&#12290;&#12288;&#12288;</span></p>
+
+<p class=MsoNormal><span lang=ZH-CN style='font-family:SimSun'>&#35835;&#32822;&#21033;&#31859;&#20070;&#26102;&#65292;&#24863;&#21463;&#20808;&#30693;&#38754;&#23545;&#33258;&#24049;&#35201;&#23459;&#35762;&#30340;&#20449;&#24687;&#30340;&#30171;&#33510;&#65292;&#19982;&#20808;&#30693;&#19968;&#36215;&#20026;&#25298;&#32477;&#30495;&#29702;&#30340;&#20154;&#31095;&#21578;&#65292;&#24182;&#25928;&#27861;&#20182;&#20805;&#28385;&#20449;&#24515;&#21644;&#21191;&#27668;&#30340;&#27036;&#26679;&#65292;&#28982;&#21518;&#31469;&#21147;&#36861;&#27714;&#25104;&#20026;&#31070;&#30524;&#20013;&#30340;&#25104;&#21151;&#20154;&#22763;&#12290;</span></p>
+
+<h2><span lang=ZH-CN style='font-family:SimSun'>&#30446;&#30340;</span></h2>
+
+<p class=MsoNoSpacing>&nbsp;<span lang=ZH-CN style='font-family:SimSun'>&#32822;&#21033;&#31859;&#20889;&#20316;&#26412;&#20070;&#30340;&#30446;&#30340;&#21253;&#25324;</span>3<span
+lang=ZH-CN style='font-family:SimSun'>&#26041;&#38754;&#65306;</span></p>
+
+<p class=MsoNoSpacing style='margin-left:.25in;text-indent:-.25in'><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=ZH-CN style='font-family:SimSun'>&#20026;&#32822;&#21033;&#31859;&#30340;&#20808;&#30693;&#20107;&#22857;&#21644;&#39044;&#35328;&#20449;&#24687;&#25552;&#20379;&#27704;&#20037;&#30340;&#35760;&#24405;&#65307;</span></p>
+
+<p class=MsoNoSpacing style='margin-left:.25in;text-indent:-.25in'><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=ZH-CN style='font-family:SimSun'>&#38416;&#26126;&#36825;&#26679;&#19968;&#26465;&#21407;&#21017;&#65306;&#24403;&#31070;&#23376;&#27665;&#36829;&#32972;&#22307;&#32422;&#24182;&#19988;&#39037;&#22266;&#22320;&#24726;&#36870;&#31070;&#21644;&#20182;&#30340;&#35805;&#35821;&#26102;&#65292;&#31070;&#30340;&#23457;&#21028;&#23601;&#26080;&#21487;&#36991;&#20813;&#24182;&#19988;&#38590;&#20197;&#36867;&#33073;&#65307;</span></p>
+
+<p class=MsoNoSpacing style='margin-left:.25in;text-indent:-.25in'><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=ZH-CN style='font-family:SimSun'>&#24432;&#26174;&#31070;&#25152;&#39044;&#35328;&#30340;&#35805;&#35821;&#30340;&#30495;&#30830;&#24615;&#21644;&#26435;&#23041;&#24615;&#12290;<span
+style='background:yellow'>&#32822;&#21033;&#31859;&#25152;&#35762;&#30340;&#35768;&#22810;&#39044;&#35328;&#22312;&#20182;&#30340;&#26377;&#29983;&#20043;&#24180;&#23601;&#24471;&#21040;&#20102;&#24212;&#39564;</span></span>(<span
+lang=ZH-CN style='font-family:SimSun'>&#22914;</span>16:9<span lang=ZH-CN
+style='font-family:SimSun'>&#65307;</span>20:4<span lang=ZH-CN
+style='font-family:SimSun'>&#65307;</span>25:1~14<span lang=ZH-CN
+style='font-family:SimSun'>&#65307;</span>27:19~22<span lang=ZH-CN
+style='font-family:SimSun'>&#65307;</span>28:15~17<span lang=ZH-CN
+style='font-family:SimSun'>&#65307;</span>32:10~13<span lang=ZH-CN
+style='font-family:SimSun'>&#65307;</span>34:1~5)<span lang=ZH-CN
+style='font-family:SimSun'>&#65307;&#20854;&#20182;&#19968;&#20123;&#20851;&#20110;&#26410;&#26469;&#30340;&#39044;&#35328;&#26377;&#20123;&#21518;&#26469;&#24471;&#21040;&#20102;&#24212;&#39564;&#65292;&#26377;&#20123;&#23578;&#24453;&#26085;&#21518;&#24212;&#39564;</span>(<span
+lang=ZH-CN style='font-family:SimSun'>&#22914;</span>23:5~6<span lang=ZH-CN
+style='font-family:SimSun'>&#65307;</span>30:8~9<span lang=ZH-CN
+style='font-family:SimSun'>&#65307;</span>31:31~34<span lang=ZH-CN
+style='font-family:SimSun'>&#65307;</span>33:14~16)<span lang=ZH-CN
+style='font-family:SimSun'>&#12290;</span></p>
+
+<p class=MsoNormal style='text-indent:2.25pt'>&nbsp;</p>
+
+<h2><span lang=ZH-CN style='font-family:SimSun'>&#29305;&#33394;</span></h2>
+
+<p class=MsoNoSpacing style='margin-left:.25in;text-indent:-.25in'><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=ZH-CN style='font-family:SimSun'>&#26412;&#20070;&#26159;&#22307;&#32463;&#20013;&#26368;&#38271;&#30340;&#20070;&#21367;&#20043;&#19968;&#65292;&#38500;&#35799;&#31687;&#20197;&#22806;&#65292;&#20840;&#20070;&#30340;&#23383;&#25968;</span>(<span
+lang=ZH-CN style='font-family:SimSun'>&#32780;&#38750;&#31456;&#25968;</span>)<span
+lang=ZH-CN style='font-family:SimSun'>&#36229;&#36807;&#22307;&#32463;&#30340;&#20854;&#23427;&#20219;&#20309;&#20070;&#21367;&#65307;</span></p>
+
+<p class=MsoNoSpacing style='margin-left:.25in;text-indent:-.25in'><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=ZH-CN style='font-family:SimSun'>&#26412;&#20070;&#27604;&#20854;&#23427;&#20219;&#20309;&#26087;&#32422;&#20808;&#30693;&#20070;&#37117;&#26356;&#21152;&#28145;&#20837;&#35814;&#23613;&#22320;&#25259;&#38706;&#20102;&#20808;&#30693;&#20010;&#20154;&#30340;&#29983;&#27963;&#32463;&#21382;&#21644;&#20869;&#24515;&#20105;&#25112;&#65307;</span></p>
+
+<p class=MsoNoSpacing style='margin-left:.25in;text-indent:-.25in'><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=ZH-CN style='font-family:SimSun'>&#20840;&#20070;&#24357;&#28459;&#30528;&#36825;&#20301;</span><span
+style='font-family:"Cambria","serif"'>“</span><span lang=ZH-CN
+style='font-family:SimSun'>&#27969;&#27882;&#30340;&#20808;&#30693;</span><span
+style='font-family:"Cambria","serif"'>”</span><span lang=ZH-CN
+style='font-family:SimSun'>&#22240;&#29369;&#22823;&#30340;&#24726;&#36870;&#32780;&#24551;&#20260;&#12289;&#24515;&#30862;&#21644;&#21852;&#27875;&#30340;&#24754;&#30171;&#27668;&#24687;&#65307;&#23613;&#31649;&#32822;&#21033;&#31859;&#23545;&#27665;&#20247;&#21457;&#20986;&#30340;&#20449;&#24687;&#24378;&#21170;&#32780;&#20005;&#21385;&#65292;&#20294;&#26159;&#20182;&#24515;&#20013;&#21364;&#28145;&#28145;&#22320;&#20026;&#30528;&#31070;&#23376;&#27665;&#24551;&#20260;&#30171;&#33510;&#12290;&#20182;&#21521;&#31070;&#24544;&#24515;&#32831;&#32831;&#65292;&#26356;&#20026;&#30528;&#31070;&#30340;&#20260;&#30171;&#32780;&#26497;&#24230;&#24551;&#20260;&#65307;</span></p>
+
+<p class=MsoNoSpacing style='margin-left:.25in;text-indent:-.25in'><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=ZH-CN style='font-family:SimSun'>&#26412;&#20070;&#20013;&#30340;&#19968;&#20010;&#20851;&#38190;&#35789;&#35821;&#26159;</span><span
+style='font-family:"Cambria","serif"'>“</span><span lang=ZH-CN
+style='font-family:SimSun'>&#32972;&#36947;</span><span style='font-family:
+"Cambria","serif"'>”</span>(<span lang=ZH-CN style='font-family:SimSun'>&#29992;&#21040;</span>5<span
+lang=ZH-CN style='font-family:SimSun'>&#27425;</span>)<span lang=ZH-CN
+style='font-family:SimSun'>&#25110;</span><span style='font-family:"Cambria","serif"'>“</span><span
+lang=ZH-CN style='font-family:SimSun'>&#22904;&#35784;</span><span
+style='font-family:"Cambria","serif"'>”</span>(<span lang=ZH-CN
+style='font-family:SimSun'>&#29992;&#21040;</span>10<span lang=ZH-CN
+style='font-family:SimSun'>&#27425;</span>)<span lang=ZH-CN style='font-family:
+SimSun'>&#65292;&#20840;&#20070;&#25581;&#31034;&#20102;&#19968;&#20010;&#27704;&#24658;&#20027;&#39064;&#65306;&#31070;&#23545;&#24726;&#36870;&#21644;&#32972;&#36947;&#20043;&#20154;&#25152;&#26045;&#34892;&#30340;&#23457;&#21028;&#19981;&#21487;&#36870;&#36716;&#65307;</span></p>
+
+<p class=MsoNoSpacing style='margin-left:.25in;text-indent:-.25in'><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=ZH-CN style='font-family:SimSun'>&#20840;&#20070;&#21521;&#25105;&#20204;&#21551;&#31034;&#20102;&#19968;&#20010;&#26368;&#20255;&#22823;&#30340;&#31070;&#23398;&#27010;&#24565;</span><span
+style='font-family:"Cambria","serif"'>——“</span><span lang=ZH-CN
+style='font-family:SimSun'>&#26032;&#32422;</span><span style='font-family:
+"Cambria","serif"'>”</span><span lang=ZH-CN style='font-family:SimSun'>&#65292;&#31070;&#23558;&#22312;&#26410;&#26469;&#22797;&#20852;&#30340;&#26102;&#20505;&#65292;&#19982;&#20182;&#30340;&#24544;&#24515;&#23376;&#27665;&#21478;&#31435;&#26032;&#32422;</span>(31:31~34)<span
+lang=ZH-CN style='font-family:SimSun'>&#65307;</span></p>
+
+<p class=MsoNoSpacing style='margin-left:.25in;text-indent:-.25in'><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=ZH-CN style='font-family:SimSun'>&#20070;&#20013;&#30340;&#35799;&#20307;&#37096;&#20998;&#22914;&#21516;&#22307;&#32463;&#20013;&#30340;&#20854;&#23427;&#35799;&#27468;&#19968;&#26679;&#65292;&#20248;&#32654;&#33258;&#28982;&#65292;&#33410;&#22863;&#27969;&#30021;&#65292;&#20805;&#28385;&#20102;&#35768;&#22810;&#28145;&#36995;&#30340;&#27604;&#21947;&#20197;&#21450;&#29983;&#21160;&#30340;&#35686;&#21477;&#21644;&#20196;&#20154;&#38590;&#24536;&#30340;&#31687;&#31456;&#65307;</span></p>
+
+<p class=MsoNoSpacing style='margin-left:.25in;text-indent:-.25in'><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=ZH-CN style='font-family:SimSun'>&#20070;&#20013;&#25552;&#21040;&#24052;&#27604;&#20262;&#30340;&#27425;&#25968;</span>(164<span
+lang=ZH-CN style='font-family:SimSun'>&#27425;</span>)<span lang=ZH-CN
+style='font-family:SimSun'>&#27604;&#22307;&#32463;&#25152;&#26377;&#20854;&#23427;&#20070;&#21367;&#25552;&#21040;&#30340;&#24635;&#21644;&#36824;&#22810;&#12290;</span></p>
+
+<h2><span lang=ZH-CN style='font-family:SimSun'>&#32508;&#35272;</span></h2>
+
+<p class=MsoNoSpacing>&nbsp;</p>
+
+<p class=MsoNoSpacing><span lang=ZH-CN style='font-family:SimSun'>&#21271;&#22269;&#20197;&#33394;&#21015;&#34987;&#20122;&#36848;&#25915;&#38519;&#24460;&#65292;<span
+style='background:yellow'>&#22312;&#29369;&#22823;&#22269;&#20129;&#22269;&#21069;&#19981;&#20037;&#30340;&#26102;&#20505;&#65292;&#32822;&#21033;&#31859;&#20415;&#24320;&#22987;&#22312;&#29369;&#22823;&#20256;&#36947;</span>&#12290;&#22312;&#36825;&#27573;&#26085;&#23376;&#65292;&#29369;&#22823;&#22269;&#34987;&#20122;&#36848;&#12289;&#22467;&#21450;&#21644;&#24052;&#27604;&#20262;&#19977;&#38754;&#25915;&#20987;&#12290;&#31070;&#24050;&#35686;&#21578;&#65292;&#29369;&#22823;&#23558;&#34987;&#24052;&#27604;&#20262;&#25915;&#38519;&#65292;&#25152;&#20197;&#32822;&#21033;&#31859;&#20844;&#28982;&#21453;&#23545;&#29369;&#22823;&#19982;&#22467;&#21450;&#32852;&#30431;&#65292;&#32780;&#22467;&#21450;&#20063;&#23558;&#34987;&#25171;&#36133;&#12290;&#24403;&#26102;&#65292;&#29369;&#22823;&#39035;&#21521;&#20122;&#36848;&#36827;&#36129;&#65292;&#20294;&#19981;&#21040;&#20108;&#21313;&#24180;&#65292;&#20122;&#36848;&#39318;&#37117;&#23612;&#23612;&#24494;&#22478;&#22312;&#36973;&#21463;&#29467;&#28872;&#22260;&#25915;&#19979;&#27814;&#38519;&#20102;&#12290;&#22467;&#21450;&#27861;&#32769;&#23612;&#21733;&#29575;&#20891;&#21271;&#19978;&#32463;&#24052;&#21202;&#26031;&#22374;&#21040;&#21704;&#20848;&#65292;&#26432;&#27515;&#20102;&#32422;&#35199;&#20122;&#29579;&#65288;&#20027;&#21069;</span>609<span
+lang=ZH-CN style='font-family:SimSun'>&#24180;&#65289;&#12290;&#27861;&#32769;&#19982;&#20122;&#36848;&#30340;&#27531;&#20853;&#36935;&#19978;&#23612;&#24067;&#30002;&#23612;&#25746;&#65292;&#24403;&#26102;&#20182;&#27491;&#25381;&#20891;&#23637;&#24320;&#30528;&#21517;&#30340;&#36838;&#22522;&#31859;&#26045;&#20043;&#24441;&#12290;&#29369;&#22823;&#36930;&#33853;&#20837;&#24052;&#27604;&#20262;&#25163;&#20013;&#12290;&#22312;&#36825;&#20107;&#20043;&#21069;&#65292;&#23612;&#21733;&#26366;&#24223;&#40668;&#32422;&#35199;&#20122;&#30340;&#32487;&#25215;&#20154;&#32422;&#21704;&#26031;&#65292;&#21478;&#31435;&#32422;&#38597;&#25964;&#20026;&#29579;&#65292;&#24076;&#26395;&#20182;&#25104;&#20026;&#22467;&#21450;&#30340;&#38468;&#24248;&#12290;&#23612;&#24067;&#30002;&#23612;&#25746;&#26366;&#19968;&#24230;&#36731;&#35270;&#29369;&#22823;&#65292;&#27809;&#20316;&#29702;&#20250;&#65292;&#20196;&#32422;&#38597;&#25964;&#26377;&#26426;&#20250;&#21521;&#22467;&#21450;&#35201;&#27714;&#22686;&#25588;&#65292;&#24110;&#21161;&#20854;&#29420;&#31435;&#12290;</span></p>
+
+<p class=MsoNoSpacing>&nbsp;</p>
+
+<p class=MsoNoSpacing><span lang=ZH-CN style='font-family:SimSun'>&#20027;&#21069;&#20116;&#20061;&#20843;&#24180;&#65292;&#23612;&#24067;&#30002;&#23612;&#25746;&#22260;&#25915;&#32822;&#36335;&#25746;&#20919;&#65292;</span><span
+lang=ZH-CN> </span><span lang=ZH-CN style='font-family:SimSun'>&#25523;&#21435;&#30524;&#20013;&#21467;&#24466;&#32422;&#38597;&#25964;&#20043;&#23376;&#29369;&#22823;&#29579;&#32422;&#38597;&#26020;&#20197;&#21450;&#35768;&#22810;&#30334;&#22995;&#65292;&#28982;&#24460;&#31435;&#35199;&#24213;&#23478;&#20026;&#29579;&#12290;&#27861;&#32769;&#23612;&#21733;&#30340;&#32487;&#25215;&#20154;&#26862;&#22982;&#24503;&#20108;&#19990;&#21487;&#33021;&#24819;&#23547;&#27714;&#30431;&#20891;&#25269;&#25239;&#24052;&#27604;&#20262;&#12290;&#32822;&#21033;&#31859;&#21364;&#24378;&#28872;&#21453;&#23545;&#29369;&#22823;&#21152;&#20837;&#30431;&#20891;&#65288;&#22914;&#32822;&#21033;&#31859;&#20070;&#31532;&#20108;&#21313;&#20843;&#31456;&#65289;&#12290;&#20182;&#35828;&#37027;&#20123;&#25552;&#35758;&#21152;&#20837;&#22467;&#21450;&#30431;&#20891;&#30340;&#20154;&#37117;&#26159;&#20551;&#20808;&#30693;&#12290;&#35199;&#24213;&#23478;&#22240;&#30528;&#22467;&#21450;&#30340;&#24314;&#35758;&#32780;&#32972;&#21467;&#24052;&#27604;&#20262;&#65292;</span><span
+lang=ZH-CN> </span><span lang=ZH-CN style='font-family:SimSun'>&#23548;&#33268;&#24052;&#27604;&#20262;&#29579;&#26469;&#22260;&#25915;&#32822;&#36335;&#25746;&#20919;&#12290;&#36825;&#24180;&#20026;&#20027;&#21069;&#20116;&#20843;&#20843;&#24180;&#65292;&#22467;&#21450;&#20572;&#27490;&#25915;&#20987;&#65292;&#20294;&#19981;&#20037;&#21448;&#37325;&#26032;&#20986;&#24449;&#65292;&#27491;&#22914;&#32822;&#21033;&#31859;&#25152;&#35828;&#19968;&#26679;&#65292;&#22467;&#21450;&#26159;“&#25240;&#26029;&#30340;&#33446;&#33479;”&#65292;&#38752;&#19981;&#20303;&#12290;&#32822;&#21033;&#31859;&#28385;&#24515;&#24754;&#21696;&#65292;&#30524;&#30529;&#30529;&#30475;&#30528;&#33258;&#24049;&#26377;&#20851;&#22269;&#23478;&#34987;&#27585;&#12289;&#22269;&#27665;&#34987;&#25523;&#30340;&#39044;&#35328;&#24212;&#39564;&#12290;</span></p>
+
+<p class=MsoNoSpacing>&nbsp;</p>
+
+<p class=MsoNoSpacing><span lang=ZH-CN style='font-family:SimSun'>&#31070;&#21521;&#20808;&#30693;&#21551;&#31034;&#65292;&#29369;&#22823;&#30340;&#32618;&#23421;&#20250;&#23548;&#33268;&#22269;&#23478;&#34987;&#24052;&#27604;&#20262;&#21344;&#25454;&#65292;&#22269;&#27665;&#34987;&#27969;&#25918;&#19971;&#21313;&#24180;&#12290;&#32822;&#21033;&#31859;&#30340;&#20351;&#21629;&#24182;&#19981;&#35752;&#22909;&#65292;&#20182;&#35201;&#21521;&#21516;&#32990;&#23459;&#24067;&#36825;&#20214;&#20107;&#23454;&#65292;&#21149;&#21578;&#20182;&#20204;&#38477;&#26381;&#26044;&#24052;&#27604;&#20262;&#12290;&#32467;&#26524;&#22269;&#27665;&#25511;&#21578;&#20182;&#26159;&#21467;&#22269;&#32773;&#65292;&#36215;&#26469;&#36924;&#36843;&#20182;&#65292;&#29978;&#33267;&#35201;&#26432;&#27515;&#20182;&#12290;&#24403;&#32822;&#36335;&#25746;&#20919;&#26368;&#24460;&#33853;&#20837;&#22806;&#37030;&#30340;&#20405;&#30053;&#32773;&#25163;&#20013;&#65292;&#32822;&#21033;&#31859;&#26159;&#20854;&#20013;&#33719;&#20934;&#30041;&#22312;&#23478;&#20065;&#30340;&#20154;&#20043;&#19968;&#65292;</span><span
+lang=ZH-CN> </span><span lang=ZH-CN style='font-family:SimSun'>&#32780;&#22823;&#37096;&#20998;&#30334;&#22995;&#37117;&#34987;&#25523;&#21435;&#12290;&#20182;&#21149;&#21947;&#20313;&#27665;&#19981;&#35201;&#36867;&#21435;&#22467;&#21450;&#27714;&#21161;&#65292;&#20294;&#20182;&#20204;&#19981;&#21548;&#21149;&#21578;&#65292;&#36824;&#24378;&#36843;&#20182;&#19968;&#36215;&#36867;&#20129;&#12290;&#26368;&#24460;&#20808;&#30693;&#22312;&#22467;&#21450;&#21435;&#19990;&#20102;&#12290;</span></p>
+
+<p class=MsoNoSpacing>&nbsp;</p>
+
+<p class=MsoNoSpacing><span lang=ZH-CN style='font-family:SimSun;background:
+yellow'>&#38500;&#20102;&#39044;&#35328;&#24052;&#27604;&#20262;&#30340;&#21344;&#39046;&#22806;&#65292;&#32822;&#21033;&#31859;&#36824;&#39044;&#35328;&#24052;&#27604;&#20262;&#24093;&#22269;&#22312;&#19971;&#21313;&#24180;&#24460;&#36133;&#20129;&#65292;&#37027;&#26102;&#29369;&#22826;&#20154;&#21487;&#24402;&#22238;&#20182;&#20204;&#30340;&#23478;&#22253;</span><span
+lang=ZH-CN style='font-family:SimSun'>&#12290;</span></p>
+
+<p class=MsoNoSpacing>&nbsp;</p>
+
+<p class=MsoNormal><span lang=ZH-CN style='font-family:SimSun;background:yellow'>&#26412;&#20070;&#27719;&#38598;&#20102;&#20808;&#30693;&#32822;&#21033;&#31859;&#23545;<b>&#29369;&#22823;</b></span><span
+style='background:yellow'>(2~29</span><span lang=ZH-CN style='font-family:SimSun;
+background:yellow'>&#31456;</span><span style='background:yellow'>)</span><span
+lang=ZH-CN style='font-family:SimSun;background:yellow'>&#20197;&#21450;&#20854;&#23427;</span><b><span
+style='background:yellow'>9</span></b><b><span lang=ZH-CN style='font-family:
+SimSun;background:yellow'>&#20010;&#22806;&#37030;&#27665;&#26063;</span></b><span
+style='background:yellow'>(46~51</span><span lang=ZH-CN style='font-family:
+SimSun;background:yellow'>&#31456;</span><span style='background:yellow'>)</span><span
+lang=ZH-CN style='font-family:SimSun;background:yellow'>&#25152;&#21457;&#30340;&#39044;&#35328;</span><span
+lang=ZH-CN style='font-family:SimSun'>&#12290;&#36825;&#20123;&#39044;&#35328;&#20027;&#35201;&#20851;&#20046;&#31070;&#30340;&#23457;&#21028;&#65292;&#20854;&#20013;&#20063;&#21253;&#21547;&#19968;&#20123;&#22797;&#20852;&#30340;&#20449;&#24687;</span>(<span
+lang=ZH-CN style='font-family:SimSun'>&#29305;&#21035;&#21442;</span>30~33<span
+lang=ZH-CN style='font-family:SimSun'>&#31456;</span>)<span lang=ZH-CN
+style='font-family:SimSun'>&#12290;&#20070;&#20013;&#30340;&#39044;&#35328;&#24182;&#27809;&#26377;&#20005;&#26684;&#25353;&#29031;&#24180;&#20195;&#25110;&#20027;&#39064;&#32534;&#25490;&#65292;&#20294;&#26159;&#20840;&#20070;&#20173;&#28982;&#26377;&#19968;&#23450;&#30340;&#24635;&#20307;&#24615;&#32467;&#26500;&#21644;&#26694;&#26550;&#65292;&#27491;&#22914;&#21069;&#38754;&#30340;&#22823;&#32434;&#25152;&#31034;&#12290;&#26412;&#20070;&#30340;&#19968;&#37096;&#20998;&#20197;&#35799;&#20307;&#20889;&#25104;&#65292;&#20854;&#23427;&#37096;&#20998;&#21017;&#37319;&#29992;&#20102;&#25955;&#25991;&#25110;&#35760;&#21465;&#25991;&#30340;&#20307;&#35009;&#12290;&#20808;&#30693;&#30340;&#39044;&#35328;&#24615;&#20449;&#24687;&#19982;&#20197;&#19979;&#19968;&#20123;&#21382;&#21490;&#21490;&#23454;&#20132;&#32455;&#22312;&#19968;&#36215;&#65306;</span></p>
+
+<p class=MsoNoSpacing style='margin-left:.5in;text-indent:-.25in'><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=ZH-CN style='font-family:SimSun'>&#20808;&#30693;&#20010;&#20154;&#30340;&#29983;&#27963;&#21644;&#20107;&#22857;&#32463;&#21382;</span>(<span
+lang=ZH-CN style='font-family:SimSun'>&#22914;</span>1<span lang=ZH-CN
+style='font-family:SimSun'>&#31456;&#65307;</span>34~38<span lang=ZH-CN
+style='font-family:SimSun'>&#31456;&#65307;</span>40~45<span lang=ZH-CN
+style='font-family:SimSun'>&#31456;</span>)<span lang=ZH-CN style='font-family:
+SimSun'>&#65307;</span></p>
+
+<p class=MsoNoSpacing style='margin-left:.5in;text-indent:-.25in'><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=ZH-CN style='font-family:SimSun'>&#20197;&#32422;&#35199;&#20122;</span>(1~6<span
+lang=ZH-CN style='font-family:SimSun'>&#31456;</span>)<span lang=ZH-CN
+style='font-family:SimSun'>&#12289;&#32422;&#38597;&#25964;</span>(7~20<span
+lang=ZH-CN style='font-family:SimSun'>&#31456;</span>)<span lang=ZH-CN
+style='font-family:SimSun'>&#21450;&#35199;&#24213;&#23478;&#29579;</span>(21~25<span
+lang=ZH-CN style='font-family:SimSun'>&#31456;&#65307;</span>34<span
+lang=ZH-CN style='font-family:SimSun'>&#31456;</span>)<span lang=ZH-CN
+style='font-family:SimSun'>&#22312;&#20301;&#26102;&#26399;&#20026;&#20027;&#30340;&#29369;&#22823;&#21382;&#21490;&#65292;&#20854;&#20013;&#20063;&#21253;&#25324;&#32822;&#36335;&#25746;&#20919;&#30340;&#27814;&#38519;</span>(39<span
+lang=ZH-CN style='font-family:SimSun'>&#31456;</span>)<span lang=ZH-CN
+style='font-family:SimSun'>&#65307;</span></p>
+
+<p class=MsoNoSpacing style='margin-left:.5in;text-indent:-.25in'><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=ZH-CN style='font-family:SimSun'>&#19982;&#24052;&#27604;&#20262;&#21644;&#20854;&#23427;&#22806;&#37030;&#27665;&#26063;&#30456;&#20851;&#30340;&#22269;&#38469;&#24615;&#20107;&#20214;</span>(25~29<span
+lang=ZH-CN style='font-family:SimSun'>&#31456;&#65307;</span>46~52<span
+lang=ZH-CN style='font-family:SimSun'>&#31456;</span>)<span lang=ZH-CN
+style='font-family:SimSun'>&#12290;</span></p>
+
+<p class=MsoNoSpacing>&nbsp;</p>
+
+<p class=MsoNoSpacing>&nbsp;</p>
+
+<p class=MsoNoSpacing>&nbsp;</p>
+
+<h2><span lang=ZH-CN style='font-family:SimSun'>&#26412;&#20070;&#22823;&#32434;</span></h2>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+13.5pt;background:white'><b><span lang=ZH-CN style='font-size:10.5pt;
+font-family:SimSun;color:black'>&#19968;&#65294;&#31070;&#23545;&#29369;&#22823;&#30340;&#23457;&#21028;&#65288;</span></b><b><span
+style='font-size:10.5pt;font-family:"Arial","sans-serif";color:black'>1-45</span></b><b><span
+lang=ZH-CN style='font-size:10.5pt;font-family:SimSun;color:black'>&#31456;&#65289;</span></b></p>
+
+<p class=MsoListParagraph style='margin-top:0in;margin-right:0in;margin-bottom:
+0in;margin-left:.25in;margin-bottom:.0001pt;text-indent:-.25in;line-height:
+13.5pt;background:white'><span style='font-size:10.5pt;font-family:Symbol;
+color:black'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=ZH-CN style='font-size:10.5pt;font-family:SimSun;
+color:black'>&#32822;&#21033;&#31859;&#33945;&#21484;</span></p>
+
+<p class=MsoListParagraph style='margin-top:0in;margin-right:0in;margin-bottom:
+0in;margin-left:.25in;margin-bottom:.0001pt;text-indent:-.25in;line-height:
+13.5pt;background:white'><span style='font-size:10.5pt;font-family:Symbol;
+color:black'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=ZH-CN style='font-size:10.5pt;font-family:SimSun;
+color:black'>&#32822;&#21033;&#31859;&#25351;&#36131;&#29369;&#22823;&#30340;&#32618;&#24694;</span></p>
+
+<p class=MsoListParagraph style='margin-top:0in;margin-right:0in;margin-bottom:
+0in;margin-left:.25in;margin-bottom:.0001pt;text-indent:-.25in;line-height:
+13.5pt;background:white'><span style='font-size:10.5pt;font-family:Symbol;
+color:black'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=ZH-CN style='font-size:10.5pt;font-family:SimSun;
+color:black'>&#32822;&#21033;&#31859;&#39044;&#35328;&#29369;&#22823;&#28781;&#20129;</span></p>
+
+<p class=MsoListParagraph style='margin-top:0in;margin-right:0in;margin-bottom:
+0in;margin-left:.25in;margin-bottom:.0001pt;text-indent:-.25in;line-height:
+13.5pt;background:white'><span style='font-size:10.5pt;font-family:Symbol;
+color:black'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=ZH-CN style='font-size:10.5pt;font-family:SimSun;
+color:black'>&#32822;&#21033;&#31859;&#25351;&#36131;&#29369;&#22823;&#30340;&#39046;&#34966;</span></p>
+
+<p class=MsoListParagraph style='margin-top:0in;margin-right:0in;margin-bottom:
+0in;margin-left:.25in;margin-bottom:.0001pt;text-indent:-.25in;line-height:
+13.5pt;background:white'><span style='font-size:10.5pt;font-family:Symbol;
+color:black'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=ZH-CN style='font-size:10.5pt;font-family:SimSun;
+color:black'>&#31070;&#24212;&#35768;&#29369;&#22823;&#22797;&#22269;</span></p>
+
+<p class=MsoListParagraph style='margin-top:0in;margin-right:0in;margin-bottom:
+0in;margin-left:.25in;margin-bottom:.0001pt;text-indent:-.25in;line-height:
+13.5pt;background:white'><span style='font-size:10.5pt;font-family:Symbol;
+color:black'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=ZH-CN style='font-size:10.5pt;font-family:SimSun;
+color:black'>&#31070;&#39044;&#35328;&#30340;&#23457;&#21028;&#32456;&#20110;&#20020;&#21040;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+13.5pt;background:white'><span style='font-size:10.5pt;font-family:"Arial","sans-serif";
+color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+13.5pt;background:white'><b><span lang=ZH-CN style='font-size:10.5pt;
+font-family:SimSun;color:black'>&#20108;&#65294;&#31070;&#23545;&#21015;&#22269;&#30340;&#23457;&#21028;&#65288;</span></b><b><span
+style='font-size:10.5pt;font-family:"Arial","sans-serif";color:black'>46-52</span></b><b><span
+lang=ZH-CN style='font-size:10.5pt;font-family:SimSun;color:black'>&#31456;&#65289;</span></b></p>
+
+<p class=MsoListParagraph style='margin-top:0in;margin-right:0in;margin-bottom:
+0in;margin-left:.25in;margin-bottom:.0001pt;text-indent:-.25in;line-height:
+13.5pt;background:white'><span style='font-size:10.5pt;font-family:Symbol;
+color:black'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=ZH-CN style='font-size:10.5pt;font-family:SimSun;
+color:black'>&#23545;&#22806;&#37030;&#21015;&#22269;&#30340;&#39044;&#35328;</span></p>
+
+<p class=MsoListParagraph style='margin-top:0in;margin-right:0in;margin-bottom:
+0in;margin-left:.25in;margin-bottom:.0001pt;text-indent:-.25in;line-height:
+13.5pt;background:white'><span style='font-size:10.5pt;font-family:Symbol;
+color:black'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=ZH-CN style='font-size:10.5pt;font-family:SimSun;
+color:black'>&#32822;&#36335;&#25746;&#20919;&#27814;&#38519;</span></p>
+
+<p class=MsoNormal style='line-height:16.5pt'>&nbsp;</p>
+
+<h2><span lang=ZH-CN style='font-family:SimSun'>&#26032;&#32422;&#22307;&#32463;&#20013;&#30340;&#24212;&#39564;</span></h2>
+
+<p class=MsoNoSpacing>&nbsp;<span lang=ZH-CN style='font-family:SimSun;
+background:yellow'>&#26032;&#32422;&#22307;&#32463;&#20013;&#26368;&#24120;&#25552;&#21040;&#30340;&#23601;&#26159;&#32822;&#21033;&#31859;&#20070;&#20013;&#26377;&#20851;“&#26032;&#32422;”&#30340;&#39044;&#35328;</span>(31:31~34)<span
+lang=ZH-CN style='font-family:SimSun'>&#12290;&#23613;&#31649;&#20197;&#33394;&#21015;&#21644;&#29369;&#22823;&#19981;&#26029;&#36829;&#32972;&#31070;&#30340;&#22307;&#32422;&#65292;&#26102;&#24120;&#22240;&#32972;&#36947;&#32780;&#36973;&#21040;&#31070;&#30340;&#23457;&#21028;&#65292;&#20294;&#26159;&#32822;&#21033;&#31859;<span
+style='background:yellow'>&#20173;&#28982;&#39044;&#21578;&#35828;&#23558;&#26469;&#26377;&#19968;&#22825;&#31070;&#23558;&#19982;&#20182;&#20204;&#21478;&#31435;&#26032;&#32422;</span></span>(31:31)<span
+lang=ZH-CN style='font-family:SimSun'>&#12290;&#26032;&#32422;&#22307;&#32463;&#21448;&#36827;&#19968;&#27493;&#28165;&#26970;&#22320;&#38416;&#26126;&#36825;&#26032;&#32422;&#24050;&#32463;&#20511;&#30528;&#32822;&#31267;&#22522;&#30563;&#30340;&#21463;&#27515;&#21644;&#22797;&#27963;&#24471;&#20197;&#30830;&#31435;</span>(<span
+lang=ZH-CN style='font-family:SimSun'>&#36335;</span>22:20<span lang=ZH-CN
+style='font-family:SimSun'>&#65307;&#27604;&#36739;&#22826;</span>26:26~29<span
+lang=ZH-CN style='font-family:SimSun'>&#65307;&#21487;</span>14:22~25)<span
+lang=ZH-CN style='font-family:SimSun'>&#65292;&#22914;&#20170;&#27491;&#22312;&#31070;&#30340;&#31435;&#32422;&#23376;&#27665;&#21363;&#25945;&#20250;&#36523;&#19978;&#24471;&#21040;&#25104;&#20840;</span>(<span
+lang=ZH-CN style='font-family:SimSun'>&#26469;</span>8:8~13)<span lang=ZH-CN
+style='font-family:SimSun'>&#65292;&#26368;&#21518;&#23558;&#22240;&#20197;&#33394;&#21015;&#20840;&#23478;&#24471;&#25937;&#32780;&#36798;&#21040;&#39640;&#23792;</span>(<span
+lang=ZH-CN style='font-family:SimSun'>&#32599;</span>11:27)<span lang=ZH-CN
+style='font-family:SimSun'>&#12290;</span></p>
+
+<p class=MsoNoSpacing>&nbsp;</p>
+
+<p class=MsoNoSpacing><span lang=ZH-CN style='font-family:SimSun'>&#20070;&#20013;&#20854;&#23427;&#19968;&#20123;<span
+style='background:yellow'>&#24212;&#39564;&#22312;&#26032;&#32422;&#32822;&#31267;&#22522;&#30563;&#36523;&#19978;&#26377;&#20851;&#24357;&#36187;&#20122;</span>&#30340;&#32463;&#33410;&#22914;&#19979;&#65306;</span></p>
+
+<p class=MsoNoSpacing style='margin-left:.25in;text-indent:-.25in'><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=ZH-CN style='font-family:SimSun'>&#24357;&#36187;&#20122;&#26159;&#22909;&#29287;&#20154;&#21644;&#22823;&#21355;&#20844;&#20041;&#30340;&#33495;&#35028;</span>(<span
+lang=ZH-CN style='font-family:SimSun'>&#32822;</span>23:1~8<span lang=ZH-CN
+style='font-family:SimSun'>&#65307;&#21442;&#22826;</span>21:8~9<span
+lang=ZH-CN style='font-family:SimSun'>&#65307;&#32422;</span>10:1~18<span
+lang=ZH-CN style='font-family:SimSun'>&#65307;&#26519;&#21069;</span>1:30<span
+lang=ZH-CN style='font-family:SimSun'>&#65307;&#26519;&#21518;</span>5:21)<span
+lang=ZH-CN style='font-family:SimSun'>&#65307;</span></p>
+
+<p class=MsoNoSpacing style='margin-left:.25in;text-indent:-.25in'><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=ZH-CN style='font-family:SimSun'>&#25289;&#29595;&#20043;&#22320;&#30340;&#30171;&#21741;&#22768;&#38899;</span>(<span
+lang=ZH-CN style='font-family:SimSun'>&#32822;</span>31:15)<span lang=ZH-CN
+style='font-family:SimSun'>&#22312;&#24076;&#24459;&#29579;&#20225;&#22270;&#38500;&#28781;&#23156;&#23401;&#32822;&#31267;&#26102;&#24471;&#21040;&#20102;&#24212;&#39564;</span>(<span
+lang=ZH-CN style='font-family:SimSun'>&#21442;&#22826;</span>2:17~18)<span
+lang=ZH-CN style='font-family:SimSun'>&#65307;</span></p>
+
+<p class=MsoNoSpacing style='margin-left:.25in;text-indent:-.25in'><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=ZH-CN style='font-family:SimSun'>&#24357;&#36187;&#20122;&#28909;&#20999;&#22320;&#20851;&#27880;&#31070;&#27583;&#30340;&#22307;&#27905;</span>(<span
+lang=ZH-CN style='font-family:SimSun'>&#32822;</span>7:11)<span lang=ZH-CN
+style='font-family:SimSun'>&#65292;&#21518;&#26469;&#20027;&#32822;&#31267;&#26366;&#20146;&#33258;&#27905;&#20928;&#22307;&#27583;</span>(<span
+lang=ZH-CN style='font-family:SimSun'>&#21442;&#22826;</span>21:13<span
+lang=ZH-CN style='font-family:SimSun'>&#65307;&#21487;</span>11:17<span
+lang=ZH-CN style='font-family:SimSun'>&#65307;&#36335;</span>19:46)<span
+lang=ZH-CN style='font-family:SimSun'>&#12290;</span></p>
+
+<h2><span lang=ZH-CN style='font-family:SimSun'>&#22312;&#27491;&#20856;&#20013;&#30340;&#29420;&#29305;&#22320;&#20301;</span></h2>
+
+<p class=MsoNoSpacing>&nbsp;</p>
+
+<p class=MsoNoSpacing><span lang=ZH-CN style='font-family:SimSun'>&#20247;&#25152;&#21608;&#30693;&#65292;&#32822;&#21033;&#31859;&#34987;&#31216;&#20026;“<span
+style='background:yellow'>&#27969;&#27882;&#30340;&#20808;&#30693;</span>”&#65292;&#36825;&#26159;&#20182;&#30340;&#20316;&#21697;&#30340;&#22522;&#35843;&#12290;<span
+style='background:yellow'>&#22914;&#26524;&#25105;&#20204;&#35760;&#20303;&#36825;&#28857;&#21644;&#20182;&#27969;&#27882;&#30340;&#21407;&#22240;&#65292;&#20415;&#33021;&#20102;&#35299;&#20182;&#30340;&#20449;&#24687;</span>&#12290;</span></p>
+
+<p class=MsoNoSpacing>&nbsp;</p>
+
+<p class=MsoNoSpacing><span lang=ZH-CN style='font-family:SimSun'>&#32822;&#21033;&#31859;&#26159;&#20301;&#29420;&#29305;&#30340;&#20808;&#30693;&#65292;&#22240;&#20026;&#20182;&#23558;&#20182;&#30340;&#24515;&#32928;&#21644;&#24615;&#24773;&#37117;&#36196;&#38706;&#25950;&#24320;&#65292;&#27604;&#26087;&#32422;&#20013;&#20219;&#20309;&#19968;&#20301;&#20808;&#30693;&#37117;&#26356;&#29978;&#12290;&#35770;&#24615;&#24773;&#65292;&#20182;&#26159;&#20010;&#26082;&#22810;&#24833;&#21892;&#24863;&#21448;&#31163;&#32676;&#32034;&#23621;&#30340;&#20154;&#65292;&#20294;&#31070;&#21628;&#21484;&#20182;&#21435;&#26021;&#36131;&#24403;&#26102;&#37027;&#20123;&#31163;&#32463;&#21467;&#36947;&#30340;&#20154;&#12290;&#37027;&#26102;&#24052;&#27604;&#20262;&#12289;&#22467;&#21450;&#21644;&#20122;&#36848;&#19977;&#22269;&#24444;&#27492;&#20105;&#22842;&#22269;&#38469;&#38388;&#30340;&#22320;&#20301;&#65292;&#24418;&#25104;&#32039;&#24352;&#23616;&#38754;&#12290;&#29369;&#22823;&#22269;&#22312;&#32422;&#35199;&#20122;&#29579;&#30340;&#39046;&#23548;&#19979;&#19968;&#24230;&#22797;&#20852;&#65292;&#24460;&#26469;&#20415;&#19968;&#36470;&#19981;&#25391;&#65292;&#20197;&#33394;&#21015;&#30340;&#23646;&#28789;&#39118;&#27668;&#24050;&#20005;&#37325;&#36133;&#22351;&#12290;&#27492;&#22806;&#65292;&#22312;&#31070;&#35805;&#35821;&#21644;&#30495;&#36947;&#20013;&#25104;&#38271;&#30340;&#20154;&#21364;&#36716;&#21521;&#25308;&#20854;&#23427;&#20598;&#20687;&#12290;</span><span
+lang=ZH-CN> </span><span lang=ZH-CN style='font-family:SimSun'>&#20961;&#27492;&#31181;&#31181;&#24773;&#26223;&#20196;&#25105;&#20204;&#24819;&#21040;&#29616;&#20170;&#35199;&#26041;&#30340;&#22522;&#30563;&#25945;&#19990;&#30028;&#12290;</span></p>
+
+<p style='line-height:16.5pt'><b><span lang=ZH-CN style='font-family:SimSun;
+background:yellow'>&#27880;</span></b><b><span style='font-family:SimSun;
+background:yellow'>: <span lang=ZH-CN>&#20197;&#36187;&#20122;&#20070;&#30340;&#23398;&#20064;&#21442;&#29031;&#32593;&#19978;&#30340;<span
+style='color:black'>&#25705;&#26681;&#35299;&#32463;&#19995;&#20070;</span></span></span></b></p>
+
+<p style='line-height:16.5pt'>&nbsp;</p>
+
+<span style='font-size:11.0pt;line-height:115%;font-family:"Calibri","sans-serif"'><br
+clear=all style='page-break-before:always'>
+</span>
+
+<p class=MsoNormal><b><span style='font-size:13.0pt;line-height:115%;
+font-family:"Cambria","serif";color:#4F81BD'>&nbsp;</span></b></p>
+
+</div>
+
+</body>
+
+</html>
