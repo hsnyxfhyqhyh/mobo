@@ -24,7 +24,7 @@ public class LoadDataWithCaptionTest {
 	
 	private static void loadDataForVersion(String version) {
 		try{
-			for (int i=26; i<=26; i++) {
+			for (int i=27; i<=27; i++) {
 				String bookNumber = "";
 				if (i<10) {
 					bookNumber = "0" + i;
