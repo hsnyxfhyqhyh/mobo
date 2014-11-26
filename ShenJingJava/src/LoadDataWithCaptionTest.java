@@ -14,6 +14,10 @@ public class LoadDataWithCaptionTest {
 	
 	private static StringBuffer sb = new StringBuffer();
 	
+	private static int chapterStartIndex = 33;
+	private static int chapterEndIndex = 37;
+	
+	
 	public static void main(String[] args) {
 		loadDataForVersion("hhb");
 		
@@ -24,7 +28,7 @@ public class LoadDataWithCaptionTest {
 	
 	private static void loadDataForVersion(String version) {
 		try{
-			for (int i=27; i<=27; i++) {
+			for (int i=chapterStartIndex; i<=chapterEndIndex; i++) {
 				String bookNumber = "";
 				if (i<10) {
 					bookNumber = "0" + i;
