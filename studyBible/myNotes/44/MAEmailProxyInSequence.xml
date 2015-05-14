@@ -1,0 +1,59 @@
+<sequence xmlns="http://ws.apache.org/ns/synapse" name="MAEmailProxyInSequence">
+	<property name="OriginalAction" expression="get-property('Action')"/>
+	<property name="OkToSend" value="N"/>
+	<property name="sendNumber" value="1" scope="default" type="STRING"/>
+	<filter source="get-property('OriginalAction')" regex="SendEmail">
+		<then>
+			<log level="full" category="TRACE">
+				<property name="Before IN Transformation" value="SendEmail"/>
+			</log>
+			
+			<property name="Subject" expression="//ns:AAA_SendEmail_RQ/ns:Subject/text()" xmlns:ns="http://aaa/midatlantic/enterprise/services/email/2015/05/13" scope="transport"/>
+
+			<property name="messageType" value="text/html" scope="axis2"/>
+			<property name="ContentType" value="text/html" scope="axis2"/>
+			<property name="FORCE_SC_ACCEPTED" value="true" scope="axis2" type="STRING"/>
+			<property name="OUT_ONLY" value="true"/>
+
+			<property expression="//ns:AAA_SendEmail_RQ/ns:EmailAddress/text()" xmlns:ns="http://aaa/midatlantic/enterprise/services/email/2015/05/13" name="ToEmail"/>
+			<property expression="//ns:AAA_SendEmail_RQ/ns:From/text()" xmlns:ns="http://aaa/midatlantic/enterprise/services/email/2015/05/13" name="EmailContent"/>
+
+			<log level="full" category="ERROR">
+				<property expression="//ns:AAA_SendEmail_RQ/ns:EmailAddress/text()" xmlns:ns="http://aaa/midatlantic/enterprise/services/email/2015/05/13" name="ToEmail"/>
+			</log>
+
+			<payloadFactory>
+                <format>
+					<html>
+						<body>
+							<h2 style="color:green">$1</h2>
+							<p>email template 01</p>
+						</body>
+					</html>
+				</format>
+                <args>
+					<arg xmlns:ns="http://aaa/midatlantic/enterprise/services/email/2015/05/13" expression="//ns:AAA_SendEmail_RQ/ns:From"/>
+                </args>
+            </payloadFactory>
+
+			<send>
+				<endpoint>
+					<address uri="mailto:yhu@aaamidatlantic.com"/>
+				</endpoint>
+			</send>
+
+			
+			<header name="To" expression="fn:concat('mailto:', get-property('ToEmail'))"/>
+			<send />
+
+			<!--
+
+			<script language="js"><![CDATA[
+				mc.setPayloadXML(<h1>WSO2 ESB Rocks-#-</h1>);
+
+			   ]]></script>
+			
+			-->
+		</then>
+	</filter>
+</sequence>
