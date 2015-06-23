@@ -7,15 +7,15 @@ import java.util.ArrayList;
 
 /********************************************************************************************************************************************************************************************************
  * Purpose: 
- * 2014-09-29: to write out the book content. 
+ * 2015-06-23: to write out the book content. 
  ********************************************************************************************************************************************************************************************************/
 
 public class LoadDataWithCaptionTest {
 	
 	private static StringBuffer sb = new StringBuffer();
 	
-	private static int bookStartIndex = 40;
-	private static int bookEndIndex = 43;
+	private static int bookStartIndex = 51;
+	private static int bookEndIndex = 51;
 	
 	
 	public static void main(String[] args) {
