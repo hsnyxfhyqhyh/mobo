@@ -14,8 +14,8 @@ public class LoadDataWithCaptionTest {
 	
 	private static StringBuffer sb = new StringBuffer();
 	
-	private static int bookStartIndex = 51;
-	private static int bookEndIndex = 51;
+	private static int bookStartIndex = 63;
+	private static int bookEndIndex = 66;
 	
 	
 	public static void main(String[] args) {

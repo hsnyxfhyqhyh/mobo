@@ -7,10 +7,10 @@ import java.util.ArrayList;
 
 /********************************************************************************************************************************************************************************************************
  * Purpose: 
- * 2016-01-16: to write out the niv bible for Qian Jun 
+ * 2016-01-16: Generate empty files
  ********************************************************************************************************************************************************************************************************/
 
-public class LoadDataWithCaptionTemp {
+public class Temp {
 	
 	private static StringBuffer sb = new StringBuffer();
 	
@@ -20,7 +20,6 @@ public class LoadDataWithCaptionTemp {
 	
 	public static void main(String[] args) {
 		loadDataForVersion("niv");
-		//loadDataForVersion("kjv");
 		
 		
 
@@ -37,22 +36,9 @@ public class LoadDataWithCaptionTemp {
 					bookNumber = "" + i;
 				}
 				
-				//lines below will have the caption content
-				File fCaption = new File("caption/hhb/" + bookNumber + ".txt");
-				ArrayList<String> bookCaptions = new ArrayList<String>();
-				//FileUtil.getContents(bookCaptions, fCaption);
 				
-				StringBuffer sb = new StringBuffer();
 				
-				int chapterCount = ChapterXmlParser.getChapterCount(version, bookNumber);
-				
-				for (int j=1; j<=chapterCount; j++) {
-					String chapterNumber = "" + j;
-					ChapterDTO chapter = ChapterXmlParser.getChapterContent(version, bookNumber, chapterNumber);
-					sb.append(getChapterVerses(bookCaptions, chapter.getVerses(), chapterNumber, ChapterXmlParser.getBookName(bookNumber)));
-				}
-				
-				FileUtil.writeFile(sb.toString(), i + ".txt");
+				FileUtil.writeFile("", i + ".txt");
 			}
 		}
 		catch(Exception e) {

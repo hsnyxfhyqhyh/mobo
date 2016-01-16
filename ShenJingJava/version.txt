@@ -4,3 +4,8 @@
 
 Note:
 书的号码在LoadData.java里。
+
+
+
+History: add kjv version bible data file: (original from http://quod.lib.umich.edu/k/kjv/browse.html) 
+kjv temp folder is the original data files from the above web site. 
