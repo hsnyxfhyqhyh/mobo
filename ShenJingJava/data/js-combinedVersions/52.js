@@ -1,4 +1,3 @@
-<script>
 var chapterData = {
 	"BookName": "帖撒罗尼迦前书",
 	"BookName_En": "Thessalonians1",
@@ -814,4 +813,3 @@ var chapterData = {
 		}
 	]
 }
-</script>

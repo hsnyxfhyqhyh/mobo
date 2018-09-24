@@ -1,4 +1,3 @@
-<script>
 var chapterData = {
 	"BookName": "利未记",
 	"BookName_En": "Leviticus",
@@ -7392,4 +7391,3 @@ var chapterData = {
 		}
 	]
 }
-</script>

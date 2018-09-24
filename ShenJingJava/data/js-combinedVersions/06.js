@@ -1,4 +1,3 @@
-<script>
 var chapterData = {
 	"BookName": "约书亚记",
 	"BookName_En": "Joshua",
@@ -5727,4 +5726,3 @@ var chapterData = {
 		}
 	]
 }
-</script>

@@ -1,4 +1,3 @@
-<script>
 var chapterData = {
 	"BookName": "以西结书",
 	"BookName_En": "Ezekiel",
@@ -11103,4 +11102,3 @@ var chapterData = {
 		}
 	]
 }
-</script>
