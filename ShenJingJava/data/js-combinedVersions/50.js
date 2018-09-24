@@ -915,3 +915,4 @@ var chapterData = {
 		}
 	]
 }
+</script>

@@ -5735,3 +5735,4 @@ var chapterData = {
 		}
 	]
 }
+</script>

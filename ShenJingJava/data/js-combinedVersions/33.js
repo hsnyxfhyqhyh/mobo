@@ -980,3 +980,4 @@ var chapterData = {
 		}
 	]
 }
+</script>

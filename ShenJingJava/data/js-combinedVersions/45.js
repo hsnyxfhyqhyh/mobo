@@ -3775,3 +3775,4 @@ var chapterData = {
 		}
 	]
 }
+</script>

@@ -226,3 +226,4 @@ var chapterData = {
 		}
 	]
 }
+</script>

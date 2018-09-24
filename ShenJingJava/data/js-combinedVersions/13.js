@@ -8098,3 +8098,4 @@ var chapterData = {
 		}
 	]
 }
+</script>

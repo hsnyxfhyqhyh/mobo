@@ -1533,3 +1533,4 @@ var chapterData = {
 		}
 	]
 }
+</script>

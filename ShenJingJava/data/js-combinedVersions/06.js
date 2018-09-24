@@ -5727,3 +5727,4 @@ var chapterData = {
 		}
 	]
 }
+</script>

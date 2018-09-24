@@ -2310,3 +2310,4 @@ var chapterData = {
 		}
 	]
 }
+</script>
