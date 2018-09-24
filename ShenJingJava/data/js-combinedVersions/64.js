@@ -1,0 +1,148 @@
+<script>
+var chapterData = {
+	"BookName": "约翰三书",
+	"BookName_En": "John3",
+	"BookNumber": "64",
+	"ChapterCount": "1",
+	"Chapters": [
+		{
+			"BookName": "约翰三书",
+			"BookName_En": "John3",
+			"ChapterNumber": "1",
+			"ChapterCount": "1",
+			"VerseCount": "15",
+			"Versions": [
+				{
+					"VersionName": "hhb",
+					"Verses": [
+						{
+							"VerseNumber": "1",
+							"VerseContent": "作长老的写信给亲爱的该犹、就是我诚心所爱的。"
+						},
+						{
+							"VerseNumber": "2",
+							"VerseContent": "亲爱的兄弟阿、我愿你凡事兴盛、身体健壮、正如你的灵魂兴盛一样。"
+						},
+						{
+							"VerseNumber": "3",
+							"VerseContent": "有弟兄来证明你心里存的真理、正如你按真理而行、我就甚喜乐。"
+						},
+						{
+							"VerseNumber": "4",
+							"VerseContent": "我听见我的儿女们按真理而行、我的喜乐就没有比这个大的。"
+						},
+						{
+							"VerseNumber": "5",
+							"VerseContent": "亲爱的兄弟阿、凡你向作客旅之弟兄所行的、都是忠心的．"
+						},
+						{
+							"VerseNumber": "6",
+							"VerseContent": "他们在教会面前证明了你的爱．你若配得过　神、帮助他们往前行、这就好了．"
+						},
+						{
+							"VerseNumber": "7",
+							"VerseContent": "因他们是为主的名〔原文作那名〕出外、对于外邦人一无所取。"
+						},
+						{
+							"VerseNumber": "8",
+							"VerseContent": "所以我们应该接待这样的人、叫我们与他们一同为真理作工。"
+						},
+						{
+							"VerseNumber": "9",
+							"VerseContent": "我曾略略的写信给教会．但那在教会中好为首的丢特腓不接待我们。"
+						},
+						{
+							"VerseNumber": "10",
+							"VerseContent": "所以我若去、必要提说他所行的事、就是他用恶言妄论我们．还不以此为足、他自己不接待弟兄、有人愿意接待、他也禁止、并且将接待弟兄的人赶出教会。"
+						},
+						{
+							"VerseNumber": "11",
+							"VerseContent": "亲爱的兄弟阿、不要效法恶、只要效法善。行善的属乎　神．行恶的未曾见过　神。"
+						},
+						{
+							"VerseNumber": "12",
+							"VerseContent": "低米丢行善、有众人给他作见证．又有真理给他作见证．就是我们也给他作见证．你也知道我们的见证是真的。"
+						},
+						{
+							"VerseNumber": "13",
+							"VerseContent": "我原有许多事要写给你、却不愿意用笔墨写给你．"
+						},
+						{
+							"VerseNumber": "14",
+							"VerseContent": "但盼望快快的见你、我们就当面谈论．"
+						},
+						{
+							"VerseNumber": "15",
+							"VerseContent": "愿你平安。众位朋友都问你安。请你替我按着姓名问众位朋友安。"
+						}
+					]
+				},
+				{
+					"VersionName": "niv",
+					"Verses": [
+						{
+							"VerseNumber": "1",
+							"VerseContent": "The elder, To my dear friend Gaius, whom I love in the truth."
+						},
+						{
+							"VerseNumber": "2",
+							"VerseContent": "Dear friend, I pray that you may enjoy good health and that all may go well with you, even as your soul is getting along well."
+						},
+						{
+							"VerseNumber": "3",
+							"VerseContent": "It gave me great joy to have some brothers come and tell about your faithfulness to the truth and how you continue to walk in the truth."
+						},
+						{
+							"VerseNumber": "4",
+							"VerseContent": "I have no greater joy than to hear that my children are walking in the truth."
+						},
+						{
+							"VerseNumber": "5",
+							"VerseContent": "Dear friend, you are faithful in what you are doing for the brothers, even though they are strangers to you."
+						},
+						{
+							"VerseNumber": "6",
+							"VerseContent": "They have told the church about your love. You will do well to send them on their way in a manner worthy of God."
+						},
+						{
+							"VerseNumber": "7",
+							"VerseContent": "It was for the sake of the Name that they went out, receiving no help from the pagans."
+						},
+						{
+							"VerseNumber": "8",
+							"VerseContent": "We ought therefore to show hospitality to such men so that we may work together for the truth."
+						},
+						{
+							"VerseNumber": "9",
+							"VerseContent": "I wrote to the church, but Diotrephes, who loves to be first, will have nothing to do with us."
+						},
+						{
+							"VerseNumber": "10",
+							"VerseContent": "So if I come, I will call attention to what he is doing, gossiping maliciously about us. Not satisfied with that, he refuses to welcome the brothers. He also stops those who want to do so and puts them out of the church."
+						},
+						{
+							"VerseNumber": "11",
+							"VerseContent": "Dear friend, do not imitate what is evil but what is good. Anyone who does what is good is from God. Anyone who does what is evil has not seen God."
+						},
+						{
+							"VerseNumber": "12",
+							"VerseContent": "Demetrius is well spoken of by everyone--and even by the truth itself. We also speak well of him, and you know that our testimony is true."
+						},
+						{
+							"VerseNumber": "13",
+							"VerseContent": "I have much to write you, but I do not want to do so with pen and ink."
+						},
+						{
+							"VerseNumber": "14",
+							"VerseContent": "I hope to see you soon, and we will talk face to face. Peace to you. The friends here send their greetings. Greet the friends there by name."
+						},
+						{
+							"VerseNumber": "15",
+							"VerseContent": " "
+						}
+					]
+				}
+			]
+		}
+	]
+}
