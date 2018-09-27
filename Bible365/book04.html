@@ -1,0 +1,46 @@
+<!DOCTYPE>
+<html>
+    <head> 
+        <meta name="viewport" content="width=device-width" />
+        <meta charset="UTF-8" >
+		<META http-equiv=Content-Type content="text/html; charset=gb2312">
+       
+        <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+        <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
+        
+        <script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
+        
+        <script src="jsdata/04.js"></script>    
+        <script src="js/preProcessing.js"></script>    
+        <script>   
+        	var bookNumber = getParameterByName('bookNumber'); 
+			
+			//handle the parameter passed in - bookNumber 
+			if (bookNumber == null){
+				bookNumber= "04";
+			}
+
+        </script>
+    </head>
+    <body>
+    <div data-role="page" id="page" >
+            <div data-role="header" data-position="fixed"  id="header1">
+                <h1>B 365 </h1>
+            </div>
+            <div data-role="content" id="content">
+                <ol data-role="listview" >
+                    <li>Loading</li>
+                  
+                </ol>
+            </div>
+
+            <div data-role="footer" data-position="fixed" id="footer1">
+                <a href="#" class="ui-btn ui-icon-arrow-l ui-btn-icon-notext" onclick="navPrevious();" >Left</a>
+                <a href="#" class="ui-btn ui-icon-arrow-r ui-btn-right ui-btn-icon-notext" onclick="navNext();" >Left</a>
+                
+            </div>           
+        </div>
+
+       <script src="js/postProcessing.js"></script>    
+    </body>
+</html>
