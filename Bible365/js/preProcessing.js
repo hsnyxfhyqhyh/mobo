@@ -103,7 +103,7 @@ function navPrevious(){
             }
             
             //alert(bookNumber);
-            window.location = "book" + bookNumber +".html?p=last";
+            window.location = "book" + bookNumber +".html?p=last&m=" + m;
         }
     }
     
@@ -131,7 +131,7 @@ function navNext(){
             }
 
             //alert(bookNumber);
-            window.location = "book" + bookNumber +".html";
+            window.location = "book" + bookNumber +".html?m=" + m;
         }
     }
 }
