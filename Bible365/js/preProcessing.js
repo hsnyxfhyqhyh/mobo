@@ -10,6 +10,7 @@ function getParameterByName(name, url) {
 
 var chapterNumber = getParameterByName('chapterNumber'); 
 var m = getParameterByName('m');
+var page = getParameterByName('p'); 
 
 //handle the parameter passed in -chapterNumber
 if (chapterNumber == null){
@@ -39,6 +40,13 @@ if (m == null || m == 'c'){
 book = chapterData;
 
 var titleName;
+
+var chapterCount = parseInt(book["ChapterCount"]);
+
+if (page == "last"){
+    chapterNumber = chapterCount;
+}
+//alert (chapterCount);
 
 function reload() {
     var chapter = book.Chapters[chapterNumber-1];
@@ -74,16 +82,58 @@ function reload() {
 }
 
 function navPrevious(){
-    chapterNumber = parseInt(chapterNumber) -1;
-    reload();
-
+    if (chapterNumber > 1){
+       chapterNumber = parseInt(chapterNumber) -1;
+       reload();
+    } else if (chapterNumber ==1) {
+        if (bookNumber != "01") {
+            var b;
+            if (bookNumber.startsWith("0")){
+                b = parseInt(bookNumber.substring(1, 2));
+            } else {
+                b=parseInt(bookNumber);
+            }
+            
+            b = b-1;
+            
+            if (b<10) {
+                bookNumber = "0" + b;
+            } else {
+                bookNumber = "" + b;
+            }
+            
+            //alert(bookNumber);
+            window.location = "book" + bookNumber +".html?p=last";
+        }
+    }
+    
 }
 
 
 function navNext(){
-    chapterNumber = parseInt(chapterNumber) +1;
-    reload();
+    if (chapterNumber < chapterCount){
+       chapterNumber = parseInt(chapterNumber) + 1;
+       reload();
+    } else {
+        if (bookNumber != "66") {
+            var b;
+            if (bookNumber.startsWith("0")){
+                b = parseInt(bookNumber.substring(1, 2));
+            } else {
+                b=parseInt(bookNumber);
+            }
+            b = b+1;
 
+            if (b<10) {
+                bookNumber = "0" + b;
+            } else {
+                bookNumber = "" + b;
+            }
+
+            //alert(bookNumber);
+            window.location = "book" + bookNumber +".html";
+        }
+    }
 }
 
 // 			$.getJSON("json/Book.json", function(data){
