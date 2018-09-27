@@ -1,0 +1,102 @@
+<!DOCTYPE>
+<html>
+    <head> 
+    	
+        <meta name="viewport" content="width=device-width" />
+
+        <meta charset="UTF-8" >
+
+		<META http-equiv=Content-Type content="text/html; charset=gb2312">
+        <script src="jsdata/01.js"></script>
+        <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+        <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
+        
+        <script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
+            
+        <script>   
+			function getParameterByName(name, url) {
+				if (!url) url = window.location.href;
+				name = name.replace(/[\[\]]/g, '\\$&');
+				var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+					results = regex.exec(url);
+				if (!results) return null;
+				if (!results[2]) return '';
+				return decodeURIComponent(results[2].replace(/\+/g, ' '));
+			}
+
+			//handle the parameter passed in -chapterNumber
+			var chapterNumber = getParameterByName('chapterNumber'); 
+			if (chapterNumber == null){
+				chapterNumber=1;
+			}
+			
+			//handle the parameter passed in - version
+			var version = getParameterByName('version');
+			if (version == null){
+				version="hhb";
+			}
+
+			var chapter = chapterData.Chapters[chapterNumber-1];
+			var verseVersion ;
+
+			for (i in chapter.Versions) {
+				v = chapter.Versions[i];
+				
+				if (version == v.VersionName)  {
+					verseVersion = v;
+				}
+			}
+			
+			
+						
+// 			$.getJSON("json/Book.json", function(data){
+// 				alert(data["BookName"]);
+	
+// 			});
+
+// 			$.getJSON("https://lmncw4mlel.execute-api.us-east-1.amazonaws.com/prod/bible-init-2?username=livingwater&lastname=hu3", function(data){
+// 				alert(data["statusCode"]);
+	
+// 			});
+
+        </script>
+
+		
+
+        
+    </head>
+    <body>
+    <div data-role="page" id="page" >
+            <div data-role="header" id="header">
+                <h1>Title2 </h1>
+            </div>
+            <div data-role="content" id="content">
+                <ol data-role="listview" >
+                    <li>item 1</li>
+                  
+                </ol>
+            </div>
+
+            <div data-role="footer" data-position="fixed" id="footer">
+                <h1></h1>
+            </div>           
+ 			
+        </div>
+       
+
+        <script>
+			//set header content
+ 			document.getElementById("header").innerHTML = "<h1><font style='white-space:normal;font-family:SimHei;' >" + chapter.BookName + " - " + chapter.BookName_En + " - " + chapter.ChapterNumber + "</font></h1>";
+			
+			//set the content section
+			c = "<ol data-role='listview' >"
+ 			for (j in verseVersion.Verses) {
+				c += "<li><font style='white-space:normal;font-family:SimSun;  font-size: small' >" + verseVersion.Verses[j].VerseContent + "</font></li>"
+ 			}
+
+ 			c += "</ol>"
+
+ 			document.getElementById("content").innerHTML = c;
+        </script>
+    </body>
+</html>
