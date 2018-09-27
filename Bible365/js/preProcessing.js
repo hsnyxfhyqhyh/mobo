@@ -38,14 +38,53 @@ if (m == null || m == 'c'){
 
 book = chapterData;
 
-
-
-reload();
+var titleName;
 
 function reload() {
+    var chapter = book.Chapters[chapterNumber-1];
+    var verseVersion ;
+
+    for (i in chapter.Versions) {
+        v = chapter.Versions[i];
+
+        if (version == v.VersionName)  {
+            verseVersion = v;
+        }
+    }
+
+    if (version == 'hhb') { titleName = chapter.BookName }
+    else if (version = 'niv') {titleName = chapter.BookName_En}
+
+    //set header content
+    document.getElementById("header1").innerHTML = 
+        "<h1 class='ui-title' role='heading' aria-level='1'><font style='white-space:normal;font-family:SimHei;font-size: large' >" + titleName 
+        + " - " + chapter.ChapterNumber + "</font></h1>";
+
+    //set the content section
+    c = "<ol data-role='listview' class='ui-listview'>"
+    for (j in verseVersion.Verses) {
+        c += "<li class='ui-li-static ui-body-inherit ui-first-child'><font style='white-space:normal;font-family:SimSun;  font-size: medium' >" 
+                + verseVersion.Verses[j].VerseContent 
+              + "</font></li>"
+    }
+
+    c += "</ol>"
+
+    document.getElementById("content").innerHTML = c;
+}
+
+function navPrevious(){
+    chapterNumber = parseInt(chapterNumber) -1;
+    reload();
 
 }
 
+
+function navNext(){
+    chapterNumber = parseInt(chapterNumber) +1;
+    reload();
+
+}
 
 // 			$.getJSON("json/Book.json", function(data){
 // 				alert(data["BookName"]);
