@@ -1,11 +1,8 @@
 <!DOCTYPE>
 <html>
     <head> 
-    	
         <meta name="viewport" content="width=device-width" />
-
         <meta charset="UTF-8" >
-
 		<META http-equiv=Content-Type content="text/html; charset=gb2312">
        
         <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
@@ -13,8 +10,6 @@
         
         <script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
         
-
-        <script src="jsdata/01.js"></script>    
         <script>   
 			function getParameterByName(name, url) {
 				if (!url) url = window.location.href;
@@ -30,6 +25,7 @@
 			var bookNumber = getParameterByName('bookNumber'); 
 			var chapterNumber = getParameterByName('chapterNumber'); 
 			var m = getParameterByName('m');
+			var chapterCount;
 
 			//handle the parameter passed in - bookNumber 
 			if (bookNumber == null){
@@ -48,27 +44,52 @@
 				version= "niv"
 			} 
 
-// 			var bookPathUrl = "https://s3.amazonaws.com/bible365/json/" + bookNumber + ".json"; 
+			var bookPathUrl = "https://s3.amazonaws.com/bible365/json/" + bookNumber + ".json"; 
+			var titleName;
+			var book ;
 
-// 			var book ;
-// 			$( document ).ready(function() {
-// 				$.getJSON(bookPathUrl, function(data){
-// 					book = data;
-// 					reload()
+			$( document ).ready(function() {
+				$.getJSON(bookPathUrl, function(data){
+					book = data;
+					reload();
 
-// 				});
-
-				
-// 			});
+				});
+			});
 			
-			book = chapterData;
-
-			
-
-			reload();
-
 			function reload() {
+				//alert (chapterNumber);
+				var chapter = book.Chapters[chapterNumber-1];
+
+				if (version == 'hhb') { titleName = chapter.BookName }
+    			else if (version = 'niv') {titleName = chapter.BookName_En}
 				
+				chapterCount = parseInt(book["ChapterCount"]);
+				var verseVersion ;
+
+				for (i in chapter.Versions) {
+					v = chapter.Versions[i];
+
+					if (version == v.VersionName)  {
+						verseVersion = v;
+					}
+				}
+
+				 //set header content
+				document.getElementById("header1").innerHTML = 
+					"<h1 class='ui-title' role='heading' aria-level='1'><font style='white-space:normal;font-family:SimHei;font-size: large' >" + titleName 
+					+ " - " + chapter.ChapterNumber + "</font></h1>";
+
+				//set the content section
+				c = "<ol data-role='listview' class='ui-listview'>"
+				for (j in verseVersion.Verses) {
+					c += "<li class='ui-li-static ui-body-inherit ui-first-child'><font style='white-space:normal;font-family:SimSun;  font-size: medium' >" 
+							+ verseVersion.Verses[j].VerseContent 
+						  + "</font></li>"
+				}
+
+				c += "</ol>"
+
+				document.getElementById("content").innerHTML = c;
 			}
 			
 						
@@ -82,6 +103,77 @@
 	
 // 			});
 
+			function navPrevious(){
+				if (chapterNumber > 1){
+				   chapterNumber = parseInt(chapterNumber) -1;
+				   reload();
+				} else if (chapterNumber ==1) {
+					if (bookNumber != "01") {
+						var b;
+						if (bookNumber.startsWith("0")){
+							b = parseInt(bookNumber.substring(1, 2));
+						} else {
+							b=parseInt(bookNumber);
+						}
+
+						b = b-1;
+
+						if (b<10) {
+							bookNumber = "0" + b;
+						} else {
+							bookNumber = "" + b;
+						}
+						
+						bookPathUrl = "https://s3.amazonaws.com/bible365/json/" + bookNumber + ".json"; 
+						
+						$.getJSON(bookPathUrl, function(data){
+// 							alert("inside json call back");
+							book = data;
+							chapterNumber = parseInt(book["ChapterCount"]);
+							reload();
+
+						});
+					}
+				}
+
+			}
+
+
+			function navNext(){
+				
+				if (chapterNumber < chapterCount){
+				   chapterNumber = parseInt(chapterNumber) + 1;
+				   reload();
+				} else {
+
+					if (bookNumber != "66") {
+
+						var b;
+						if (bookNumber.startsWith("0")){
+							b = parseInt(bookNumber.substring(1, 2));
+						} else {
+							b=parseInt(bookNumber);
+						}
+						b = b+1;
+
+						if (b<10) {
+							bookNumber = "0" + b;
+						} else {
+							bookNumber = "" + b;
+						}
+						
+						bookPathUrl = "https://s3.amazonaws.com/bible365/json/" + bookNumber + ".json"; 
+						
+						$.getJSON(bookPathUrl, function(data){
+// 							alert("inside json call back");
+							book = data;
+							chapterNumber = 1;
+							reload();
+
+						});
+					}
+				}
+			}
         </script>
 
 		
@@ -90,7 +182,7 @@
     </head>
     <body>
     <div data-role="page" id="page" >
-            <div data-role="header" id="header">
+            <div data-role="header" id="header1">
                 <h1>B 365 </h1>
             </div>
             <div data-role="content" id="content">
@@ -100,37 +192,17 @@
                 </ol>
             </div>
 
-            <div data-role="footer" data-position="fixed" id="footer">
-                <h1></h1>
-            </div>           
+            <div data-role="footer" data-position="fixed" id="footer1">
+                <a href="#" class="ui-btn ui-icon-arrow-l ui-btn-icon-notext" onclick="navPrevious();" >Left</a>
+                <a href="#" class="ui-btn ui-icon-arrow-r ui-btn-right ui-btn-icon-notext" onclick="navNext();" >Left</a>
+                
+            </div>          
  			
         </div>
        
 
         <script>
-			var chapter = book.Chapters[chapterNumber-1];
-			var verseVersion ;
-
-			for (i in chapter.Versions) {
-				v = chapter.Versions[i];
-
-				if (version == v.VersionName)  {
-					verseVersion = v;
-				}
-			}
-
-			//set header content
-			document.getElementById("header").innerHTML = "<h1><font style='white-space:normal;font-family:SimHei;' >" + chapter.BookName + " - " + chapter.BookName_En + " - " + chapter.ChapterNumber + "</font></h1>";
-
-			//set the content section
-			c = "<ol data-role='listview' >"
-			for (j in verseVersion.Verses) {
-				c += "<li><font style='white-space:normal;font-family:SimSun;  font-size: small' >" + verseVersion.Verses[j].VerseContent + "</font></li>"
-			}
-
-			c += "</ol>"
-
-			document.getElementById("content").innerHTML = c;
+			
         </script>
     </body>
 </html>
