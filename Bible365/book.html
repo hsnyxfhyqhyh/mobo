@@ -21,11 +21,11 @@
 				return decodeURIComponent(results[2].replace(/\+/g, ' '));
 			}
 
-			
 			var bookNumber = getParameterByName('bookNumber'); 
 			var chapterNumber = getParameterByName('chapterNumber'); 
 			var m = getParameterByName('m');
 			var chapterCount;
+			var page = getParameterByName('p'); 
 
 			//handle the parameter passed in - bookNumber 
 			if (bookNumber == null){
@@ -39,6 +39,7 @@
 			
 			//handle the parameter passed in - version
 			if (m == null || m == 'c'){
+				m = 'c';
 				version="hhb";
 			} else if (m= "e") {
 				version= "niv"
@@ -58,12 +59,20 @@
 			
 			function reload() {
 				//alert (chapterNumber);
+				
+				chapterCount = parseInt(book["ChapterCount"]);
+
+				if (page == "last"){
+					chapterNumber = chapterCount;
+					page = "";			//reset page value 
+				}
+				//alert (chapterNumber);
+
 				var chapter = book.Chapters[chapterNumber-1];
 
 				if (version == 'hhb') { titleName = chapter.BookName }
     			else if (version = 'niv') {titleName = chapter.BookName_En}
-				
-				chapterCount = parseInt(book["ChapterCount"]);
+
 				var verseVersion ;
 
 				for (i in chapter.Versions) {
@@ -92,17 +101,6 @@
 				document.getElementById("content").innerHTML = c;
 			}
 			
-						
-// 			$.getJSON("json/Book.json", function(data){
-// 				alert(data["BookName"]);
-	
-// 			});
-
-// 			$.getJSON("https://lmncw4mlel.execute-api.us-east-1.amazonaws.com/prod/bible-init-2?username=livingwater&lastname=hu3", function(data){
-// 				alert(data["statusCode"]);
-	
-// 			});
-
 			function navPrevious(){
 				if (chapterNumber > 1){
 				   chapterNumber = parseInt(chapterNumber) -1;
@@ -123,21 +121,11 @@
 						} else {
 							bookNumber = "" + b;
 						}
-						
-						bookPathUrl = "https://s3.amazonaws.com/bible365/json/" + bookNumber + ".json"; 
-						
-						$.getJSON(bookPathUrl, function(data){
-// 							alert("inside json call back");
-							book = data;
-							chapterNumber = parseInt(book["ChapterCount"]);
-							reload();
 
-						});
+						window.location = "book.html?p=last&m=" + m + "&bookNumber=" + bookNumber;
 					}
 				}
-
 			}
-
 
 			function navNext(){
 				
@@ -162,23 +150,17 @@
 							bookNumber = "" + b;
 						}
 						
-						bookPathUrl = "https://s3.amazonaws.com/bible365/json/" + bookNumber + ".json"; 
-						
-						$.getJSON(bookPathUrl, function(data){
-// 							alert("inside json call back");
-							book = data;
-							chapterNumber = 1;
-							reload();
-
-						});
+						window.location = "book.html?m=" + m + "&bookNumber=" + bookNumber;
 					}
 				}
 			}
+
+// 			$.getJSON("https://lmncw4mlel.execute-api.us-east-1.amazonaws.com/prod/bible-init-2?username=livingwater&lastname=hu3", function(data){
+// 				alert(data["statusCode"]);
+	
+// 			});
+
         </script>
-
-		
-
-        
     </head>
     <body>
     <div data-role="page" id="page" >
@@ -195,10 +177,7 @@
             <div data-role="footer" data-position="fixed" id="footer1">
                 <a href="#" class="ui-btn ui-icon-arrow-l ui-btn-icon-notext" onclick="navPrevious();" >Left</a>
                 <a href="#" class="ui-btn ui-icon-arrow-r ui-btn-right ui-btn-icon-notext" onclick="navNext();" >Left</a>
-                
             </div>          
- 			
         </div>
-      
     </body>
 </html>
