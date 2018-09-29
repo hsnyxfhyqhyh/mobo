@@ -105,6 +105,7 @@
 				if (chapterNumber > 1){
 				   chapterNumber = parseInt(chapterNumber) -1;
 				   reload();
+				   $(window).scrollTop(0);
 				} else if (chapterNumber ==1) {
 					if (bookNumber != "01") {
 						var b;
@@ -132,6 +133,7 @@
 				if (chapterNumber < chapterCount){
 				   chapterNumber = parseInt(chapterNumber) + 1;
 				   reload();
+				   $(window).scrollTop(0);
 				} else {
 
 					if (bookNumber != "66") {
