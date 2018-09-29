@@ -9,7 +9,7 @@
         <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
         
         <script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
-        
+        <script src="jsdata/loadBooksData.js"></script>
         <script>   
 			function getParameterByName(name, url) {
 				if (!url) url = window.location.href;
@@ -20,6 +20,10 @@
 				if (!results[2]) return '';
 				return decodeURIComponent(results[2].replace(/\+/g, ' '));
 			}
+
+			//TRY the idea of loading the book data
+			//alert(books["books"][0]["BookNumber"]);
+
 
 			var bookNumber = getParameterByName('bookNumber'); 
 			var chapterNumber = getParameterByName('chapterNumber'); 
@@ -55,6 +59,13 @@
 					reload();
 
 				});
+
+				$("#page").on("swiperight", function(event, ui){
+                    $("#sameBookPanel").panel("open");
+                });
+                $("#page").on("swipeleft", function(event, ui){
+                    $("#panelArea2").panel("open");
+                });
 			});
 			
 			function reload() {
@@ -157,6 +168,26 @@
 				}
 			}
 
+			function clickButton () {
+                chapterNumber = document.getElementById("text-18").value;
+                reload();
+				$(window).scrollTop(0);
+				$("#sameBookPanel").panel("close");
+            }
+
+            function switchMode() {
+            	if (m=="c") {
+            		m="e";
+            		version="niv";
+            	} else {
+            		m = "c";
+            		version ="hhb";
+            	}
+                reload();
+				$(window).scrollTop(0);
+				$("#sameBookPanel").panel("close");
+            }
+
 // 			$.getJSON("https://lmncw4mlel.execute-api.us-east-1.amazonaws.com/prod/bible-init-2?username=livingwater&lastname=hu3", function(data){
 // 				alert(data["statusCode"]);
 	
@@ -175,7 +206,14 @@
                   
                 </ol>
             </div>
-
+			<div data-role="panel" id="sameBookPanel" data-display="reveal" data-position="left">
+                <form>
+                     <label for="text-18">Jump to: </label>
+                     <input type="text" name="text-18" id="text-18" value="Value">
+                     <input type="button" name="btnJump" onclick="clickButton();" id="btnJump" value="Jump">
+                     <input type="button" name="btnSwitch" onclick="switchMode();" id="btnSwitch" value="Switch">
+                </form>
+            </div>
             <div data-role="footer" data-position="fixed" id="footer1">
                 <a href="#" class="ui-btn ui-icon-arrow-l ui-btn-icon-notext" onclick="navPrevious();" >Left</a>
                 <a href="#" class="ui-btn ui-icon-arrow-r ui-btn-right ui-btn-icon-notext" onclick="navNext();" >Left</a>
