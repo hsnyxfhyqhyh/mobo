@@ -35,7 +35,7 @@ public class XmlToJson {
 				
 				ChapterDTO chapter1 = ChapterXmlParser.getChapterContent(version, bookNumber, "1");
 				
-				sb.append("<script>\n");
+//				sb.append("<script>\n");
 				sb.append("var chapterData = {\n");
 				
 				sb.append("\t\"BookName\": \"" + chapter1.getBookChineseName() + "\",\n");
@@ -104,6 +104,8 @@ public class XmlToJson {
 				}
 				sb.append("\t]\n");		//end chapters
 				sb.append("}\n");
+				
+//				sb.append("</script>\n");
 				String bookFileNamePrefix ="";
 				if (i<10) {
 					bookFileNamePrefix = "0" + i;
