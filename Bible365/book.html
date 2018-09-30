@@ -111,6 +111,20 @@
 				c += "</ol>"
 
 				document.getElementById("content").innerHTML = c;
+				
+				//populate samebook jump 
+				objListSameBook = document.getElementById("listSameBook");
+				removeOptions (objListSameBook);
+
+				if (chapterCount> 1) {
+					for (k=1; k <= chapterCount; k++) {
+						var option = document.createElement("option");
+
+						option.text = "" +k;
+						option.value = "" +k;
+						objListSameBook.add(option);
+					}
+				}
 			}
 			
 			function navPrevious(){
@@ -169,12 +183,21 @@
 				}
 			}
 
-			function clickButton () {
-                chapterNumber = document.getElementById("text-18").value;
+			function jumpChapter () {
+                chapterNumber = document.getElementById("listSameBook").value;
                 reload();
 				$(window).scrollTop(0);
 				$("#sameBookPanel").panel("close");
             }
+
+            function removeOptions(selectbox)
+			{
+				var i;
+				for(i = selectbox.options.length - 1 ; i >= 0 ; i--)
+				{
+					selectbox.remove(i);
+				}
+			}
 
             function switchMode() {
             	if (m=="c") {
@@ -209,9 +232,21 @@
             </div>
 			<div data-role="panel" id="sameBookPanel" data-display="reveal" data-position="left">
                 <form>
-                     <label for="text-18">Jump to: </label>
-                     <input type="text" name="text-18" id="text-18" value="Value">
-                     <input type="button" name="btnJump" onclick="clickButton();" id="btnJump" value="Jump">
+                	
+                	<div class="ui-field-contain">
+						<label for="listBooks">选书阅读：</label>
+						<select name="listBooks" id="listBooks" onchange="jumpBook();" data-mini="true">
+							<option value="01">创世纪</option>
+						</select>
+					</div>
+
+                	<div class="ui-field-contain">
+						<label for="listSameBook">同卷跳转：</label>
+						<select name="listSameBook" id="listSameBook" onchange="jumpChapter();" data-mini="true">
+							<option value="1">1</option>
+						</select>
+					</div>
+                    
                      <input type="button" name="btnSwitch" onclick="switchMode();" id="btnSwitch" value="Switch">
                 </form>
             </div>
@@ -222,3 +257,4 @@
         </div>
     </body>
 </html>
+
