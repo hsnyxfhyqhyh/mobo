@@ -116,6 +116,11 @@
 				objListSameBook = document.getElementById("listSameBook");
 				removeOptions (objListSameBook);
 
+				//var option0Samebook = document.createElement("option");
+				//option0Samebook.text = "-同卷跳转-";
+				//option0Samebook.value = "0" ;
+				//objListSameBook.add(option0Samebook);
+
 				if (chapterCount> 1) {
 					for (k=1; k <= chapterCount; k++) {
 						var option = document.createElement("option");
@@ -125,11 +130,38 @@
 						objListSameBook.add(option);
 					}
 				}
+
+				document.getElementById("listSameBook").value = chapterNumber;
+
+				//populate books jump
+				var objListBooks = document.getElementById("listBooks");
+				removeOptions (objListBooks);
+				//var option0books = document.createElement("option");
+				//option0books.text = "-选书阅读-";
+				//option0books.value = "0" ;
+				//objListBooks.add(option0books);
+
+				//var selectedIndex = 0;
+
+				for (k in books.books) {
+
+					var option = document.createElement("option");
+					option.text = books.books[k].BookNumber + " - " + books.books[k].BookName;
+					option.value = books.books[k].BookNumber;
+					//if (books.books[k].BookNumber == bookNumber) {
+					//	selectedIndex = parseInt(k)+1;
+					//	alert (selectedIndex);
+					//}
+					objListBooks.add(option);
+				}
+
+				document.getElementById("listBooks").value = bookNumber;
 			}
 			
 			function navPrevious(){
 				if (chapterNumber > 1){
 				   chapterNumber = parseInt(chapterNumber) -1;
+				   document.getElementById("listSameBook").value = chapterNumber;
 				   reload();
 				   $(window).scrollTop(0);
 				} else if (chapterNumber ==1) {
@@ -158,6 +190,8 @@
 				
 				if (chapterNumber < chapterCount){
 				   chapterNumber = parseInt(chapterNumber) + 1;
+				   document.getElementById("listSameBook").value = chapterNumber;
+				   //alert (chapterNumber);
 				   reload();
 				   $(window).scrollTop(0);
 				} else {
@@ -184,10 +218,18 @@
 			}
 
 			function jumpChapter () {
+                //alert("onclick-jumpChapter");
                 chapterNumber = document.getElementById("listSameBook").value;
                 reload();
 				$(window).scrollTop(0);
 				$("#sameBookPanel").panel("close");
+
+            }
+
+            function jumpBook () {
+                bookNumber = document.getElementById("listBooks").value;
+                window.location = "book.html?m=" + m + "&bookNumber=" + bookNumber;
+
             }
 
             function removeOptions(selectbox)
@@ -236,7 +278,7 @@
                 	<div class="ui-field-contain">
 						<label for="listBooks">选书阅读：</label>
 						<select name="listBooks" id="listBooks" onchange="jumpBook();" data-mini="true">
-							<option value="01">创世纪</option>
+							<!--option value="01">创世纪</option-->
 						</select>
 					</div>
 
